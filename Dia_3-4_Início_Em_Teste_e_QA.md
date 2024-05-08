@@ -61,16 +61,24 @@ Tópico 6 - Hard Skills:
             Relacionais, Não Relacionais.
 
         - Sobre Teste e QA:
-            Planejar; Analisar; Modelar; Implementar/Preparar; 
+            - Planejar; Analisar; Modelar; Implementar/Preparar; 
 
-            Executar -> Manual, Automatizada; 
+            - Executar -> Manual, Automatizada; 
 
-            Comunicar Defeitos (Como reproduzir o defeito, "Como encontrar de novo o bug" -> Evidências: Prints, Gravações); 
+            - Comunicar Defeitos (Como reproduzir o defeito, "Como encontrar de novo o bug" -> Evidências: Prints, Gravações); 
 
-            Acompanhar os Defeitos -> Teste de Confirmação e Teste de Regressão;
+            - Acompanhar os Defeitos -> Teste de Confirmação e Teste de Regressão;
 
-            Técnicas de Teste -> Quantos testes têm no cenário? Quais são os testes mais relevantes?
+            - Técnicas de Teste -> Quantos testes têm no cenário? Quais são os testes mais relevantes?
 
-            Práticas; Processos -> Abordagens; 
+            - Práticas; Processos -> Abordagens; 
             
-            Estratégias e Ferramentas.
+            - Estratégias e Ferramentas.
+
+Tópico 7 - Débito Técnico:
+    - Todo mundo tem.
+    - Todo mundo sempre terá;
+    - O problema não é ter uma dívida -> O Problema é:
+        - Não planejar como resolver a dívida;
+        - Não agir seguindo esse plano -> Manter o Ritmo;
+        - Não rever o plano -> O conhecimento caduca.
