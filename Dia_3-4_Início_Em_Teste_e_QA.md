@@ -76,9 +76,9 @@ Tópico 6 - Hard Skills:
             - Estratégias e Ferramentas.
 
 Tópico 7 - Débito Técnico:
-    - Todo mundo tem.
-    - Todo mundo sempre terá;
-    - O problema não é ter uma dívida -> O Problema é:
-        - Não planejar como resolver a dívida;
-        - Não agir seguindo esse plano -> Manter o Ritmo;
-        - Não rever o plano -> O conhecimento caduca.
+- Todo mundo tem.
+- Todo mundo sempre terá;
+- O problema não é ter uma dívida -> O Problema é:
+- Não planejar como resolver a dívida;
+- Não agir seguindo esse plano -> Manter o Ritmo;
+- Não rever o plano -> O conhecimento caduca.
