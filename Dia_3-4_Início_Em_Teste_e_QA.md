@@ -19,48 +19,48 @@ Tópico 3 - Habilidades Pessoais do Testador/QA:
 Tópico 4 - Habilidades Interpessoais do Testador/QA:
 - Soft Skills:
 -> Habilidades Interpessoais:
-    Comunicação:
-        Ouvir, Falar, Postura Corporal, Ler, Escrever, Desenhar, Interpretar, Você não pode ser só um portador de más notícias;
+    - Comunicação:
+        - Ouvir, Falar, Postura Corporal, Ler, Escrever, Desenhar, Interpretar, Você não pode ser só um portador de más notícias;
 
-    Negociação:
-        Prazos, Recursos, Ganha-Ganha;
+    - Negociação:
+        - Prazos, Recursos, Ganha-Ganha;
 
-    Empatia:
-        Se colocar no lugar do outro; entender: Desejos, Necessidades, Dores, Restrições, Preferências, Hábitos e Costumes, Crenças;
+    - Empatia:
+        - Se colocar no lugar do outro; entender: Desejos, Necessidades, Dores, Restrições, Preferências, Hábitos e Costumes, Crenças;
 
 Tópico 5 - Trabalho em Equipe:
     -> Trabalhar em Equipe:     
-        Reuniões:
+        - Reuniões:
             Objetivo -> Progresso, Dúvidas, Decisões;
             No Início -> Planejamento;
             Durante -> Dailies;
             No Final -> Revisão -> Ok, Não Ok; Retrospectivas -> Lições Aprendidas;
 
-        Colaborar:
+        - Colaborar:
             Fazer junto; Saber ajudar; Saber receber ajuda; Receber feedback; Transparente -> Não omitir, deixar claro o quanto entende -> só sei que nada sei; Não tomar decisões pelo grupo; Não é ser bobo -> Aprenda a dizer "Não" quando necessário.
         
 Tópico 6 - Hard Skills:
-    Gerais:
+    - Gerais:
         Conhecer o Sistema Operacional; Office; E-mail -> Ler, Interpretar e Responder; Mensagens Instântaneas; Idiomas; Internet; Acesso Remoto; Videoconferência; Segurança.
 
-    Sobre o Negócio:
-        O que você testa?  
+    - Sobre o Negócio:
+        - O que você testa?  
             Banco; Seguradora; Comércio; indústria; Padrões -> Normas, Modelos, Avaliações, Certificações; Legislações; Usos e Costumes; Regras -> Explícitas, Implícitas; Como seus concorrentes fazem -> Concorrentes diretos e indiretos; Vivência o uso real do software por pelo menos 1 dia;
 
-    Sobre Tecnologia:
-        Programação:
+    - Sobre Tecnologia:
+        - Programação:
             Telecomunicações; Pode se tornar algo natural; Reino Unido -> Desde 2014 todas as crianças aprendem de forma obrigatória programação.
 
-        Telecomunicações:
+        - Telecomunicações:
             Protocolos, Meios, Redes.
 
-        Infraestrutura:
+        - Infraestrutura:
             Virtualização -> VM, Containers; Servidores; Indicadores -> CPU, Memória RAM, Discos; Equipamentos; Componentes.
 
-        Banco de Dados:
+        - Banco de Dados:
             Relacionais, Não Relacionais.
 
-        Sobre Teste e QA:
+        - Sobre Teste e QA:
             Planejar; Analisar; Modelar; Implementar/Preparar; 
 
             Executar -> Manual, Automatizada; 
