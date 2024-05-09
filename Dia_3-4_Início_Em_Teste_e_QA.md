@@ -19,61 +19,61 @@ Tópico 3 - Habilidades Pessoais do Testador/QA:
 Tópico 4 - Habilidades Interpessoais do Testador/QA:
 - Soft Skills:
 -> Habilidades Interpessoais:
-    - Comunicação:
-        - Ouvir, Falar, Postura Corporal, Ler, Escrever, Desenhar, Interpretar, Você não pode ser só um portador de más notícias;
+- Comunicação:
+    - Ouvir, Falar, Postura Corporal, Ler, Escrever, Desenhar, Interpretar, Você não pode ser só um portador de más notícias;
 
-    - Negociação:
-        - Prazos, Recursos, Ganha-Ganha;
+- Negociação:
+    - Prazos, Recursos, Ganha-Ganha;
 
-    - Empatia:
-        - Se colocar no lugar do outro; entender: Desejos, Necessidades, Dores, Restrições, Preferências, Hábitos e Costumes, Crenças;
+- Empatia:
+    - Se colocar no lugar do outro; entender: Desejos, Necessidades, Dores, Restrições, Preferências, Hábitos e Costumes, Crenças;
 
 Tópico 5 - Trabalho em Equipe:
-    -> Trabalhar em Equipe:     
-        - Reuniões:
-            Objetivo -> Progresso, Dúvidas, Decisões;
-            No Início -> Planejamento;
-            Durante -> Dailies;
-            No Final -> Revisão -> Ok, Não Ok; Retrospectivas -> Lições Aprendidas;
+-> Trabalhar em Equipe:     
+- Reuniões:
+    Objetivo -> Progresso, Dúvidas, Decisões;
+    No Início -> Planejamento;
+    Durante -> Dailies;
+    No Final -> Revisão -> Ok, Não Ok; Retrospectivas -> Lições Aprendidas;
 
-        - Colaborar:
-            Fazer junto; Saber ajudar; Saber receber ajuda; Receber feedback; Transparente -> Não omitir, deixar claro o quanto entende -> só sei que nada sei; Não tomar decisões pelo grupo; Não é ser bobo -> Aprenda a dizer "Não" quando necessário.
+- Colaborar:
+    Fazer junto; Saber ajudar; Saber receber ajuda; Receber feedback; Transparente -> Não omitir, deixar claro o quanto entende -> só sei que nada sei; Não tomar decisões pelo grupo; Não é ser bobo -> Aprenda a dizer "Não" quando necessário.
         
 Tópico 6 - Hard Skills:
-    - Gerais:
-        Conhecer o Sistema Operacional; Office; E-mail -> Ler, Interpretar e Responder; Mensagens Instântaneas; Idiomas; Internet; Acesso Remoto; Videoconferência; Segurança.
+- Gerais:
+    Conhecer o Sistema Operacional; Office; E-mail -> Ler, Interpretar e Responder; Mensagens Instântaneas; Idiomas; Internet; Acesso Remoto; Videoconferência; Segurança.
 
-    - Sobre o Negócio:
-        - O que você testa?  
-            Banco; Seguradora; Comércio; indústria; Padrões -> Normas, Modelos, Avaliações, Certificações; Legislações; Usos e Costumes; Regras -> Explícitas, Implícitas; Como seus concorrentes fazem -> Concorrentes diretos e indiretos; Vivência o uso real do software por pelo menos 1 dia;
+- Sobre o Negócio:
+    - O que você testa?  
+        Banco; Seguradora; Comércio; indústria; Padrões -> Normas, Modelos, Avaliações, Certificações; Legislações; Usos e Costumes; Regras -> Explícitas, Implícitas; Como seus concorrentes fazem -> Concorrentes diretos e indiretos; Vivência o uso real do software por pelo menos 1 dia;
 
-    - Sobre Tecnologia:
-        - Programação:
-            Telecomunicações; Pode se tornar algo natural; Reino Unido -> Desde 2014 todas as crianças aprendem de forma obrigatória programação.
+- Sobre Tecnologia:
+    - Programação:
+        Telecomunicações; Pode se tornar algo natural; Reino Unido -> Desde 2014 todas as crianças aprendem de forma obrigatória programação.
 
-        - Telecomunicações:
-            Protocolos, Meios, Redes.
+    - Telecomunicações:
+        Protocolos, Meios, Redes.
 
-        - Infraestrutura:
-            Virtualização -> VM, Containers; Servidores; Indicadores -> CPU, Memória RAM, Discos; Equipamentos; Componentes.
+    - Infraestrutura:
+        Virtualização -> VM, Containers; Servidores; Indicadores -> CPU, Memória RAM, Discos; Equipamentos; Componentes.
 
-        - Banco de Dados:
-            Relacionais, Não Relacionais.
+    - Banco de Dados:
+        Relacionais, Não Relacionais.
 
-        - Sobre Teste e QA:
-            - Planejar; Analisar; Modelar; Implementar/Preparar; 
+    - Sobre Teste e QA:
+        - Planejar; Analisar; Modelar; Implementar/Preparar; 
 
-            - Executar -> Manual, Automatizada; 
+        - Executar -> Manual, Automatizada; 
 
-            - Comunicar Defeitos (Como reproduzir o defeito, "Como encontrar de novo o bug" -> Evidências: Prints, Gravações); 
+        - Comunicar Defeitos (Como reproduzir o defeito, "Como encontrar de novo o bug" -> Evidências: Prints, Gravações); 
 
-            - Acompanhar os Defeitos -> Teste de Confirmação e Teste de Regressão;
+        - Acompanhar os Defeitos -> Teste de Confirmação e Teste de Regressão;
 
-            - Técnicas de Teste -> Quantos testes têm no cenário? Quais são os testes mais relevantes?
+        - Técnicas de Teste -> Quantos testes têm no cenário? Quais são os testes mais relevantes?
 
-            - Práticas; Processos -> Abordagens; 
+        - Práticas; Processos -> Abordagens; 
             
-            - Estratégias e Ferramentas.
+        - Estratégias e Ferramentas.
 
 Tópico 7 - Débito Técnico:
 - Todo mundo tem.
