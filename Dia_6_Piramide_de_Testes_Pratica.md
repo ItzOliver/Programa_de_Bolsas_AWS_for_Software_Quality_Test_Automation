@@ -35,11 +35,11 @@
                 - Dessa forma, você perde um grande benefício dos testes unitários: atuar como uma rede de segurança para alterações de código.
                 - O que você faz em vez disso? Não reflita sua estrutura interna de código nos testes unitários. Em vez disso, teste o comportamento observável. Pense sobre:
 
-                       - se eu inserir os valores x e y, o resultado será z?
+                    - se eu inserir os valores x e y, o resultado será z?
 
                     em vez de
 
-                       - se eu inserir x e y, o método chamará a classe A primeiro, depois chamará a classe B e retornará o resultado da classe A mais o resultado da classe B?
+                    - se eu inserir x e y, o método chamará a classe A primeiro, depois chamará a classe B e retornará o resultado da classe A mais o resultado da classe B?
                 
                 - Os métodos privados geralmente devem ser considerados um detalhe de implementação. É por isso que você nem deveria ter vontade de testá-los.
             
