@@ -16,4 +16,4 @@
         - "Os testes precisam ser regularmente atualizados, caso contrário eles se tornam ineficazes, tal qual um pesticida aplicado numa praga que já evoluiu e não é mais afetada por seus efeitos."
 
     - Saber diferenciar **Urgência** de **Importância**;
-        - Matriz de Eisenhower -> saber gerenciar o tempo para resolução de problemas e saber qual problema priorizar é essencial;
+        - Matriz de Eisenhower -> saber gerenciar o tempo para resolução de problemas e saber qual problema priorizar é essencial; 
