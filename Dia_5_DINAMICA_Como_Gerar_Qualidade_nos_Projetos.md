@@ -1,4 +1,9 @@
 - **Como Gerar Qualidade nos Projetos?**
+- Material desenvolvido durante a dinâmica de grupo realizada em conjunto pelos alunos:
+    - Eduarda Lazzaretti da Silva;
+    - Oliver Pereira de Almeida;
+    - Ricardo Enio Neckel.
+
     - Valorizar qualidade acima de prazo;
         - O rápido custa caro -> é melhor ter mais tempo para testar do que não testar o suficiente e acarretar em erros futuros;
         - É mais fácil corrigir desde o começo do que entregar um produto deficitário e depois ter que lidar com retrabalho;
