@@ -41,4 +41,4 @@
     - Já o nível de teste mais complexo e demorado (os de ponta a ponta), deve possuir menos testes (assim o deploy não fica travado por mais de 1h enquanto os testes estão sendo rodados);
     - Os testes de integração existem para os cenários que não podem ser cobertos por testes de ponta a ponta, e para cenários que os testes de unidade já cobrem muito bem.
 
-    | ----------- | Quantidade | Tempo para rodar | |----------|:-------------:|------:| | Ponta a ponta| 13 | ~ 15 min | |----------|:-------------:|------:| | Integração| ~ 3k | ~ 3 min | |----------|:-------------:|------:| | Unidade| ~ 6k | ~ 1 min |
+    | ----------- | Quantidade | Tempo para rodar | |----------|:-------------:|------:| | Ponta a ponta| 13 | ~ 15 min | | Integração| ~ 3k | ~ 3 min |  | Unidade| ~ 6k | ~ 1 min |
