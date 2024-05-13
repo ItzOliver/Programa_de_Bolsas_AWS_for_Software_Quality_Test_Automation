@@ -1,4 +1,4 @@
-Uma Breve História do Teste:
+**Uma Breve História do Teste:**
 - Século 19 -> Charles Babbage cria a primeira máquina de somar com a ajuda de Ada Lovelace, ele dizia que "É melhor tomar uma má decisão com dados do que tomar uma má decisão com dado nenhum.";
 - Entre 1840 e 1850, Ada envia uma carta a Charles informando que encontrou um defeito -> "Antes de existir computadores já existiam bugs";
 - No final do século 19 -> Herman Hollerith inventou as máquinas cartão perfurado -> Teste de caixa branca tem seu nome derivado da caixa dos cartões perfurados;
@@ -7,7 +7,7 @@ Uma Breve História do Teste:
 - Glenford Myers -> escreveu a Arte de Testar Software - "Bíblia do Software" -> "O custo de um defeito vai aumentando quanto mais tempo ele existe" -> "Um defeito que você encontra amanhã custa mais caro que um defeito encontrado hoje";
 - Emerson Rios -> Escreveu o livro "Base de Conhecimento em teste de software";
 
-Importância do Teste x Danos dos Bugs:
+**Importância do Teste x Danos dos Bugs:**
 - Danos dos Bugs:
     - Empresas/Organizações:
         - Atrasos;
@@ -31,7 +31,7 @@ Importância do Teste x Danos dos Bugs:
 
 -> Prejuízos Financeiros e de Imagem.
 
-Os 7 Fundamentos do Teste (ISTQB):
+**Os 7 Fundamentos do Teste (ISTQB):**
 - Teste Demonstra a Presença de Defeitos:
     - O teste pode demonstrar a presença de defeitos, mas não pode provar que eles não existem;
     - Teste reduz a probabilidade que os defeitos permaneçam em um software, mas mesmo se nenhum defeito for encontrado, não prova que ele esteja perfeito.
@@ -61,7 +61,7 @@ Os 7 Fundamentos do Teste (ISTQB):
     - Encontrar e consertar defeitos não ajuda se o sistema construído não atende às expectativas e necessidades dos usuários;
     - Exemplo: Microsoft Windows X IBM OS2.
 
-Diferença Entre Teste e QA:
+**Diferença Entre Teste e QA:**
 - Projetos anteriores devem prover lições aprendidas:
     - Entendimento da causa raiz dos defeitos encontrados;
     - Aprimorar os processos;
@@ -70,7 +70,7 @@ Diferença Entre Teste e QA:
 - Testes devem ser integrados como uma das atividades de garantia de qualidade;
 - Juntamente aos padrões de desenvolvimento, treinamento, análise de defeitos, e outras ações.
 
-Erro -> Defeito -> Falha:
+**Erro -> Defeito -> Falha:**
 - Software são feitos por pessoas para pessoas;
 - Pessoas cometem erros (enganos), que produzem defeitos(bugs) no código, em um software ou sistema ou em um documento;
 - Se um defeito no código for executado, o sistema falhará ao tentar fazer o que deveria (ou, em algumas vezes, o que não deveria), causando uma falha;

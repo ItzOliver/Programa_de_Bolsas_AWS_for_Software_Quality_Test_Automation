@@ -1,18 +1,18 @@
-Tipos de Testes Baseados na IEC/ISO 25010:
+**Tipos de Testes Baseados na IEC/ISO 25010:**
 - Evolui e Substitui a ISO 9126;
 - Conhecida como SQuaRE -> Systems and Software Quality Requeriments and Evaluation;
 - Analogia da camiseta -> O que faz uma camiste ter qualidade?
     - Tecido, caimento, durabilidade, não encolher, não esticar, não formar bolinhas, não desbotar, Etc.
 
-AF.U.C.C.E.M.P.S:
-- AF -> Adequação Funcional (Funcionalidade):
+**AF.U.C.C.E.M.P.S:**
+- **AF -> Adequação Funcional (Funcionalidade):**
     - Completude (Funcional);
         - Observar se tudo aquilo que foi solicitado para o software fazer, ele fez.
     - Correção (Funcional);
         - Então a correção funcional é ver se o resultado está certo.
     - Apropriado (a Funcionalidade).
 
-- U -> Usabilidade:
+- **U -> Usabilidade:**
     - Reconhecibilidade;
         - Facilitar que o usuário reconheça elementos e comportamentos;
     - Aprendizibilidade;
@@ -25,13 +25,13 @@ AF.U.C.C.E.M.P.S:
     - Acessibilidade;
         - Facilitar o acesso a todas as pessoa.
 
-- C -> Compatibilidade:
+- **C -> Compatibilidade:**
     - Coexistência;
         - Facilidade de coexistir;
     - Interoperabilidade;
         - Facilidade de Comunicar.
 
-- C -> Confiança:
+- **C -> Confiança:**
     - Maturidade;
         - Perceber e prevenir a falha antes que aconteça;
     - Disponibilidade;
@@ -41,12 +41,12 @@ AF.U.C.C.E.M.P.S:
     - Recuperabilidade;
         - Recuperar-se de falhas e travamentos.
 
-- E -> Eficiência (de desempenho):
+- **E -> Eficiência (de desempenho):**
     - Comportamento em relação ao tempo;
     - Utilização de recursos;
     - Capacidade -> de atender transações e usuários.
 
-- M -> Manutenibilidade:
+- **M -> Manutenibilidade:**
     - Modularidade;
         - Organizado em módulos;
     - Reusabilidade;
@@ -58,7 +58,7 @@ AF.U.C.C.E.M.P.S:
     - Testabilidade;
         - Facilidade de testar.
 
-- P -> Portabilidade:
+- **P -> Portabilidade:**
     - Adaptabilidade;
         - Facilidade de adaptar;
     - Instabilidade;
@@ -66,7 +66,7 @@ AF.U.C.C.E.M.P.S:
     - Substituibilidade;
         - Facilidade de substituir.
 
-- S -> Segurança:
+- **S -> Segurança:**
     - Confidencialidade;
     - Integridade;
     - Não repúdio;
