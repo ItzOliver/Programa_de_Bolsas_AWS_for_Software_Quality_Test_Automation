@@ -47,3 +47,15 @@
         | Ponta a ponta| 13 | ~ 15 min |
         | Integração| ~ 3k | ~ 3 min |
         | Unidade| ~ 6k | ~ 1 min |
+
+**Importante:**
+- O conceito da pirâmide de testes "decai" um pouco quando examinado de perto;
+- De um ponto de vista moderno a pirâmide de testes parece simplista demais e pode levar a problemas de interpretação;
+- Ainda assim, devido a sua essência simples, a pirâmide de testes serve como uma boa regra quando se trata de estabelecer seu próprio conjunto de testes, a melhor coisa a se fazer é lembrar de dois pontos importantes da pirâmide:
+    - Escreva testes com diferentes níveis de granulidade;
+    - Quanto mair alto-nível você estiver, menos testes você deve ter;
+
+- **Atenha-se ao formato de pirâmide** para criar um conjunto de testes saudável, rápido e de fácil manutenção;
+    - Escreva muitos testes de unidade pequenos e rápidos;
+    - Escreva alguns testes mais granulares;
+    - E escreva poucos testes de alto nível que testem seu aplicativo de ponta a ponta.
