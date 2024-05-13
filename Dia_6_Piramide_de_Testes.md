@@ -42,8 +42,8 @@
     - Os testes de integração existem para os cenários que não podem ser cobertos por testes de ponta a ponta, e para cenários que os testes de unidade já cobrem muito bem.
 
 
-    |  | Quantidade | Tempo para rodar | 
-    |----------|:-------------:|------:|
-    | Ponta a ponta| 13 | ~ 15 min |
-    | Integração| ~ 3k | ~ 3 min |
-    | Unidade| ~ 6k | ~ 1 min |
+        |  | Quantidade | Tempo para rodar | 
+        |----------|:-------------:|------:|
+        | Ponta a ponta| 13 | ~ 15 min |
+        | Integração| ~ 3k | ~ 3 min |
+        | Unidade| ~ 6k | ~ 1 min |
