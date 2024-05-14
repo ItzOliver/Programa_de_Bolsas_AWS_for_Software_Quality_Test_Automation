@@ -26,3 +26,4 @@
     | - Documentação abrangente | - Produto que funciona |
     | - Negociação de contrato | - Colaboração com o cliente |
     | - Projetos de escopo sujeito a poucas mudanças. Ex: Contrução de uma ponte | - Indicados para projetos que podem ser pensados e repensados, que possuem escopo não especificado durante seu desenvolvimento. Ex: Desenvolvimento de Software |
+

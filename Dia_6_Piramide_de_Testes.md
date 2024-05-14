@@ -43,7 +43,7 @@
 
 
         |  | Quantidade | Tempo para rodar | 
-        |----------|:-------------:|------:|
+        |:----------:|:-------------:|:------:|
         | Ponta a ponta| 13 | ~ 15 min |
         | Integração| ~ 3k | ~ 3 min |
         | Unidade| ~ 6k | ~ 1 min |
