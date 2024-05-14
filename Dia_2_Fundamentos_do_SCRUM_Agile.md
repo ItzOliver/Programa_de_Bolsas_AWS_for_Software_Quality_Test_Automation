@@ -18,7 +18,7 @@
     **Manifesto Ágil:** Declaração de princípios;
 
     | Metodologia Tradicional | Metodologia Ágil |
-    |----------|:-------------:|
+    |:----------:|:-------------:|
     | - Dirigido por planejamento | - Dirigido por valores |
     | - Seguir um plano | - Responder mudanças |
     | - Processos | - Indivíduos |
