@@ -46,3 +46,8 @@
         - 5. Defina as tarefas não-importantes e não-urgentes:
             - Por fim, você deverá assinalar no quarto quadrante todas as tarefas que não são importantes, nem urgentes. Essa etapa é importante para entender com o que você não deve perder seu tempo;
             - As tarefas deste último quadrante podem ser descartadas ou executadas a longo prazo, sem pressa.
+
+        |  | Pouco Importante | Muito Importante | 
+        |----------|:-------------:|------:|
+        | Muito Urgente| Delegue | Faça imediatamente |
+        | Pouco Urgente| Descarte | Planeje |
