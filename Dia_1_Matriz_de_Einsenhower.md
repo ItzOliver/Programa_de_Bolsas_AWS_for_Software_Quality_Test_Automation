@@ -50,4 +50,4 @@
         |  | Pouco Importante | Muito Importante | 
         |----------|:-------------:|------:|
         | Muito Urgente| Delegue | Faça imediatamente |
-        | Pouco Urgente| Descarte | Planeje |
+        | Pouco Urgente| Descarte | Planeje  |
