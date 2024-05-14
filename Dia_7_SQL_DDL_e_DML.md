@@ -80,4 +80,26 @@
             **DELETE FROM** products
             **WHERE** id = 6;
 
-    
+- **COMO CRIAR UMA CHAVE PRIMÁRIA:**
+    - Primeiro caso:
+        **CREATE TABLE** products (
+            id int **PRIMARY KEY**,
+            name varchar(60),
+            description varchar(150),
+            category varchar(40),
+            price numeric(10,2),
+            in_stock boolean
+        );
+
+    - Segundo caso (tabela já criada):
+        **ALTER TABLE** products
+        **ADD CONSTRAINT** products_pk **PRIMARY KEY**(id);
+
+- **COMO REMOVER UMA CHAVE PRIMÁRIA:**
+    **ALTER TABLE** products
+    **DROP CONSTRAINT** products_pk;
+
+- Existem dois tipos de chamve primária:
+    - Natural key: um campo que já existe na tabela;
+    - Surrogate key: um campo criado para representar a chave.
+        - Na esmagadora maioria das vezes usamos uma surrogate key númerica (id).
