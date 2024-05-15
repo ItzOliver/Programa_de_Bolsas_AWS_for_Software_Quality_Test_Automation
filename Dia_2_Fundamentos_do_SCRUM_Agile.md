@@ -73,3 +73,13 @@
         - Acertos e erros são registrados;
         - Documente qual foi a lição aprendida com o acerto/erro;
         - Apresentar a lição aprendida pra equipe sem apontar culpados e ensinar qual é a forma correta de agir.
+
+- **Vantagens do SCRUM:**
+    - O ambiente que o Scrum gera é muito propício para o trabalho em equipe;
+    - Alta produtividade;
+    - Incremental;
+        - Entrega de valor;
+        - Feedback rápido;
+        - Flexível a mudanças;
+        - Erros em estágios iniciais;
+        - Satisfação do cliente.
