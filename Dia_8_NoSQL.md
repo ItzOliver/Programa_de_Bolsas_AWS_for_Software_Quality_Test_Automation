@@ -5,14 +5,15 @@
 
 - **Como inserir dados:**
     - Inserir dados sem criar um collection irá criar a collection, se não existir banco também criará o banco;
-        Exemplo:
-            db.pessoas.insertOne({ nome: "Matheus", idade: 30, profissao: "Programador", esta_empregado: true });
+        - Exemplo:
+            - db.pessoas.insertOne({ nome: "Matheus", idade: 30, profissao: "Programador", esta_empregado: true });
 
-            db -> banco de dados atual;
-            pessoas -> collection;
-            insertOne -> método;
-        Exemplo2:
-            db.pessoas.insertMany([
+            - db -> banco de dados atual;
+            - pessoas -> collection;
+            - insertOne -> método;
+            
+        - Exemplo2:
+            - db.pessoas.insertMany([
                 { nome: "João", idade: 40, profissao: "Arquiteto", esta_empregado: false },
                 { nome: "Maria", idade: 23, profissao: "Professora", esta_empregado: true }
             ]);
