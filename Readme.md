@@ -15,3 +15,7 @@ Os documentos presentes nesse repositório foram elaborados ao longo dos dias da
 - Pirâmide de testes
 - Myers e o princípio de Pareto
 - Fundamentos de CyberSecurity
+
+# Organização
+
+O Conteúdo dessa Sprint foi separado em diferentes documentos por dias e assuntos. Desse modo, foi desenvolvimento um documento diferente para documentar cada tópico de estudo e cada realização das atividades e exercícios propostos.
