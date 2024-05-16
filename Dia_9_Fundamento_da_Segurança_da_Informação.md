@@ -32,4 +32,8 @@ Queremos que os dados estejam disponíveis para o que for necessário, quando pr
 ### Política de Segurança da Informação (PSI)
 Na PSI estão as boas práticas a serem seguidas para proteger as informações, tudo que estiver contrário a isso deve ser considerado um incidente de segurança e deve ser reportado ao time InfoSec.
 A Compass, assim como todas as demais empresas do grupo, segue atualmente as orientações da PSI publicada pelo Grupo UOL que diz:
->  'A política de Segurança da Informação e Segurança Cibernética pretende (i) descrever as melhores práticas de Segurança da Informação e Segurança Cibernética quanto à confidencialidade, integridade e disponibilidade de informações; (ii) estabelecer diretrizes para todos os usuários, e (iii) minimizar os riscos de Segurança da Informação.'
+>  "A política de Segurança da Informação e Segurança Cibernética pretende (i) descrever as melhores práticas de Segurança da Informação e Segurança Cibernética quanto à confidencialidade, integridade e disponibilidade de informações; (ii) estabelecer diretrizes para todos os usuários, e (iii) minimizar os riscos de Segurança da Informação."
+
+### Política de Classificação da Informação
+Para definir o controle mais adequado é necessário conhecer o tipo de informação, a sua criticidade e o público.
+> "Essa política descreve o processo de classificação da informação, caracterizado pela definição do nível de sensibilidade e os grupos de acesso à informação, visando assegurar que esta receba um nível adequado de proteção, conforme seu valor, sensibilidade e criticidade para a organização."
