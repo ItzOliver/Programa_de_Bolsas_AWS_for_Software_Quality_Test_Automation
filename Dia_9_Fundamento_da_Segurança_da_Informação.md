@@ -28,3 +28,8 @@ Queremos que os dados estejam disponíveis para o que for necessário, quando pr
     - Gestão de vulnerabilidades.
 **A qualquer hora que preicse!**
 
+## A segurança da informação é responsabilidade de todos!
+### Política de Segurança da Informação (PSI)
+Na PSI estão as boas práticas a serem seguidas para proteger as informações, tudo que estiver contrário a isso deve ser considerado um incidente de segurança e deve ser reportado ao time InfoSec.
+A Compass, assim como todas as demais empresas do grupo, segue atualmente as orientações da PSI publicada pelo Grupo UOL que diz:
+>  'A política de Segurança da Informação e Segurança Cibernética pretende (i) descrever as melhores práticas de Segurança da Informação e Segurança Cibernética quanto à confidencialidade, integridade e disponibilidade de informações; (ii) estabelecer diretrizes para todos os usuários, e (iii) minimizar os riscos de Segurança da Informação.'
