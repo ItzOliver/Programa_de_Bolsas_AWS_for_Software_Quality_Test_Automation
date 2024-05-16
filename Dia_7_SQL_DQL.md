@@ -84,9 +84,12 @@
             - FROM PEDIDOS
             - GROUP BY CODCLIENTE 
         - O comando acima retorna o maior valor de pedido de cada cliente. Observe o resultado:
-            - SELECT CODCLIENTE, COUNT(*)
-            - FROM PEDIDOS
-            - GROUPY BY CODCLIENTE
+            SELECT CODCLIENTE, COUNT(*)
+            &nbsp;
+            FROM PEDIDOS
+            &nbsp;
+            GROUPY BY CODCLIENTE
+            &nbsp;
         - Acima vemos quantos pedidos foram feitos por cada cliente.
         
     - **HAVING:**

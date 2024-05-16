@@ -20,3 +20,5 @@ Os documentos presentes nesse repositório foram elaborados ao longo dos dias da
 
 O Conteúdo dessa Sprint foi separado em dias e assuntos por diferentes documentos. 
 Desse modo, foi desenvolvido um documento diferente para documentar cada tópico de estudo e cada realização das atividades e exercícios propostos.
+
+# Agradecimentos
