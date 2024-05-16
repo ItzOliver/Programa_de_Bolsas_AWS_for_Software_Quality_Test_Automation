@@ -1,3 +1,5 @@
+# EXERCÍCIO PRÁTICO DE NoSQL
+
 - **Com Base Nos Usuários Listados:**
 
     - 1) Realizar uma consulta que conte o número de registros existentes;

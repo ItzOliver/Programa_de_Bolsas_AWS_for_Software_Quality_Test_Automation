@@ -1,4 +1,4 @@
-**O que é o Git?**
+# O que é o Git?
 - O Git é um sistema distribuído opensource de controle de versão – o mais popular do mundo, diga-se de passagem;
     - Ser opensource significa que o Git é um software de livre utilização, ou seja, permite que qualquer pessoa com conhecimentos de programação use-o, modifique-o e aprimore-o;
     - Dizer que o Git faz controle de versões é a mesma coisa que dizer que ele armazena conteúdo e mantém um histórico das alterações feitas nele (seja por um usuário só ou muitos);
@@ -7,7 +7,7 @@
 - Apesar de ser usado para registrar o histórico de edições de qualquer tipo de arquivo, incluindo trabalhos de TCC e monografias de doutorado, a adoção mais ampla desta ferramenta se dá na área de desenvolvimento de software;
 - Dentro deste universo, o objetivo do Git é registrar todas as mudanças feitas no código-fonte de um projeto, evitando que algo importante se perca no meio do caminho.
 
-**Os 13 Comandos Git mais usados:**
+# Os 13 Comandos Git mais usados:
 - **git init:**
     - Para começar um projeto que ainda não seja um repositório (ou repo), o Git Init costuma ser o comando mais indicado;
     - Basicamente, ele cria um repositório vazio ou transforma uma pasta que você já tem e que não está com controle de versão em um repositório:

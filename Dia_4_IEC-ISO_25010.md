@@ -1,10 +1,10 @@
-**Tipos de Testes Baseados na IEC/ISO 25010:**
+# Tipos de Testes Baseados na IEC/ISO 25010
 - Evolui e Substitui a ISO 9126;
 - Conhecida como SQuaRE -> Systems and Software Quality Requeriments and Evaluation;
 - Analogia da camiseta -> O que faz uma camiste ter qualidade?
     - Tecido, caimento, durabilidade, não encolher, não esticar, não formar bolinhas, não desbotar, Etc.
 
-**AF.U.C.C.E.M.P.S:**
+## AF.U.C.C.E.M.P.S:
 - **AF -> Adequação Funcional (Funcionalidade):**
     - Completude (Funcional);
         - Observar se tudo aquilo que foi solicitado para o software fazer, ele fez.

@@ -1,3 +1,4 @@
+# Fundamentos do SCRUM
 - **Antes do Ágil, Entenda a Gestão Tradicional de Projetos:**
     - Foco no planejamento de tudo que será realizado **do início ao fim** do projeto;
     - Envolve muita documentação;

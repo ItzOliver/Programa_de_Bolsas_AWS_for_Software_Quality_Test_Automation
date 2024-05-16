@@ -1,4 +1,4 @@
-- **Como Gerar Qualidade nos Projetos?**
+# Como Gerar Qualidade nos Projetos?
 - Material desenvolvido durante a dinâmica de grupo realizada em conjunto pelos alunos:
     - Eduarda Lazzaretti da Silva;
     - Oliver Pereira de Almeida;

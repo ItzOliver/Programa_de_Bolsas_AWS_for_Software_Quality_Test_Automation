@@ -1,7 +1,7 @@
-- **SQL:**
-    - O que é SQL?
-        - SQL (Structured Query Language) é um conjunto de comandos de manipulação de banco de dados para criar e manter a estrutura desse banco de dados, além de incluir, excluir, modificar e pesquisar informações nas tabelas dele;
-        - É uma linguagem declarativa, ou seja, especifica-se o que deve ser feito e não como deve ser feito;
+# **SQL
+- O que é SQL?
+    - SQL (Structured Query Language) é um conjunto de comandos de manipulação de banco de dados para criar e manter a estrutura desse banco de dados, além de incluir, excluir, modificar e pesquisar informações nas tabelas dele;
+    - É uma linguagem declarativa, ou seja, especifica-se o que deve ser feito e não como deve ser feito;
 
     - **Subconjuntos da linguagem SQL:**
         - **DDL** (Data Definition Language)

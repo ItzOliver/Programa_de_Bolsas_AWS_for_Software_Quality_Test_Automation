@@ -1,8 +1,8 @@
-**Fundamentos do Teste**
+# Fundamentos do Teste
 - Conforme o projeto avança no desenvolvimento, os testes também avançam junto.
     - Enquanto o time do desenvolvimento está trabalhando no projeto a equipe de testes já pode começar a planjear e projetar os testes a fim de garantir qualidade.
 
-- **Pirâmide de testes;**
+## Pirâmide de testes
  - **Teste unitário ou Teste de unidade:**
     - Verificam o funcionamento da menor unidade de código testável da aplicação, independente da interação dela com outras partes do código;
     - A unidade geralmente é vista como um método público em uma classe (quando falamos em Orientação a Objetos), mas pode ser vista também como um conjunto de classes/métodos/objetos interagindo entre si;

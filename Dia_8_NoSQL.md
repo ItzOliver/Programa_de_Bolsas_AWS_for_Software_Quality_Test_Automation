@@ -1,4 +1,4 @@
-- **NoSQL MongoDB:**
+# NoSQL MongoDB
 
 - No MongoDB não temos tabelas, temos collections.
 - No MongoDB "não temos queries", utilizamos métodos -> Como em linguagens orientadas a objeto.
