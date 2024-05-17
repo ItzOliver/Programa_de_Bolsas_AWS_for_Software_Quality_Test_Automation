@@ -124,8 +124,22 @@ Somos todos do mundo de tecnologia, e queremos sempre o melhor, o mais novo, o �
 - Tentativas não autorizadas de acesso;
 - Compartilhamento de credenciais.
 ## Como relatar um incidente?
-
+Temos papel fundamental aqui, pois ao relatar um incidente que foi alvo ou presenciou, abre o caminho para que o time InfoSec analise e envolva quem for necessário para corrigir e reduzir a chance de que ocorra novamente.
+Por isso, caso seja identificado um incidente de segurança relate imediatamente seja de forma identificada ou anônima ao time InfoSec.
+Reporte identificado: https://compasso.atlassian.net/servicedesk/customer/portal/100
+Reporte anônimo: https://forms.office.com/r/aPFSTtMQy4
 ## Redes Wi-fi
+Inúmeras vezes colocamos em risco nossas informações como senhas, históricos de navegação, e-mails, mensagens, dados e arquivos, simplesmente por utilizarmos um hotspot desconhecido, gratuito ou até mesmo com nomes muito convincentes ou semelhantes aos que costumamos usar. É possível que alguém mal intencionado esteja bisbilhotando todos os pacotes que trafegam naquela rede aberta.
+### Dicas valiosas para redes Wi-fi públicas e dosméticas
 ### Em redes públicas:
-
+- Evite se conectar a redes abertas;
+- Utilize uma VPN confiável, assim seus dados são criptografados em trânsito e protege a privacidade caso os pacotes sejam interceptados;
+- Desative a opção de conexão automática nas redes Wi-fi públicas. Assim consegue escolher onde se conectar;
+- Desabilite o compartilhamento de arquivos e impressoras, isso reduz o risco de acesso não autorizado;
+- Não instale APPs que prometem quebrar senhas ou descobri-las para conectar a redes Wi-fi protegidas.
 ### Em sua rede doméstica: 
+- Em seu roteador, configure uma senha forte, troque-a periodicamente, utilize os padrões WPA2 ou WPA3;
+- Mantenha o firmware atualizado, aqui a atualização automática pode te ajudar muito;
+- Mude os padrões de fábrica como o nome da sua rede (SSID) e as credenciais de administrador do roteador;
+- Desabilite o acesso remoto ao roteador para para manutenção;
+- Fique atento aos sites onde vai inserir informações confidenciais, confique que utilizam conexões seguras (https).
