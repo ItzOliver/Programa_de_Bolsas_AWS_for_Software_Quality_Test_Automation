@@ -61,6 +61,67 @@ Pratique tudo ao contrário e estará seguro. Segurança depende de cada uma das
 - A8: Injection
 - A9: Improper Assets Management
 - A10: Insufficient Logging & Monitoring
-# Segurança da rede Wifi Doméstica
-##
+# Segurança de rede Wifi Doméstica
+## Quais são as Ameaças na rede Doméstica?
+- Sequestro de DNS
+- Botnets e Proxy
+- Monitoramento de trafego
+- Vazamento de Dados pessoais e senhas
+## Como podemos nos precaver e defender dessas ameaças?
+Dentro da Interface do roteador podemos:
+- Alterar as informações padrão do roteador
+- Utilizar o WPA2 e AES256
+- Alterar periodicamente o nome da rede e a senha
+- Recomendamos ativar o firewall do roteador pessoal
+- Bloquear dispositivos desconhecidos
+- Ocultar o nome de rede
+- Recomendamos atualizar firmware dos equipamentos
+## PAra o Home-office, como se blindar?
+- Evitar acessar o ambiente de trabalho em redes publicas/inseguras
+- Uso de senhas fortes
+- Sempre verificar se o antivírus esta ativo e atualizado
+- Sempre atualizar o sistema com os patchs disponíveis pela empresa
+- Alterar as senhas periodicamente
+- Nunca compartilhar usuários/senhas
 # Segurança Digital - Dicas para se proteger no dia-a-dia
+## Boas Senhas
+**As senhas longas são mais fortes**, então use uma que tenha pelo menos 12 caracteres.
+Para criar senhas mais longas e mais fáceis de memorizar tente usar:
+- A letra de uma música ou de um poema;
+- Uma fala importante de um filme ou discurso;
+- O trecho de um livro;
+- Uma série de palavras significativas para você;
+- Uma abreviação: crie uma senha usando a primeira letra de cada palavra de uma frase;
+- Customize sua senha com a inclusão de caracteres especiais, números, letras maiúsculas e/ minúsculas.
+## Use um gerenciador de senhas
+Um **gerenciador de senhas** é um aplicativo projetado especificamente para armazenar dados de login em um "cofre" criptografado e gerar **senhas** complexas, fazendo com que seja bastante simples criar e guardar uma senha esclusiva e forte para diversas contas on-line.
+Recomendações de APPs: lastpass e bitwarden.
+## MFA ALL THE THINGS
+A autenticação multifator (MFA) é o processo pelo qual várias tecnologias são usadas para autenticar a identidade do usuário.
+Dê preferência para aplicativos (ou hardware) de OTP.
+## Cuidados com Phishing
+- Parta da premissa de que e-mail é um canal hostil
+- Procure por sinais de fraude (remetente, erros de grafia no texto, utilização de encurtadores, etc)
+- Verifique os Links
+## Antivírus
+- Tenha um antivírus instalado em seu computador
+- Certifique-se de que ele está configurado para baixar as atualizações automaticamente
+- Se necessário crie exceções para aplicativos, processos e diretórios (whitelist)
+## Manter software atualizado
+- Certifique-se que seu sistema operacional está configurado para baixar e instalar as atualizações automaticamente e em horários programados
+- Periodicamente faça o mesmo procedimento para os aplicativos que você utiliza
+## Backup
+- Defina quais são os seus arquivos importantes e/ou faça um backup de tudo
+- Escolha as abordagens que mais se adequam as suas necessidades e estilo (ponto de restore, backup físico, rede, cloud, criptografia)
+## Segurança Navegador
+- Use addons para bloquear conteúdos maliciosos relacionados a segurança
+## Privacidade
+- Parta de premissa de que os dados que você coloca na internet podem "vazar"
+- Não se esqueça de que a internet não esquece
+- Utilize os recursos para limitar o acesso de seus dados apenas a pessoas conhecidas, ou mais próximas, dentro de suas redes sociais
+## Transações $ Na Internet
+- Utilize sites confiáveis de ecommerce
+- Quando possível opte pelas modalidades onde o pagamento é liberado mediante recebimento do produto
+- Valide o beneficiário final do boleto
+- Faça uso do cartão virtual
+- Toda comunicação transacional deve ser confirmada no site onde a compra foi efetuada (não confie no email)
