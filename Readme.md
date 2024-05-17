@@ -3,6 +3,11 @@
 Este repositório documenta o estudo e o desenvolvimento de todas as atividades realizadas durante a Sprint 1 da trilha de QA do Programa de Bolsas da Compass.UOL.
 Os documentos presentes nesse repositório foram elaborados ao longo dos dias da Sprint 1 e só foram possíveis graças à ajuda e orientação de colegas e mentores.
 
+# Organização
+
+O Conteúdo dessa Sprint foi separado em pastas, cada pasta representando um dia diferente e, dentro de cada pasta, os assuntos foram separados em diferentes arquivos.
+Desse modo, foi desenvolvido um documento diferente para documentar cada tópico de estudo e cada realização das atividades e exercícios propostos.
+
 # Nessa Sprint foi estudado
 
 - Comunicação em projetos
@@ -28,9 +33,5 @@ Os documentos presentes nesse repositório foram elaborados ao longo dos dias da
 - [Dia 9](https://github.com/ItzOliver/Sprint1/tree/main/Dia%209)
 - [Dia 10]()
 
-# Organização
-
-O Conteúdo dessa Sprint foi separado em dias e assuntos por diferentes documentos. 
-Desse modo, foi desenvolvido um documento diferente para documentar cada tópico de estudo e cada realização das atividades e exercícios propostos.
-
 # Agradecimentos
+Gostaria de agradecer a todos os colegas e mentores pela ajuda e orientação dadas ao longo da Sprint
