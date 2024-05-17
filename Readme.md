@@ -17,8 +17,7 @@ Os documentos presentes nesse repositório foram elaborados ao longo dos dias da
 - Fundamentos de CyberSecurity
 
 # Índice
-[Dia 1]
-(https://github.com/ItzOliver/Sprint1/tree/main/Dia%201)
+[Dia 1](https://github.com/ItzOliver/Sprint1/tree/main/Dia%201)
 
 
 # Organização
