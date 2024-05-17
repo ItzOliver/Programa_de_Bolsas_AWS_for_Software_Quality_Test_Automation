@@ -126,8 +126,6 @@ Somos todos do mundo de tecnologia, e queremos sempre o melhor, o mais novo, o �
 ## Como relatar um incidente?
 Temos papel fundamental aqui, pois ao relatar um incidente que foi alvo ou presenciou, abre o caminho para que o time InfoSec analise e envolva quem for necessário para corrigir e reduzir a chance de que ocorra novamente.
 Por isso, caso seja identificado um incidente de segurança relate imediatamente seja de forma identificada ou anônima ao time InfoSec.
-Reporte identificado: https://compasso.atlassian.net/servicedesk/customer/portal/100
-Reporte anônimo: https://forms.office.com/r/aPFSTtMQy4
 ## Redes Wi-fi
 Inúmeras vezes colocamos em risco nossas informações como senhas, históricos de navegação, e-mails, mensagens, dados e arquivos, simplesmente por utilizarmos um hotspot desconhecido, gratuito ou até mesmo com nomes muito convincentes ou semelhantes aos que costumamos usar. É possível que alguém mal intencionado esteja bisbilhotando todos os pacotes que trafegam naquela rede aberta.
 ### Dicas valiosas para redes Wi-fi públicas e dosméticas
@@ -143,3 +141,24 @@ Inúmeras vezes colocamos em risco nossas informações como senhas, históricos
 - Mude os padrões de fábrica como o nome da sua rede (SSID) e as credenciais de administrador do roteador;
 - Desabilite o acesso remoto ao roteador para para manutenção;
 - Fique atento aos sites onde vai inserir informações confidenciais, confique que utilizam conexões seguras (https).
+
+# Módulo 4 - Segurança em IA Generativa
+## O que é IA generativa?
+IA generativa é um subcampo da IA que se concentra na criação de novos conteúdos, dados ou informações como texto, imagens, vídeos, música ou código, a partir de um conjunto de entradas existentes.
+Os algoritmos de IA aprendem com os dados fornecidos e são capazes de gerar saídas semelhantes, mas não idênticas, com base no conhecimento adquirido durante o treinamento.
+## Ambiente e utilização de ferramentas IA
+Utilize ferramentas homologadas e licenças comerciais em ambiente corporativo, e isso não significa você mesmo comprar uma licença.
+É proibido o uso dessas ferramentas para uso pessoal, atividades ilegais, fraudulentas, danos físicos e econômicos, violação de privacidade ou que contrariam a política de segurança da informação.
+## Como proteger os dados e informações
+Quando buscar apoio de uma IA generativa para melhorar ou agilizar seu trabalho é vital lembrar de proteger as informações de clientes ou da empresa que esteja trabalhando.
+- Remova dados pessoais, senhas ou tokens das consultas que enviar, independente que sejam dados de ambientes de desenvolvimento ou de produção;
+- Quando possível utilize mascaramento de dados;
+- Troque nas consultas qualquer dado real de clientes ou da empresa, como nomes próprios das empresas, comentários de código, casos reais.
+## Controles mínimos de segurança
+Todas as ferramentas de IA devem atender requisitos mínimos de segurança tais como os controles tecnológicos, gestão de acessos, monitoramento, documentação e revisão dos processos e capacitação das pessoas.
+Lembre-se dos processos do seu dia a dia!
+- Homologação para validar os controles técnicos;
+- Análise de riscos;
+- Utilizar o Jira para solicitação de acessos às ferramentas de IA;
+- Documentar no Sharepoint ou Confluence os manuais de processos para utilização das ferramentas de IA;
+- Realizar os treinamentos obrigatórios e particar das ações de capacitação e conscientização sobre o tema.
