@@ -5,7 +5,7 @@ EXERCÍCIOS REALIZADOS NO SITE sqliteonline.com
 - **COM BASE NA TABELA USUÁRIOS:**
     1) Realizar uma consulta que conte o número de registros na tabela.
         - Resposta: 
-            - Comando: SELECT COUNT(nome) FROM usuarios;
+            - Comando: "SELECT COUNT(nome) FROM usuarios;"
 
     2) Realizar uma consulta para encontrar o usuário com id 10.
         - Resposta:
