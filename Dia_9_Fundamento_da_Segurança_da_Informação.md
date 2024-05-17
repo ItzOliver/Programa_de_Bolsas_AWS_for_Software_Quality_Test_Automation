@@ -128,4 +128,4 @@ Somos todos do mundo de tecnologia, e queremos sempre o melhor, o mais novo, o �
 ## Redes Wi-fi
 ### Em redes públicas:
 
-### Em sua rede doméstica:
+### Em sua rede doméstica: 
