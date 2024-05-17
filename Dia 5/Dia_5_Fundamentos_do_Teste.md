@@ -18,7 +18,9 @@
 - Teste: Execução dos testes pode mostrar falhas causadas por defeitos no software.
 - Depuração do código: É a atividade de desenvolvimento que localiza, analise e corrige esses defeitos.
 - Testes de confirmação: Verificam se as correções resolveram os defeitos
+
 &nbsp;
+
 - Por via de regra, o mais usual é que o testador foque nas atividades de 'teste' e 'teste de confirmação', enquanto o desenvolvedor fique com a responsabilidade de depurar o código.
 ### EFICIÊNCIA X EFICÁCIA
 - O desafio do teste de software é alcançar: Eficácia e Eficiência.
@@ -42,7 +44,9 @@ Defeito:
 - É o resultado do erro cometido
 Falha:
 - Um evento no qual um componente ou sistema não executa uma função necessária dentro dos limites especificados.
+
 &nbsp;
+
 - Um software pode conter defeitos e nunca falhar;
 - Falha é um evento;
 - Defeito é um estado do software causado por um erro;
@@ -130,7 +134,9 @@ O desenvolvimento de software, incluindo os testes de software, envolve seres hu
 - Um bom testador deve ter respeito com sensibilidade e ser atencioso com os outros ao fornecer feedback ou discutir falhas.
 ## Conclusão
 > Testar é o processo consiste em todas as atividades de ciclo de vida, estáticas e dinâmicas, relacionadas ao planejamento, preparação e avaliação de produtos de software e produtos de trabalho relacionados, para determinar se satisfazem os requisitos especificados, demonstrando que são adequados à sua finalidade e para detectar defeito.
+
 &nbsp;
+
 - A confiabilidade do software aumenta à medida em que ele é executado ao longo do tempo, sem apresentarfalhas;
 - Testes de regressão precisam de atualizações de rotina;
 - Quanto maior o risco de perda, maior o investimento em testes;
@@ -142,5 +148,7 @@ O desenvolvimento de software, incluindo os testes de software, envolve seres hu
     - O produto não for utilizável;
     - O produto não atender às necessidades e expectativas dos usuários.
 - Teste de software não é um trabalho aleatório até descobrir bugs, mas um processo para assegurar a realização de um teste eficaz.
+
 &nbsp;
+
 **Conteúdo desenvolvido com base no material fornecido no Dia 5 - Fundamentos do teste de software**
