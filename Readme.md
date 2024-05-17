@@ -31,7 +31,7 @@ Desse modo, foi desenvolvido um documento diferente para documentar cada tópico
 - [Dia 7](https://github.com/ItzOliver/Sprint1/tree/main/Dia%207)
 - [Dia 8](https://github.com/ItzOliver/Sprint1/tree/main/Dia%208)
 - [Dia 9](https://github.com/ItzOliver/Sprint1/tree/main/Dia%209)
-- [Dia 10]()
+- [Dia 10](https://github.com/ItzOliver/Sprint1/tree/main/Dia%2010)
 
 # 🤝 Agradecimentos
 Gostaria de agradecer a todos os colegas e mentores pela ajuda e orientação dadas ao longo da Sprint. Em especial, gostaria de agradecer à Eduarda Lazzaretti da Silva e ao Ricardo Enio Neckel pela colaboração na dinâmica do dia 5 da Sprint. Também agradeço ao Davi Santos Santana pela ajuda e boa vontade nas vezes em que precisei de auxílio para resolver alguns problemas envolvendo Git.
