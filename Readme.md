@@ -22,16 +22,16 @@ Desse modo, foi desenvolvido um documento diferente para documentar cada tópico
 - Fundamentos de CyberSecurity
 
 # 📖 Índice
-- [Dia 1](https://github.com/ItzOliver/Sprint1/tree/main/Dia%201)
-- [Dia 2](https://github.com/ItzOliver/Sprint1/tree/main/Dia%202)
-- [Dia 3](https://github.com/ItzOliver/Sprint1/tree/main/Dia%203)
-- [Dia 4](https://github.com/ItzOliver/Sprint1/tree/main/Dia%204)
-- [Dia 5](https://github.com/ItzOliver/Sprint1/tree/main/Dia%205)
-- [Dia 6](https://github.com/ItzOliver/Sprint1/tree/main/Dia%206)
-- [Dia 7](https://github.com/ItzOliver/Sprint1/tree/main/Dia%207)
-- [Dia 8](https://github.com/ItzOliver/Sprint1/tree/main/Dia%208)
-- [Dia 9](https://github.com/ItzOliver/Sprint1/tree/main/Dia%209)
-- [Dia 10](https://github.com/ItzOliver/Sprint1/tree/main/Dia%2010)
+- [Dia 1](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%201)
+- [Dia 2](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%202)
+- [Dia 3](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%203)
+- [Dia 4](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%204)
+- [Dia 5](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%205)
+- [Dia 6](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%206)
+- [Dia 7](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%207)
+- [Dia 8](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%208)
+- [Dia 9](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%209)
+- [Dia 10](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/main/Sprint1/Dia%2010)
 
 # 🤝 Agradecimentos
 Gostaria de agradecer a todos os colegas e mentores pela ajuda e orientação dadas ao longo da Sprint. Em especial, gostaria de agradecer à Eduarda Lazzaretti da Silva e ao Ricardo Enio Neckel pela colaboração na dinâmica do dia 5 da Sprint. Também agradeço ao Davi Santos Santana pela ajuda e boa vontade nas vezes em que precisei de auxílio para resolver alguns problemas envolvendo Git.
