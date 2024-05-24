@@ -11,3 +11,5 @@
         - Ou seja, no primeiro momento a automação não vai conseguir fazer esse papel -> O teste manual não é excluído devido a automação. 
         - Nesse caso, existem equipes de testadores manuais/analistas de teste que vão realizar esses testes manuais em demandas novas e em um segundo momento essas demandas novas vão ter os cenários de testes avaliados -> No sentido de selecionar quais cenários de testes dessas demandas novas devem ser incluidos nas automações de testes.
             - As justificativas podem ser duas: Se essa demanda nova tornasse uma prioridade e se essa demanda nova, caso não esteja na automação, vai fazer com que a automação quebre.
+
+> A automação de testes não deve ser aleatória. Devemos seguir alguns critérios para escolher a prioridade de quais testes vamos automatizar. O foco é o retorno de valor para o time e para o projeto. 
