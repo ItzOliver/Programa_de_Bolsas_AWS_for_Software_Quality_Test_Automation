@@ -14,4 +14,5 @@ Quando estiver sendo feita a análise de uma documentção e quando estiver send
     - Features nos indicam padrões para desenvolvimento dividido em: Funcionalidades, contexto, esquemas dos cenários, exemplos e cenários.
 Utilizando a ferramenta XMind devemos montar um mapa mental, ao lado direito devemos colocar as rotas dos testes prioritários.
 ## Análise de Funcionalidades e Mapeamento de cenários
+![PadraoXMind.png](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/PadraoXMind.png?raw=true)
 Funcionalidades nos apresentam contextos, cenários e esquemas do cenário ou com diferentes casos de teste a serem executados.
