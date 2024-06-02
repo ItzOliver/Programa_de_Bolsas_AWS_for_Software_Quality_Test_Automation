@@ -70,11 +70,33 @@ O objetivo desse plano de testes é verificar e garantir que a rota de usuários
         - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail já estar sendo utilizado.
         - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
 
-    - **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
+    - **Caso de Teste 2.2 - Tentar Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
         - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
         - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail e/ou senha serem inválidos.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
 ### Teste de Busca de Usuário
-- **Cenário 1 - Realizar busca de usuário existente**
-    **Caso de Teste 1.1 - 
+- **Cenário 1 - Realizar busca de usuário válida**
+    - **Caso de Teste 1.1 - Tentar Buscar por Usuário Existente:**
+        - **Objetivo:** Garantir que usuários existentes possam ser buscados no sistema.
+        - **Pré-condições:** Não há.
+        - **Resultado Esperado:** Lista de usuários que satisfaçam a condição de busca (se houver). Status Code: 200 enviado.
+
+- **Cenário 2 - Realizar busca de usuário inválida**
+    - **Caso de Teste 2.1 - Tentar Buscar por Usuário Inexistente:**
+        - **Objetivo:** Garantir que o usuário receba um feedback caso busque por usuários inexistentes no sistema.
+        - **Pré-condições:** Usuário(s) buscados não existirem no sistema.
+        - **Resultado Esperado:** Mensagem dizendo "Usuário não encontrado". Status Code: 400 enviado.
+
+### Teste de Deleção de Usuário
+- **Cenário 1 - Realizar deleção de usuário válida**
+    - **Caso de Teste 1.1 - Tentar Deletar Usuário Existente:**
+        - **Objetivo:** Garantir que o usuário selecionado será deletado.
+        - **Pré-condições:** Possuir a autenticação necessária e usuário não pode possuir carrinho.
+        - **Resultado Esperado:** Mensagem dizendo "Registro Excluído | Nenhum registro excluído". Status Code: 200 enviado.
+
+- **Cenário 2 - Realizar deleção de usuário inválida**
+    - **Caso de Teste 1.1 - Tentar Deletar Usuário com Carrinho:**
+        - **Objetivo:** Garantir que o usuário selecionado não será deletado.
+        - **Pré-condições:** Possuir a autenticação necessária e usuário possuir carrinho.
+        - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir usuário com carrinho cadastrado". Status Code: 400 enviado.
