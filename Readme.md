@@ -9,10 +9,6 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 
 ### Resumo do problema:
 
-### Onde o problema foi encontrado:
-
-### Quem o problema afeta (empresa, cliente, usuários ou público no geral): 
-
 ### Resultado esperado:
 
 ### Resultado obtido:
