@@ -18,61 +18,62 @@ O objetivo desse plano de testes é verificar e garantir que a rota de usuários
 ## Cenários Macro na Suíte de Testes
 ### Testes de Criação de Usuário
 - **Cenário 1 - Criar usuário com campos válidos**
-    **Caso de Teste 1.1 - Todos os Campos Válidos:**
-    - **Objetivo:** Garantir que um usuário seja criado caso todos os campos preenchidos sejam válidos.
-    - **Pré-condições:** Não há.
-    - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 201 enviado.
+    - **Caso de Teste 1.1 - Todos os Campos Válidos:**
+        - **Objetivo:** Garantir que um usuário seja criado caso todos os campos preenchidos sejam válidos.
+        - **Pré-condições:** Não há.
+        - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 201 enviado.
 
 - **Cenário 2 - Criar usuário com campos inválidos**
-    **Caso de Teste 2.1 - E-mail já Utilizado:** 
-    - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
-    - **Pré-condições:** Tentar criar usuário com e-mail já utlizado.
-    - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
+    - **Caso de Teste 2.1 - E-mail já Utilizado:** 
+        - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
+        - **Pré-condições:** Tentar criar usuário com e-mail já utlizado.
+        - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
 
-    **Caso de Teste 2.2 - Provedor de E-mail Inválido:** 
-    - **Objetivo:** Garantir que um usuário não seja criado caso seu provedor de e-mail seja inválido.
-    - **Pré-condições:** Tentar criar usuário com e-mails de provedor gmail ou hotmail.
-    - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
+    - **Caso de Teste 2.2 - Provedor de E-mail Inválido:** 
+        - **Objetivo:** Garantir que um usuário não seja criado caso seu provedor de e-mail seja inválido.
+        - **Pré-condições:** Tentar criar usuário com e-mails de provedor gmail ou hotmail.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
-    **Caso de Teste 2.3 - Senha Inválida:** 
-    - **Objetivo:** Garantir que um usuário não seja criado caso sua senha seja inválida.
-    - **Pré-condições:** Tentar criar usuário com senha menor que 5 caracteres ou maior que 10.
-    - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
+    - **Caso de Teste 2.3 - Senha Inválida:** 
+        - **Objetivo:** Garantir que um usuário não seja criado caso sua senha seja inválida.
+        - **Pré-condições:** Tentar criar usuário com senha menor que 5 caracteres ou maior que 10.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
 ### Testes de Login de Usuário
 - **Cenário 1 - Realizar login com campos válidos**
-    **Caso de Teste 1.1 - Todos os Campos Válidos:** 
-    - **Objetivo:** Garantir que um usuário consiga realizar login desde que entre com credenciais válidas.
-    - **Pré-condições:** Ter realizado cadastro na plataforma.
-    - **Resultado Esperado:** Mensagem dizendo "Login realizado com sucesso" junto do Token de autenticação. Status code: 200 enviado.
+    - **Caso de Teste 1.1 - Todos os Campos Válidos:** 
+        - **Objetivo:** Garantir que um usuário consiga realizar login desde que entre com credenciais válidas.
+        - **Pré-condições:** Ter realizado cadastro na plataforma.
+        - **Resultado Esperado:** Mensagem dizendo "Login realizado com sucesso" junto do Token de autenticação. Status code: 200 enviado.
 
 - **Cenário 2 - Realizar login com campos inválidos**
-    **Caso de Teste 2.1 - E-mail e/ou Senha Inválidos:** 
-    - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
-    - **Pré-condições:** Tentar logar na plataforma com e-mail e/ou senha inválidos.
-    - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
+    - **Caso de Teste 2.1 - E-mail e/ou Senha Inválidos:** 
+        - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
+        - **Pré-condições:** Tentar logar na plataforma com e-mail e/ou senha inválidos.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
 
 ### Teste de Atualização de Dados de Usuário
 - **Cenário 1 - Realizar alteração com campos válidos**
-    **Caso de Teste 1.1 - Tentar Alterar Dados de Usuário Cadastrado:** 
-    - **Objetivo:** Garantir que um usuário possa ter seus dados alterados.
-    - **Pré-condições:** Possuir a autenticação necessária.
-    - **Resultado Esperado:** Mensagem dizendo "Registo alterado com sucesso". Status code: 200 enviado.
+    - **Caso de Teste 1.1 - Tentar Alterar Dados de Usuário Cadastrado:** 
+        - **Objetivo:** Garantir que um usuário possa ter seus dados alterados.
+        - **Pré-condições:** Possuir a autenticação necessária.
+        - **Resultado Esperado:** Mensagem dizendo "Registo alterado com sucesso". Status code: 200 enviado.
 
-    **Caso de Teste 1.2 - Tentar Alterar Dados de Usuário Não Cadastrado:** 
-    - **Objetivo:** Garantir que, caso não seja encontrado usuário com ID informado, é realizado novo cadastro ao invés de alteração.
-    - **Pré-condições:** Possuir a autenticação necessária e não existir usuário com ID informado.
-    - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 200 enviado.
+    - **Caso de Teste 1.2 - Tentar Alterar Dados de Usuário Não Cadastrado:** 
+        - **Objetivo:** Garantir que, caso não seja encontrado usuário com ID informado, é realizado novo cadastro ao invés de alteração.
+        - **Pré-condições:** Possuir a autenticação necessária e não existir usuário com ID informado.
+        - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 200 enviado.
 
 - **Cenário 2 - Realizar alteração com campos inválidos**
-    **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário Não Cadastrado com E-mail já Utilizado:**
-    - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
-    - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail já estar sendo utilizado.
-    - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
+    - **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário Não Cadastrado com E-mail já Utilizado:**
+        - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
+        - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail já estar sendo utilizado.
+        - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
 
-    **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
-    - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
-    - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 401 enviado.
+    - **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
+        - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
+        - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail e/ou senha serem inválidos.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
 ### Teste de Busca de Usuário
 - **Cenário 1 - Realizar busca de usuário existente**
