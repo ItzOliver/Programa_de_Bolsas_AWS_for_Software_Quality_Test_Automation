@@ -73,3 +73,7 @@ O objetivo desse plano de testes é verificar e garantir que a rota de usuários
     **Caso de Teste 2.1 - Tentar Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
     - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
     - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 401 enviado.
+
+### Teste de Busca de Usuário
+- **Cenário 1 - Realizar busca de usuário existente**
+    **Caso de Teste 1.1 - 
