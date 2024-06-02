@@ -99,4 +99,4 @@ O objetivo desse plano de testes é verificar e garantir que a rota de usuários
     - **Caso de Teste 1.1 - Tentar Deletar Usuário com Carrinho:**
         - **Objetivo:** Garantir que o usuário selecionado não será deletado.
         - **Pré-condições:** Possuir a autenticação necessária e usuário possuir carrinho.
-        - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir usuário com carrinho cadastrado". Status Code: 400 enviado.
+        - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir usuário com carrinho". Status Code: 400 enviado.
