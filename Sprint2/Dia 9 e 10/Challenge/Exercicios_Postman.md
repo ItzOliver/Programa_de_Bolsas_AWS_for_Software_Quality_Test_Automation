@@ -1,10 +1,10 @@
 # Postman
 ## Testes Executados e Evidências:
 1) Teste de cadastro de usuário com provedor de e-mail gmail:
-![CadastroUsuarioGmail](CadastroUsuarioGmail.png)
+![CadastroUsuarioGmail](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/CadastroUsuarioGmail.png?raw=true)
 2) Teste de cadastro de usuário com provedor de e-mail hotmail:
-![CadastroUsuarioHotmail](CadastroUsuarioHotmail.png)
+![CadastroUsuarioHotmail](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/CadastroUsuarioHotmail.png?raw=true)
 3) Teste de definição de senha com menos de 5 caracteres:
-![SenhaMenorQue5](SenhaMenorQue5.png)
+![SenhaMenorQue5](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/SenhaMenorQue5.png?raw=true)
 4) Teste de definição de senha com mais de 10 caracteres:
-![SenhaMaiorQue10](SenhaMaiorQue10.png)
+![SenhaMaiorQue10](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/SenhaMaiorQue10.png?raw=true)
