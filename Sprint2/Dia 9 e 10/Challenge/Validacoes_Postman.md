@@ -2,9 +2,9 @@
 ## Testes Executados e Evidências:
 ### Testes de Criação de Usuário
 1) Teste de cadastro de usuário com todos os campos válidos:
-![Cadastro Campos Validos]()
+![Cadastro Campos Validos](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/CadastroCamposValidos.png?raw=true)
 2) Teste de cadastro de usuário com e-mail já utilizado:
-![Cadastro Email Ja Utilizado]()
+![Cadastro Email Ja Utilizado](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/CadastroEmailJaUtilizado.png?raw=true)
 3) Teste de cadastro de usuário com provedor de e-mail gmail:
 ![Cadastro Usuario Gmail](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/CadastroUsuarioGmail.png?raw=true)
 4) Teste de cadastro de usuário com provedor de e-mail hotmail:
@@ -16,11 +16,11 @@
 
 ### Testes de Atualização de Usuário
 1) Teste de alteração de dados de usuário cadastrado: 
-![Editar Dados Usuario Cadastrado]()
+![Editar Dados Usuario Cadastrado](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/EditarDadosUsuarioCadastrado.png?raw=true)
 2) Teste de alteração de dados de usuário não cadastrado:
-![Editar Dados Usuario Não Cadastrado]()
+![Editar Dados Usuario Não Cadastrado](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/EditarDadosUsuarioNCadastrado.png?raw=true)
 3) Teste de alteração de dados de usuário com ID não encontrado:
-![Editar Dados Usuario Sem ID]()
+![Editar Dados Usuario Sem ID](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/EditarDadosUsuarioSemID.png?raw=true)
 4) Teste de alteração de e-mail de usuário para e-mail do provedor gmail:
 ![Alterar Email Gmail](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/AlterarEmailGmail.png?raw=true)
 5) Teste de alteração de e-mail de usuário para e-mail do provedor hotmail:
@@ -32,12 +32,12 @@
 
 ### Testes de Busca de Usuário
 1) Teste de busca por usuário existente:
-![Busca Usuario Existente]()
-2) Teste de busca por usuario inexsitente: !!!! Melhoria
-![Busca Usuario Inexistente]()
+![Busca Usuario Existente](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/BuscaUsuarioExistente.png?raw=true)
+2) Teste de busca por usuario inexsitente:
+![Busca Usuario Inexistente](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/BuscaUsuarioInexistente.png?raw=true)
 
 ### Testes de Deleção de Usuário
 1) Teste de deleção de usuário existente:
-![Delete Usuario Existente]()
+![Delete Usuario Existente](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/DeleteUsuarioExistente.png?raw=true)
 2) Teste de deleção de usuário inexistente:
-![Delete Usuario Inexistente]()
+![Delete Usuario Inexistente](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/DeleteUsuarioInexistente.png?raw=true)
