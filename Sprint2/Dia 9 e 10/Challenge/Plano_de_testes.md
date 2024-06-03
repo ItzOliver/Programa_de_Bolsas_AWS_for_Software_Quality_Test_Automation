@@ -1,11 +1,11 @@
 # Plano de Testes para API ServeRest - Usuários
 ## Resumo
-O objetivo desse plano de testes é verificar e garantir que a rota de usuários da API ServeRest atenda aos critérios de aceitação definidos na User Stories.
+Objetivo: Garantir que a API de cadastro de usuários no Marketplace do ServeRest funcione corretamente para que usuários possam realizar a venda de seus produtos.
 
 ## Estratégia de Testes
-1) Testes Funcionais: Validação das Funcionalidade principais da API (CRUD).
-2) Testes de Validação: Verificação das regras de negócio, critérios de aceitação e restrições.
-3) Testes de Erro: Validação de que a API lida corretamente com entradas válidas, inválidas e casos de erro.
+1) Testes de API: Validação das Funcionalidade principais da API (CRUD).
+2) Testes de Validação de dados: Verificação das regras de negócio, critérios de aceitação e restrições.
+3) Testes de integridade: Garantir que não é possível criar ou atualizar um usuário com um e-mail já utilizado, de provedores proibidos ou com senhas inválidas.
 4) Automação de Testes: Identificação de testes repetitivos e críticos para automação, garantindo eficiência e cobertura contínua.
 
 ## Critérios de Aceitação:
