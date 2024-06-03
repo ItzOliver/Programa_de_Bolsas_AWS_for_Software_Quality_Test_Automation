@@ -22,6 +22,22 @@ Objetivo: Garantir que a API de cadastro de usuários no Marketplace do ServeRes
 - As senhas devem possuír no mínimo 5 caracteres e no máximo 10 caracteres;
 - A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos.
 
+## Priorização de Testes
+### Fluxo Prioritário
+Aplicação: [API] Usuários
+Objetivo principal do sistema: Se cadastrar no Marketplace do ServeRest.
+- Lista de fluxos prioritários ordenada:
+    - Enviar uma requisição POST para cadastrar usuário;
+        - Deverão ser preenchidos os campos NOME, E-MAIL, PASSWORD e ADMINISTRADOR.
+    - Submeter requisição após preencher campos;    
+        - Se E-MAIL fornecido já estiver sendo utilizado;
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+        - Se E-MAIL for do provedor gmail ou hotmail;
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+        - Se PASSWORD for menor que 5 caracteres ou maior que 10 caracteres:
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+    - Usuário cadastrado.
+
 ## Cenários Macro na Suíte de Testes
 ### Testes de Criação de Usuário
 - **Cenário 1 - Criar usuário com campos válidos**
@@ -45,19 +61,6 @@ Objetivo: Garantir que a API de cadastro de usuários no Marketplace do ServeRes
         - **Objetivo:** Garantir que um usuário não seja criado caso sua senha seja inválida.
         - **Pré-condições:** Tentar criar usuário com senha menor que 5 caracteres ou maior que 10.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
-
-### Testes de Login de Usuário
-- **Cenário 1 - Realizar login com campos válidos**
-    - **Caso de Teste 1.1 - Logar com Todos os Campos Válidos:** 
-        - **Objetivo:** Garantir que um usuário consiga realizar login desde que entre com credenciais válidas.
-        - **Pré-condições:** Ter realizado cadastro na plataforma.
-        - **Resultado Esperado:** Mensagem dizendo "Login realizado com sucesso" junto do Token de autenticação. Status code: 200 enviado.
-
-- **Cenário 2 - Realizar login com campos inválidos**
-    - **Caso de Teste 2.1 - Logar com E-mail e/ou Senha Inválidos:** 
-        - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
-        - **Pré-condições:** Tentar logar na plataforma com e-mail e/ou senha inválidos.
-        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
 
 ### Teste de Atualização de Dados de Usuário
 - **Cenário 1 - Realizar alteração com campos válidos**
@@ -97,8 +100,8 @@ Objetivo: Garantir que a API de cadastro de usuários no Marketplace do ServeRes
 
 ### Teste de Deleção de Usuário
 - **Cenário 1 - Realizar deleção de usuário válida**
-    - **Caso de Teste 1.1 - Deletar Usuário Existente:**
-        - **Objetivo:** Garantir que o usuário selecionado será deletado.
+    - **Caso de Teste 1.1 - Deletar Usuário Existente/Inexistente:**
+        - **Objetivo:** Garantir que o usuário selecionado será deletado (se existir).
         - **Pré-condições:** Possuir a autenticação necessária e usuário não pode possuir carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Registro Excluído | Nenhum registro excluído". Status Code: 200 enviado.
 
@@ -107,3 +110,16 @@ Objetivo: Garantir que a API de cadastro de usuários no Marketplace do ServeRes
         - **Objetivo:** Garantir que o usuário selecionado não será deletado.
         - **Pré-condições:** Possuir a autenticação necessária e usuário possuir carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir usuário com carrinho". Status Code: 400 enviado.
+    
+### Testes de Login de Usuário
+- **Cenário 1 - Realizar login com campos válidos**
+    - **Caso de Teste 1.1 - Logar com Todos os Campos Válidos:** 
+        - **Objetivo:** Garantir que um usuário consiga realizar login desde que entre com credenciais válidas.
+        - **Pré-condições:** Ter realizado cadastro na plataforma.
+        - **Resultado Esperado:** Mensagem dizendo "Login realizado com sucesso" junto do Token de autenticação. Status code: 200 enviado.
+
+- **Cenário 2 - Realizar login com campos inválidos**
+    - **Caso de Teste 2.1 - Logar com E-mail e/ou Senha Inválidos:** 
+        - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
+        - **Pré-condições:** Tentar logar na plataforma com e-mail e/ou senha inválidos.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
