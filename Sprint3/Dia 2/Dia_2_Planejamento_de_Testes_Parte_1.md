@@ -1,0 +1,142 @@
+# Planejamento de Testes Parte 1
+## Negociando um acordo flexível e de valor
+- Valor para o negócio;
+    - Vantagem Competitiva;
+    - Mínima Qualidade Viável - MVQ.
+- Antecipar Mudanças;
+    - Prazo;
+    - Escopo;
+    - Custos;
+    - Legislações;
+    - Cenários.
+- Acordar as Trocas (Trade Off);
+    - Aumentar o escopo;
+        - Aumentar o prazo;
+        - Aumentar o custo;
+            - Horas extras.
+    - Reduzir o prazo;
+        - Reduzir o escopo;
+        - Aumentar o custo;
+            - Horas extras.
+## Plano de Teste
+- Contrato entre Equipes e o Cliente;
+    - Escopo;
+        - O que vai ser testado;
+        - O que não vai ser testado.
+    - Cronograma;
+        - Prazos;
+        - Quando vai ser testado.
+    - Orçamento;
+        - Quanto vai custar.
+    - Qualidade
+        - Indicadores;
+        - Metas.
+    - Riscos;
+        - O que pode dar errado;
+            - No Projeto;
+            - No Produto.
+    - Pessoas;
+        - Funcionários;
+        - Terceiros;
+        - Necessidades de Treinamento.
+    - Aquisições;
+        - Ferramentas;
+        - Serviços;
+        - Recursos.
+    - Comunicação;
+        - Como comunicar;
+        - Quem comunicar;
+        - O que comunicar;
+        - Quando comunicar.
+- IEC/ISO 29119-3;
+    - Padrão de Documentação de Teste.
+## Mapa Mental como Alternativa no Planejamento
+- Mapear o Software;
+    - A ser desenvolvido;
+    - A ser testado;
+    - Necessidades;
+    - Restrições;
+    - Substituto a um plano de teste tradicional.
+## Requisitos Funcionais e Não Funcionais
+- Funcionais;
+    - Negócio;
+        - AF- Na IEC/ISO 25010;
+            - Adequação Funcional.
+    - Analogia da Aliança de Casamento;
+        - Modelo;
+        - Preço;
+        - Local de Entrega;
+        - Data de Entrega;
+        - Horário de Entrega;
+        - Nomes Gravados.
+- Não Funcionais;
+    - Técnicos;
+        - UCCEMPS - Na IEC/ISO 25010;
+            - Todos os outros.
+    - Analogia da Aliança de Casamento;
+        - Entregar de moto;
+        - Entregar de carro;
+        - Entregar de bicicleta;
+        - Entregar a cavalo;
+        - Entregar de drone.
+## Estórias dos Usuários
+- O pedido do usuário;
+- Como ele utilizará aquela função do software;
+- INVEST;
+    - Independente;
+    - Negociável;
+    - Valioso;
+    - Estimável;
+    - Pequeno (Small);
+    - Testável;
+        - Critérios de Aceite;
+        - Ser Objetivo;
+            - Mensurável;
+                - Com 500 usuários simultâneos com conexão 4G deve demorar até 5 segundos para carregar;
+                - Qual a referência visual para o design;
+                - Quantos cliques para concluir uma transação?
+                    - Quantos cliques leva o concorrente?
+                - Qual o nível de segurança requerido?
+                    - Nada é 100% seguro.
+                - Qual o nível de disponibilidade requerido?
+                    - Nada é 100% disponível.
+            - Hard Requirements.
+        - Evite ser Subjetivo;
+            - Exemplos;
+                - Rápido;
+                - Bonito;
+                - Moderno;
+                - Fácil de Usar;
+                - Seguro;
+                - Sempre disponível.
+            - Soft Requirements;
+## Pre-Game
+- Inception;
+- Planejamento do Produto;
+- Sprint de Planejamento;
+    - Sprint Zero.
+- Reuniões de Grooming;
+- Objetivo de todas é criar e refinar as estórias dos usuários;
+## Product Backlog
+- Estórias que temos;
+    - Priorizadas;
+        - PO;
+            - Product Owner;
+            - Visão de Negócio.
+## Sprint
+- Ciclo de Trabalho;
+    - eXtreme Programing;
+        - XP;
+        - 1 semana.
+    - Scrum;
+        - 2 semanas;
+        - 3 semanas;
+        - 4 semanas.
+    - Kanban;
+        - Pode ter ou não Sprints;
+        - O objetivo é não ter.
+## Sprint Backlog 
+- O que vamos realizar neste ciclo;
+    - Novas Estórias;
+    - Mudanças;
+    - Correções.
