@@ -109,14 +109,14 @@
                 - Fácil de Usar;
                 - Seguro;
                 - Sempre disponível.
-            - Soft Requirements;
+            - Soft Requirements.
 ## Pre-Game
 - Inception;
 - Planejamento do Produto;
 - Sprint de Planejamento;
     - Sprint Zero.
 - Reuniões de Grooming;
-- Objetivo de todas é criar e refinar as estórias dos usuários;
+- Objetivo de todas é criar e refinar as estórias dos usuários.
 ## Product Backlog
 - Estórias que temos;
     - Priorizadas;
