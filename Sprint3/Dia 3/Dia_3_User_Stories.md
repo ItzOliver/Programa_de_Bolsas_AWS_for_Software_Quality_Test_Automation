@@ -17,6 +17,7 @@ Essa técnica nos trás para uma preocupação com o conteúdo dos questionament
 - **Cartão -** uma User Story não deve ser muito extensa, tornando possível escrevê-la em um único cartão;
 - **Conversa -** seu conteúdo deve gerar discussões de alinhamento entre o time sobre o que se deseja atender;
 - **Confirmação -** é importante que a história de usuário possua critérios de aceitação para que seja possível a validação de êxito na construção e entrega.
+&nbsp;
 ![ExemploUserStory](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/ExemploUserStory.png?raw=true)
 ## Refinando uma história de usuário
 Toda *user story* que entra em fila de priorização do backlog deve passar por um processo de refinamento, onde ela é melhor detalhada pelo Product Owner e o time. Isso ocorre para, além de eliminar incertezas, o time possa ter mais entendimento do que deve ser feito para atender àquela necessidade, até mesmo avaliar se ela ainda faz ou não sentido para o contexto atual do produto.
@@ -37,6 +38,7 @@ Na escrita das histórias, também devemos possuir os critérios de aceitação.
 ## Definição dos cenários em histórias de usuário
 Uma forma de escrita dos critérios de aceitação pode ser através da definição de cenários que podem auxiliar o desenvolvimento de uma história de usuário. Isso ocorre, pois traz os caminhos que um usuário pode percorrer em seu produto, finalizando no sucesso ou insucesso da tarefa, auxiliando assim nas tratativas desses caminhos previstos e alternativos.
 Uma forma de escrita desses cenários pode ser utilizando do template conhecido como BDD. A técnica de desenvolvimento BDD – Behavior Driven Development, se caracteriza como sendo o desenvolvimento baseado no comportamento. Com essa técnica, os desenvolvedores descrevem o comportamento esperado para a funcionalidade, e validam a construção da estória em cima desse comportamento.
+&nbsp;
 ![Exemplo-bdd](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/Exemplo-bdd.png?raw=true)
 ### Exemplo
 - **COMO** vendedor
