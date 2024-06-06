@@ -32,14 +32,18 @@ Nesse sentido, é importante entender que as vezes pode ser necessário a quebra
 - **Testable (testável) -** seja possível a definição de testes individuais da funcionalidade entregue pela história.
 &nbsp;
 ![ExemploUserStory](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/ExemploUserStory.png?raw=true)
+&nbsp;
 Para realizar a quebra dessa user story, eu posso pensar no que eu preciso para atender a essa necessidade do meu usuário, e o que precisarei construir para de fato chegar ao resultado esperado. Então imaginemos que o sistema dessa minha loja ainda não é informatizado, então antes de pendar na visualização dos produtos e sua quantidade em estoque eu tenho primeiro que **cadastrar os produtos**, **dar entrada no valor em estoque**, **dar baixa nos produtos vendidos**, etc.
 ## Critérios de Aceitação (Acceptance Criteria)
 Na escrita das histórias, também devemos possuir os critérios de aceitação. Eles são como checklists que devem ser repassados para garantir que aquela história esteja entregando o que foi pedido e planejado em sua definição, em caráter de funcionalidade para entrega de valor ao usuário. Os critérios de aceitação funcionam como uma forma de detalhamento maior sobre o que deve ser entregue naquela história, auxiliando também os desenvolvedores na definição e planejamento dos testes.
 ## Definição dos cenários em histórias de usuário
 Uma forma de escrita dos critérios de aceitação pode ser através da definição de cenários que podem auxiliar o desenvolvimento de uma história de usuário. Isso ocorre, pois traz os caminhos que um usuário pode percorrer em seu produto, finalizando no sucesso ou insucesso da tarefa, auxiliando assim nas tratativas desses caminhos previstos e alternativos.
 Uma forma de escrita desses cenários pode ser utilizando do template conhecido como BDD. A técnica de desenvolvimento BDD – Behavior Driven Development, se caracteriza como sendo o desenvolvimento baseado no comportamento. Com essa técnica, os desenvolvedores descrevem o comportamento esperado para a funcionalidade, e validam a construção da estória em cima desse comportamento.
+
 &nbsp;
+
 ![Exemplo-bdd](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/Exemplo-bdd.png?raw=true)
+
 ### Exemplo
 - **COMO** vendedor
 - **EU QUERO** visualizar os produtos da loja
