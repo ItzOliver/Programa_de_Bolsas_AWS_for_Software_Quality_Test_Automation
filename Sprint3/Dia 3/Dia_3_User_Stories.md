@@ -2,6 +2,8 @@
 ## Por que escrever histórias de usuário?
 De uma forma geral, podemos dizer que a escrita das histórias de usuário funcionam como uma narrativa sobre o quê, para quem e porque entregar aquela funcionalidade.
 - É um direcionador ao desenvolvimento!
+### O que é um Épico?
+Um Épico é uma User Story muito grande que levaria mais de um sprint para ser desenvolvida. Um Épico deve ser quebrado em User Stories menores que possam ser desenvolvidas em um sprint.
 ## Template para escrita de User Story
 Veja que para escrever uma história de usuário é bem simples, basta que sigamos o modelo apresentado, trazendo as informações:
 - **Como** – autor da ação (persona);
