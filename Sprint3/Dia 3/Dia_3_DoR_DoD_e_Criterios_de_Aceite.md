@@ -43,12 +43,12 @@ Os critérios de aceitação têm o objetivo de:
 - Cada consulta agendada deve mostrar o nome e o convênio do paciente.
 
 #### Quando o time deve criar a sua DoR e DoD?
-Idealmente, o time deve criar antes da primeira sprint. Porém, caso o seu time ainda não tenha uma definição de ready e/ou done criada, ou que não esteja clara para todos, uma boa oportunidade é levantar o assunto sobre a oportunidade de criarem a sua DoR e/ou DoD durante a retrospectiva.
+>Idealmente, o time deve criar antes da primeira sprint. Porém, caso o seu time ainda não tenha uma definição de ready e/ou done criada, ou que não esteja clara para todos, uma boa oportunidade é levantar o assunto sobre a oportunidade de criarem a sua DoR e/ou DoD durante a retrospectiva.
 #### Uma vez criada a DoR e DoD, elas nunca mais poderão ser alteradas?
-Elas poderão ser alteradas sempre que fizer sentido para o time. Utilize a retrospectiva para inspeção e adaptação.
+>Elas poderão ser alteradas sempre que fizer sentido para o time. Utilize a retrospectiva para inspeção e adaptação.
 #### Cada time deve ter a sua própria DoR e DoD?
-Idealmente sim, cada time cria seus próprios critérios de pronto, embora muitas vezes alguns itens da DoR e DoD possam ser similares a todos os times por ser algum requisito da área/setor/empresa.
+>Idealmente sim, cada time cria seus próprios critérios de pronto, embora muitas vezes alguns itens da DoR e DoD possam ser similares a todos os times por ser algum requisito da área/setor/empresa.
 #### De quem é a responsabilidade de tornar o item “Ready”?
-É de responsabilidade do Product Owner, embora ele(a) possa envolver outras pessoas do time nessa atividade.
+>É de responsabilidade do Product Owner, embora ele(a) possa envolver outras pessoas do time nessa atividade.
 #### Quando deve ser feito o trabalho de refinamento para deixar os itens “Ready”?
-Idealmente, na Sprint anterior a que se deseja incluir o item.
+>Idealmente, na Sprint anterior a que se deseja incluir o item.
