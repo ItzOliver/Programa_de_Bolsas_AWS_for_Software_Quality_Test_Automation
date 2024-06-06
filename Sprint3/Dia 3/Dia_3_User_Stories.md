@@ -17,7 +17,9 @@ Essa técnica nos trás para uma preocupação com o conteúdo dos questionament
 - **Cartão -** uma User Story não deve ser muito extensa, tornando possível escrevê-la em um único cartão;
 - **Conversa -** seu conteúdo deve gerar discussões de alinhamento entre o time sobre o que se deseja atender;
 - **Confirmação -** é importante que a história de usuário possua critérios de aceitação para que seja possível a validação de êxito na construção e entrega.
+
 &nbsp;
+
 ![ExemploUserStory](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/ExemploUserStory.png?raw=true)
 ## Refinando uma história de usuário
 Toda *user story* que entra em fila de priorização do backlog deve passar por um processo de refinamento, onde ela é melhor detalhada pelo Product Owner e o time. Isso ocorre para, além de eliminar incertezas, o time possa ter mais entendimento do que deve ser feito para atender àquela necessidade, até mesmo avaliar se ela ainda faz ou não sentido para o contexto atual do produto.
@@ -30,15 +32,20 @@ Nesse sentido, é importante entender que as vezes pode ser necessário a quebra
 - **Estimable (estimável) -** possui informações suficientes que garantem que o time a compreenda e que seja possível ser estimada;
 - **Sized-Appropriately/Small (Tamanho Ideal - Pequena) -** é uma história pequena que gera o mínimo de incertezas e que seja possível fazer parte de uma interação;
 - **Testable (testável) -** seja possível a definição de testes individuais da funcionalidade entregue pela história.
+
 &nbsp;
+
 ![ExemploUserStory](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/ExemploUserStory.png?raw=true)
+
 &nbsp;
+
 Para realizar a quebra dessa user story, eu posso pensar no que eu preciso para atender a essa necessidade do meu usuário, e o que precisarei construir para de fato chegar ao resultado esperado. Então imaginemos que o sistema dessa minha loja ainda não é informatizado, então antes de pendar na visualização dos produtos e sua quantidade em estoque eu tenho primeiro que **cadastrar os produtos**, **dar entrada no valor em estoque**, **dar baixa nos produtos vendidos**, etc.
 ## Critérios de Aceitação (Acceptance Criteria)
 Na escrita das histórias, também devemos possuir os critérios de aceitação. Eles são como checklists que devem ser repassados para garantir que aquela história esteja entregando o que foi pedido e planejado em sua definição, em caráter de funcionalidade para entrega de valor ao usuário. Os critérios de aceitação funcionam como uma forma de detalhamento maior sobre o que deve ser entregue naquela história, auxiliando também os desenvolvedores na definição e planejamento dos testes.
 ## Definição dos cenários em histórias de usuário
 Uma forma de escrita dos critérios de aceitação pode ser através da definição de cenários que podem auxiliar o desenvolvimento de uma história de usuário. Isso ocorre, pois traz os caminhos que um usuário pode percorrer em seu produto, finalizando no sucesso ou insucesso da tarefa, auxiliando assim nas tratativas desses caminhos previstos e alternativos.
-Uma forma de escrita desses cenários pode ser utilizando do template conhecido como BDD. A técnica de desenvolvimento BDD – Behavior Driven Development, se caracteriza como sendo o desenvolvimento baseado no comportamento. Com essa técnica, os desenvolvedores descrevem o comportamento esperado para a funcionalidade, e validam a construção da estória em cima desse comportamento.
+Uma forma de escrita desses cenários pode ser utilizando do template conhecido como BDD. A técnica de desenvolvimento BDD – Behavior Driven Development, se caracteriza como sendo o desenvolvimento baseado no comportamento. 
+Com essa técnica, os desenvolvedores descrevem o comportamento esperado para a funcionalidade, e validam a construção da estória em cima desse comportamento.
 
 &nbsp;
 
@@ -71,3 +78,11 @@ Não existe uma regra quanto à forma que as tasks devem ser descritas, mas o pr
 **Observação:** devemos estar atentos às definições das tasks para que elas não sejam muito grandes. Pois, talvez, devemos transformá-las em uma nova user story. Ou seja, fazer uma quebra da história principal (como discutimos alguns tópicos acima).
 ## Criação das interfaces com o usuário
 Por último, dependendendo da história a ser construída, pode ser necessário a representação de interfaces do sistema com o usuário. Estas representações podem vir em **baixa fidelidade** (rabiscoframes, papel), em **média fidelidade** (wireframes) ou **alta fidelidade** (protótipos navegáveis ou não), desenvolvidas pela sua equipe de design UX/UI.
+## Algumas dicas importantes sobre a escrita de histórias de usuário
+- **Defina suas personas** – não utilize a palavra usuário generalizando sua história, você precisa direcionar a sua escrita para o seu público alvo. Você não está construindo para todos!
+- **Nem sempre você vai usar o modelo clássico/padrão** – tudo vai variar dependendo da maturidade e do que faz sentido para o seu time de desenvolvimento. O importante é responder as perguntas: quem, o quê e por quê.
+- **Não se estenda muito na escrita** – histórias de usuário são lembretes para uma conversa no futuro. É importante não adicionar muitos detalhes na escrita inicial. Se atente a fornecer apenas o que é preciso para que seja possível sua discussão no momento correto.
+- **Tenha a participação do seu cliente** – o cliente deve contribuir com a escrita da história de usuário junto com o time. Isso deve ocorrer com a finalidade de garantir que ambos tenham entendido o conceito e o que se espera com aquela história.
+- **Utilize o acrônimo INVEST** – isso garantirá que sua história esteja o mais completa possível, possibilitando maior entendimento do seu time, eliminando, assim, possíveis falhas ou retrabalho.
+- **Liste os critérios de aceitação** – sempre tenha definido quais são as condições, restrições e as regras de negócio do produto.
+- **Descreva os cenários** – Utilize a técnica BDD para descrever os cenários daquela história. É importante que os cenários de testes sejam mapeados, em âmbito de negócio e comportamento.
