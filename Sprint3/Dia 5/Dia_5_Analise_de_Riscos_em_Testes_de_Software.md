@@ -31,5 +31,5 @@ Para cada risco é dado um valor, de 1 a 5 para a probabilidade e para o impacto
 Geralmente, a probabilidade é definida pelo time técnico do produto e o impacto pela área de
 #### Matriz de Riscos
 A matriz de riscos segue a mesma linha de raciocínio da tabela anterior, no entanto são utilizadas as **palavras-chave** baixo (low), médio (medium) e alto (high) ao invé de valores para determinar a priorização das atividades, conforme a figura abaixo:
-![Matriz de Riscos]()
+![Matriz de Riscos](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/MatrizDeRiscos.png?raw=true)
 Nessa figura, os riscos foram priorizados de acordo com os valores da tabela anterior.
