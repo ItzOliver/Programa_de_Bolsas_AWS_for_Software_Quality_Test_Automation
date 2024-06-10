@@ -22,9 +22,9 @@ Após a identificação dos riscos, eles devem ser priorizados. As abordagens co
 ##### Probabilidade X Impacto
 Para cada risco é dado um valor, de 1 a 5 para a probabilidade e para o impacto. Quanto menor o valor, menor a probabilidade da situação ocorrer e menor o impacto para os usuários/negócios. Posteriormente, o valor da probabilidade e do impacto são multiplicados, resultando no fator de risco, o qual será utilizado para **priorização**. Os riscos com maior pontuação precisam de maior atenção e demandarão maior tempo para testes.
 |  | Probabilidade | Impacto | Fator de Risco |
-|:-----   |:-:|:-:|:--:|
+|:----------|:-------------:|:-------------:|:-------------:|
 | Risco 4 | 4 | 3 | 12 |
 | Risco 3 | 2 | 4 | 8 |
 | Risco 2 | 5 | 1 | 5 |
 | Risco 1 | 1 | 5 | 5 |
-Geralmente, a probabilidade é definida pelo time técnico do produto e o impacto pela área de negócios.
+Geralmente, a probabilidade é definida pelo time técnico do produto e o impacto pela área de
