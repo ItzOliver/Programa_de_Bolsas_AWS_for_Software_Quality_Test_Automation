@@ -27,4 +27,5 @@ Para cada risco é dado um valor, de 1 a 5 para a probabilidade e para o impacto
 | Risco 3 | 2 | 4 | 8 |
 | Risco 2 | 5 | 1 | 5 |
 | Risco 1 | 1 | 5 | 5 |
+
 Geralmente, a probabilidade é definida pelo time técnico do produto e o impacto pela área de
