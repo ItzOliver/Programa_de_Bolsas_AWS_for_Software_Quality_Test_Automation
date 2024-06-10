@@ -93,6 +93,7 @@ Sabendo das diferenças, podemos construir uma matriz que traz a relação entre
 |:----------|:-------------:|:-------------:|
 | Conhecido | Coisas que estamos cientes e entendemos | Coisas que estamos cientes, mas não entendemos |
 | Desconhecido | Coisas que entendemos, mas não temos consciência | Coisas que não estamos cientes nem entendemos |
+
 James afirma que os riscos estão associados ao primeiro quadrante (known known), onde todo o time está ciente do problema e entende todas as suas nuances a ponto de medi-lo quantitativamente.
 Em todos os outros quadrantes, há um nível de incerteza que pode ser desvendado com as atividades de testes e análise mais aprofundada da situação.
 ## Conclusão
