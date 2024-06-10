@@ -87,6 +87,7 @@ James Thomas, em seu artigo publicado no Ministry of Testing, traz uma reflexão
 Segundo Frank Knight:
 > Riscos: são reservados para cenários em que podem ser medidos quantitativamente, geralmente usando a probabilidade;
 > Incerteza: situações que não são quantificáveis ou medidas, com as ferramentas que o time tem atualmente.
+
 Sabendo das diferenças, podemos construir uma matriz que traz a relação entre esses dois conceitos, conforme a figura abaixo:
 | | Conhecido | Desconhecido |
 |:----------|:-------------:|:-------------:|
