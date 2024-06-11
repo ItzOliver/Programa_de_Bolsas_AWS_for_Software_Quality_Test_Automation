@@ -2,14 +2,14 @@
 ## Modelos de ciclo de vida
 - Sequencial: 
     - Cascata:
-    ![Cascata]()
+    ![Cascata](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/Cascata.png?raw=true)
     - Modelo V:
-    ![Modelo V]()
+    ![Modelo V](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/ModeloV.png?raw=true)
 - Iterativo: 
     - SCRUM:
-    ![SCRUM]()
+    ![SCRUM](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/SCRUM.png?raw=true)
     - Kanban:
-    ![Kanban]()
+    ![Kanban](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/Kanban.png?raw=true)
 ## Níveis de Teste
 - Os níveis de teste são caracterizados pelos seguintes atributos:
     - Objetivos específicos;
