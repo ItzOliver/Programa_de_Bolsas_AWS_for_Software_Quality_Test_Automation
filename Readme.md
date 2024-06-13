@@ -16,3 +16,11 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 ### Passos para reprodução:
 
 ### Informações complementares:
+
+# 🗺 Mapa Mental API ServeRest
+![API Serverest.png](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint2/src/API%20Serverest.png?raw=true)
+
+O arquivo do mapa mental pode ser acessado clicando [aqui]().
+
+# 📄 Plano de Testes API ServeRest
+O plano de testes para as rotas da API ServeRest pode ser consultado [aqui]().
