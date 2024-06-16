@@ -39,7 +39,8 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
     - **CT-1.1 (Caso de Teste 1.1) - Cadastrar Produto com Todos os Campos Válidos:**
         - **Objetivo:** Garantir que um produto seja cadastrado caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Possuir a autenticação necessária.
-        - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do produto. Status Code: 201 enviado. 
+        - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do produto. Status Code: 201 enviado.
+         
 - **Cenário 2 - Cadastrar produto com campos inválidos**
     - **CT-2.1 (Caso de Teste 2.1) - Cadastrar Produto com Nome já Existente:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso já existe outro produto com o mesmo nome.
