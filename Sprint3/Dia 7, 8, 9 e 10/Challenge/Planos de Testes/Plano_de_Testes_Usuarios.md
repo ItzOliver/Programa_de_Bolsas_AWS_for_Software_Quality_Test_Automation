@@ -38,6 +38,26 @@ Objetivo principal do sistema: Se cadastrar no Marketplace do ServeRest.
             - Rejeita a requisição e envia uma mensagem informando ao usuário.
     - Usuário cadastrado.
 
+## Matriz de Rastreabilidade
+| Requisito ID | Descrição do Requisito | Casos de Teste |
+|:----------|:-------------:|:-------------:|
+| DoR-1 | Banco de dados e infraestrutura para desenvolvimento disponibilizados | Todos os casos de teste dependem da infraestrutura adequada |
+| DoR-2 | Ambiente de testes disponibilizado | Todos os casos de teste dependem do ambiente de testes |
+| DoD-1 | CRUD de cadastro de Produtos implementado (CRIA, ATUALIZA, LISTA e DELETA) | Todos os Casos de Teste |
+| DoD-2 | Análise de testes cobrindo todos os verbos | Todos os casos de teste |
+| DoD-3 | Matriz de rastreabilidade atualizada | Este documento |
+| DoD-4 | Automação de testes baseada na análise realizada | - |
+| AC-1 | Os vendedores (usuários) deverão possuir os campos NOME, E-MAIL, PASSWORD e ADMINISTRADOR | CT-1.1 |
+| AC-2 | Não deverá ser possível fazer ações e chamadas para usuários inexistentes | CT-6.1 |
+| AC-3 | Não deve ser possível criar um usuário com e-mail já utilizado | CT-2.1 |
+| AC-4 | Caso não seja encontrado usuário com o ID informado no PUT, um novo usuário deverá ser criado | CT-3.2 |
+| AC-5 | Não deve ser possível cadastrar usuário com e-mail já utilizado utilizando PUT | CT-4.1 |
+| AC-6 | Os testes executados deverão conter evidências | Evidências disponíveis no board do Jira |
+| AC-7 | Não deverá ser possível cadastrar usuários com e-mails de provedor gmail e hotmail | CT-2.2 |
+| AC-8 | Os e-mails devem seguir um padrão válido de e-mail para o cadastro | CT-2.2 e CT-4.2 |
+| AC-9 | As senhas devem possuír no mínimo 5 caracteres e no máximo 10 caracteres | CT-2.3 e CT-4.2 |
+| AC-10 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos | Todos os Casos de Teste |
+
 ## Cenários Macro na Suíte de Testes
 ### Testes de Criação de Usuário
 - **Cenário 1 - Criar usuário com campos válidos**
