@@ -33,7 +33,26 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
         - Se PASSWORD informado for inválida:
             - Rejeita a requisição e envia uma mensagem informando ao usuário.
     - Usuário logado e autenticado.
-        
+
+## Matriz de Rastreabilidade
+| Requisito ID | Descrição do Requisito | Casos de Teste |
+|:----------|:-------------:|:-------------:|
+| DoR-1 | Banco de dados e infraestrutura para desenvolvimento disponibilizados | Todos os casos de teste dependem da infraestrutura adequada |
+| DoR-2 | API de cadastro de usuários implementada | Todos os casos de teste dependem da existência de usuários autenticados |
+| DoR-3 | Ambiente de testes disponibilizado | Todos os casos de teste dependem do ambiente de testes |
+| DoD-1 | Autenticação com geração de token Bearer implementada | - |
+| DoD-2 | Análise de testes cobrindo a rota de login | Todos os casos de teste |
+| DoD-3 | Matriz de rastreabilidade atualizada | Este documento |
+| DoD-4 | Automação de testes baseado na análise realizada | - |
+| AC-1 | Usuários não cadastrados não deverão conseguir autenticar | CT-2.1 e CT-2.2 |
+| AC-2 | Usuários com senha inválida não deverão conseguir autenticar | CT-2.2 |
+| AC-3 | No caso de não autenticação, deverá ser retornado um status code 401 (Unauthorized) | CT-2.1 e CT-2.2 |
+| AC-4 | Usuários existentes e com a senha correta deverão ser autenticados | CT-1.1 |
+| AC-5 | A autenticação deverá gerar um token Bearer | CT-1.1 |
+| AC-6 | A duração da validade do token deverá ser de 10 minutos | - |
+| AC-7 | Os testes executados deverão conter evidências | Evidências disponíveis no board do Jira |
+| AC-8 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos. | Todos os Casos de Teste |
+
 ## Cenários Macro na Suíte de Testes
 ### Testes de Login de Usuário
 - **Cenário 1 - Realizar login com campos válidos**

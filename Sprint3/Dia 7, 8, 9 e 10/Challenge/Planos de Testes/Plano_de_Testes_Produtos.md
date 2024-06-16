@@ -33,6 +33,25 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
             - Rejeita a requisição e envia uma mensagem informando ao usuário.
     - Produto cadastrado.
 
+## Matriz de Rastreabilidade
+| Requisito ID | Descrição do Requisito | Casos de Teste |
+|:----------|:-------------:|:-------------:|
+| DoR-1 | Banco de dados e infraestrutura para desenvolvimento disponibilizados | Todos os casos de teste dependem da infraestrutura adequada |
+| DoR-2 | API de cadastro de usuários implementada | Todos os casos de teste dependem da existência de usuários autenticados |
+| DoR-3 | Ambiente de testes disponibilizado | Todos os casos de teste dependem do ambiente de testes |
+| DoR-4 | API de autenticação implementada | Todos os casos de teste dependem da autenticação funcional |
+| DoD-1 | CRUD de cadastro de Produtos implementado (CRIA, ATUALIZA, LISTA e DELETA) | Todos os Casos de Teste |
+| DoD-2 | Análise de testes cobrindo a rota de produtos | Todos os casos de teste |
+| DoD-3 | Matriz de rastreabilidade atualizada | Este documento |
+| DoD-4 | Automação de testes baseada na análise realizada | - |
+| AC-1 | Usuários não autenticados não devem conseguir realizar ações na rota de Produtos | CT-2.2, CT-4.2 e CT-8.2 |
+| AC-2 | Não deve ser possível realizar o cadastro de produtos com nomes já utilizados | CT-2.1 |
+| AC-3 | Não deve ser possível excluir produtos que estão dentro de carrinhos (dependência API Carrinhos) | CT-8.1 |
+| AC-4 | Caso não exista produto com o o ID informado na hora do UPDATE, um novo produto deverá ser criado | CT-3.2 |
+| AC-5 | Produtos criados através do PUT não poderão ter nomes previamente cadastrados | CT-2.1 |
+| AC-6 | Os testes executados deverão conter evidências | Evidências disponíveis no board do Jira |
+| AC-7 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos | Todos os Casos de Teste |
+
 ## Cenários Macro na Suíte de Testes
 ### Testes de Cadastro de Produtos
 - **Cenário 1 - Cadastrar produto com campos válidos**
@@ -40,7 +59,7 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
         - **Objetivo:** Garantir que um produto seja cadastrado caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do produto. Status Code: 201 enviado.
-         
+
 - **Cenário 2 - Cadastrar produto com campos inválidos**
     - **CT-2.1 (Caso de Teste 2.1) - Cadastrar Produto com Nome já Existente:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso já existe outro produto com o mesmo nome.
