@@ -109,7 +109,12 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
     - **CT-5.1 (Caso de Teste 5.1) - Buscar por Produto Existente:**
         - **Objetivo:** Garantir que produtos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
-        - **Resultado Esperado:** Lista de produtos que satisfaçam a condição de busca (se houver). Status Code: 200 enviado.
+        - **Resultado Esperado:** Lista de produtos. Status Code: 200 enviado.
+
+    - **CT-5.2 (Caso de Teste 5.2) - Buscar por Produto Existente Específico:**
+        - **Objetivo:** Garantir que produtos existentes possam ser buscados no sistema.
+        - **Pré-condições:** Não há.
+        - **Resultado Esperado:** Lista de produtos que satisfaçam a condição de busca. Status Code: 200 enviado.
 
 - **Cenário 6 - Realizar busca de produto inválida**
     - **CT-6.1 (Caso de Teste 6.1) - Buscar por Produto Inexistente:**
@@ -119,7 +124,12 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
 
 ### Testes de Deleção de Produto
 - **Cenário 7 - Realizar deleção de produto válida**
-    - **CT-7.1 (Caso de Teste 7.1) - Deletar Produto Existente/Inexistente:**
+    - **CT-7.1 (Caso de Teste 7.1) - Deletar Produto Existente:**
+        - **Objetivo:** Garantir que o produto selecionado será deletado (se existir).
+        - **Pré-condições:** Possuir a autenticação necessária e produto não fazer parte de carrinho.
+        - **Resultado Esperado:** Mensagem dizendo "Registro excluído | Nenhum registro excluído". Status Code: 200 enviado.
+
+    - **CT-7.2 (Caso de Teste 7.2) - Deletar Produto Inexistente:**
         - **Objetivo:** Garantir que o produto selecionado será deletado (se existir).
         - **Pré-condições:** Possuir a autenticação necessária e produto não fazer parte de carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído | Nenhum registro excluído". Status Code: 200 enviado.
