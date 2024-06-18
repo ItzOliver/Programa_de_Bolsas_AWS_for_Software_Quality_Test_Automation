@@ -12,6 +12,14 @@ O arquivo do mapa mental pode ser acessado clicando [aqui](https://github.com/It
 # 📄 Plano de Testes API ServeRest
 O plano de testes para as rotas de usuário, login e produtos da API ServeRest pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint3/Sprint3/Dia%207%2C%208%2C%209%20e%2010/Challenge/Planos%20de%20Testes).
 
+# 🤝 Agradecimentos
+- Enzo Rossi
+- Gabriel Just
+- Jorge Soares
+- Daniel Pontes
+- Ricardo Neckel
+- Mathias Fischer
+
 # 📄 Template para Reporte de Bugs
 ## {Insira o título do bug report aqui, lembre-se de descrever o tipo de bug encontrado, onde foi encontrado e o impacto geral dele, ex: "Vulnerabilidade X ao gerar PDF do relatório Y; Tela de cadastro Z"}
 

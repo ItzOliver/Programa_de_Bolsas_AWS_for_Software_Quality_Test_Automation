@@ -43,7 +43,7 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
 | DoD-1 | CRUD de cadastro de Produtos implementado (CRIA, ATUALIZA, LISTA e DELETA) | Todos os Casos de Teste |
 | DoD-2 | Análise de testes cobrindo a rota de produtos | Todos os casos de teste |
 | DoD-3 | Matriz de rastreabilidade atualizada | Este documento |
-| DoD-4 | Automação de testes baseada na análise realizada | - |
+| DoD-4 | Automação de testes baseada na análise realizada | CT-1.1, CT-2.1, CT-2.2, CT-2.3, CT-3.1, CT-3.2, CT-4.1, CT-4.2, CT-4.3, CT-7.1, CT-7.2, CT-8.1, CT-8.2, CT-8.3 |
 | AC-1 | Usuários não autenticados não devem conseguir realizar ações na rota de Produtos | CT-2.2, CT-4.2 e CT-8.2 |
 | AC-2 | Não deve ser possível realizar o cadastro de produtos com nomes já utilizados | CT-2.1 |
 | AC-3 | Não deve ser possível excluir produtos que estão dentro de carrinhos (dependência API Carrinhos) | CT-8.1 |

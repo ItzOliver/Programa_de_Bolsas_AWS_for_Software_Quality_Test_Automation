@@ -71,3 +71,13 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com senha inválida.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
+    
+    - **CT-2.3 (Caso de Teste 2.3) - Logar com E-mail Em Branco:** 
+        - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
+        - **Pré-condições:** Tentar logar na plataforma com e-mail em branco.
+        - **Resultado Esperado:** Mensagem dizendo "E-mail não pode ficar em branco". Status code: 400 enviado.
+
+    - **CT-2.4 (Caso de Teste 2.4) - Logar com Senha Em Branco:** 
+        - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
+        - **Pré-condições:** Tentar logar na plataforma com senha em branco.
+        - **Resultado Esperado:** Mensagem dizendo "Senha não pode ficar em branco". Status code: 400 enviado.
