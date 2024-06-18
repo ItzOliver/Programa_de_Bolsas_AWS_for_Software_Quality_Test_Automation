@@ -1,0 +1,2699 @@
+{
+	"info": {
+		"_postman_id": "a0a297d8-026d-4914-8589-2ea24a411321",
+		"name": "ServeRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35351950"
+	},
+	"item": [
+		{
+			"name": "/login",
+			"item": [
+				{
+					"name": "Login com campos válidos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fulano@qa.com\",\r\n    \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login com senha em branco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"fulano@qa.com\",\r\n  \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login com e-mail em branco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login com senha inválida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"fulano@qa.com\",\r\n  \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login com e-mail inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"fulan@qa.com\",\r\n  \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/produtos",
+			"item": [
+				{
+					"name": "Cadastrar produto com campos válidos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produto com nome repetido",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produto com token ausente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produto sem ser adm",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"Nao sou Adm\",\r",
+									"    \"email\": \"NaoSouADM@example.com\",\r",
+									"    \"password\": \"teste\",\r",
+									"    \"administrador\": \"false\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"NaoSouADM@example.com\",\r",
+									"            \"password\": \"teste\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produto com dados válidos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/mQTa3pF7RPvG7scn",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"mQTa3pF7RPvG7scn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produto não cadastrado com dados válidos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produto não cadastrado com campos repetidos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5ODgwLCJleHAiOjE3MTg3MjA0ODB9.ausQr6RhYqXCQe29Qh5btV2wkflGZS6gdggZ326sO_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Mouse do Ze\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produto com token ausente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar produto sem ser adm",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5MTgxLCJleHAiOjE3MTg3MTk3ODF9.cVrzL4-VEkkKySgfFZwKPd_gilFIPsmaTWeVlFywAqU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProduct}}\",\r\n  \"quantidade\": \"999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar lista de produtos válidos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar produto válido específico",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/BeeJh5lz3k6kSIzA",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"BeeJh5lz3k6kSIzA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar produto inválido",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/cenoura",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"cenoura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto existente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5ODgwLCJleHAiOjE3MTg3MjA0ODB9.ausQr6RhYqXCQe29Qh5btV2wkflGZS6gdggZ326sO_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/XmxcG7GM5OTe34Wu",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"XmxcG7GM5OTe34Wu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto válido inexistente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5ODgwLCJleHAiOjE3MTg3MjA0ODB9.ausQr6RhYqXCQe29Qh5btV2wkflGZS6gdggZ326sO_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto de carrinho",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzE4NzE5ODgwLCJleHAiOjE3MTg3MjA0ODB9.ausQr6RhYqXCQe29Qh5btV2wkflGZS6gdggZ326sO_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/K6leHdftCeOJj8BJ",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"K6leHdftCeOJj8BJ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto com token ausente",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar produto sem ser adm",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminCreated = false;\r",
+									"var adminLoggedIn = false;\r",
+									"sendRequestSync(\"https://compassuol.serverest.dev/usuarios\", \"POST\", {\r",
+									"    \"Content-Type\": \"application/json\"\r",
+									"}, {\r",
+									"    \"nome\": \"AdminGJ test\",\r",
+									"    \"email\": \"GabrielJustCode@example.com\",\r",
+									"    \"password\": \"admin123\",\r",
+									"    \"administrador\": \"true\"\r",
+									"}, function (err, res) {\r",
+									"    if (res.code === 201) {\r",
+									"        adminCreated = true;\r",
+									"        var jsonData = res.json();\r",
+									"        var adminId = jsonData._id;\r",
+									"        pm.environment.set(\"adminId\", adminId);\r",
+									"        sendRequestSync(\"https://compassuol.serverest.dev/login\", \"POST\", {\r",
+									"            \"Content-Type\": \"application/json\"\r",
+									"        }, {\r",
+									"            \"email\": \"GabrielJustCode@example.com\",\r",
+									"            \"password\": \"admin123\"\r",
+									"        }, function (err, res) {\r",
+									"            if (res.code === 200) {\r",
+									"                adminLoggedIn = true;\r",
+									"                if (res && res.json) {\r",
+									"                    var jsonData = res.json();\r",
+									"                    var tokenCompleto = jsonData.authorization;\r",
+									"\r",
+									"                    function retirarBearer(tokenCompleto) {\r",
+									"                        var partes = tokenCompleto.split(' ');\r",
+									"                        return partes[1];\r",
+									"                    }\r",
+									"                    var authToken = retirarBearer(tokenCompleto);\r",
+									"                    pm.environment.set(\"authToken\", authToken);\r",
+									"                    pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + authToken });\r",
+									"                } else {\r",
+									"                    console.error(\"Erro ao obter a resposta JSON\");\r",
+									"                }\r",
+									"            }\r",
+									"            pm.test(\"Admin criado e logado com sucesso\", function () {\r",
+									"                pm.expect(adminCreated && adminLoggedIn).to.be.true;\r",
+									"            });\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.error(\"Erro ao criar admin:\", res);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Codigo feito por Gabriel Just\r",
+									"// Coloque mais codigo aqui\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"//codigo que deleta o admin criado\r",
+									"function sendRequestSync(url, method, headers, body, callback) {\r",
+									"    pm.sendRequest({\r",
+									"        url: url,\r",
+									"        method: method,\r",
+									"        header: headers,\r",
+									"        body: body ? {\r",
+									"            mode: 'raw',\r",
+									"            raw: JSON.stringify(body)\r",
+									"        } : undefined\r",
+									"    }, callback);\r",
+									"}\r",
+									"var adminId = pm.environment.get(\"adminId\");\r",
+									"    sendRequestSync(\"https://compassuol.serverest.dev/usuarios/\" + adminId, \"DELETE\", {\r",
+									"        \"Content-Type\": \"application/json\"\r",
+									"    }, null, function (err, res) {\r",
+									"        pm.test(\"Admin deletado com sucesso\", function () {\r",
+									"            pm.expect(res).to.have.status(200); \r",
+									"        });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik5hb0VoQURNQHFhLmNvbSIsInBhc3N3b3JkIjoidGVzdGUiLCJpYXQiOjE3MTg2NjEyODIsImV4cCI6MTcxODY2MTg4Mn0.FXHQICQLzSHrswQ32wSmQEw2UYyellZNxKOT-ZwhLf0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/produtos/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"produtos",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/usuario",
+			"item": [
+				{
+					"name": "Cadastrar usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Daniel Cruci\",\r\n  \"email\": \"DaniCruci@qa.com.br\",\r\n  \"password\": \"teste123\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar usuario com e-mail já utilizado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Daniel Cruci\",\r\n  \"email\": \"DaniCruci@qa.com.br\",\r\n  \"password\": \"teste123\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar usuario provedor de e-mail inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Daniel Cruci\",\r\n  \"email\": \"DaniCruci@gmail.com\",\r\n  \"password\": \"teste123\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar usuario senha invalida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Arthur FF\",\r\n  \"email\": \"ArthurFF@qa.com.br\",\r\n  \"password\": \"123\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Augusto Salad\",\r\n    \"email\": \"Salada@qa.com.br\",\r\n    \"password\": \"1256789\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https:///compassuol.serverest.dev/usuarios/0VQ9eNENoPumtIBL",
+							"protocol": "https",
+							"path": [
+								"compassuol.serverest.dev",
+								"usuarios",
+								"0VQ9eNENoPumtIBL"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar usuario não cadastrado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"André Salad\",\r\n    \"email\": \"Salsa@qa.com.br\",\r\n    \"password\": \"1256789\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/56cbDOSmxw6fBtqv",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"56cbDOSmxw6fBtqv"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar usuario não cadastrado com e-mail já utilizado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"André Salad\",\r\n    \"email\": \"Salsa@qa.com.br\",\r\n    \"password\": \"1256789\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/56cbDOSmxw6fBtqv",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"56cbDOSmxw6fBtqv"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar usuario com e-mail e/ou senha inválidos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Augusto Salad\",\r\n    \"email\": \"Salsa@gmail.com\",\r\n    \"password\": \"125\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/fg4klSWxbnWXkJJx",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"fg4klSWxbnWXkJJx"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuário cadastrado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuário não cadastrado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/abobora",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"abobora"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar usuário existente/inexistente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/9ppuCJSBS0HTQQmZ",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"9ppuCJSBS0HTQQmZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar usuário com carrinho",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://compassuol.serverest.dev/usuarios/0uxuPY0cbmQhpEz1",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"0uxuPY0cbmQhpEz1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/carrinhos",
+			"item": [
+				{
+					"name": "Listar carrinhos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://compassuol.serverest.dev/carrinhos",
+							"protocol": "https",
+							"host": [
+								"compassuol",
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"carrinhos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

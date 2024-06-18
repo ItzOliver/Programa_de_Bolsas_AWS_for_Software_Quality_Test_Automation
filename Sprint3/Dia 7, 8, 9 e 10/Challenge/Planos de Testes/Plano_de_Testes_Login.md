@@ -80,4 +80,4 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
     - **CT-2.4 (Caso de Teste 2.4) - Logar com Senha Em Branco:** 
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com senha em branco.
-        - **Resultado Esperado:** Mensagem dizendo "Senha não pode ficar em branco". Status code: 400 enviado.
+        - **Resultado Esperado:** Mensagem dizendo "Senha não pode ficar em branco". Status code: 400 enviado. 
