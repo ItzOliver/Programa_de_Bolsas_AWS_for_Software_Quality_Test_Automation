@@ -54,30 +54,30 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
 | AC-8 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos. | Todos os Casos de Teste |
 
 ## Cenários Macro na Suíte de Testes
-### Testes de Login de Usuário
+### [Testes de Login de Usuário](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98328#!testCycleId=98328)
 - **Cenário 1 - Realizar login com campos válidos**
-    - **CT-1.1 (Caso de Teste 1.1) - Logar com Todos os Campos Válidos:** 
+    - **[CT-1.1 (Caso de Teste 1.1)](https://oliver-almeida.atlassian.net/browse/PB3-6) - Logar com Todos os Campos Válidos:** 
         - **Objetivo:** Garantir que um usuário consiga realizar login desde que entre com credenciais válidas.
         - **Pré-condições:** Ter realizado cadastro na plataforma.
         - **Resultado Esperado:** Mensagem dizendo "Login realizado com sucesso" junto do Token de autenticação. Status code: 200 enviado.
 
 - **Cenário 2 - Realizar login com campos inválidos**
-    - **CT-2.1 (Caso de Teste 2.1) - Logar com E-mail Inválido:** 
+    - **[CT-2.1 (Caso de Teste 2.1)](https://oliver-almeida.atlassian.net/browse/PB3-8) - Logar com E-mail Inválido:** 
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com e-mail inválido.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
     
-    - **CT-2.2 (Caso de Teste 2.2) - Logar com Senha Inválida:** 
+    - **[CT-2.2 (Caso de Teste 2.2)](https://oliver-almeida.atlassian.net/browse/PB3-8) - Logar com Senha Inválida:** 
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com senha inválida.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status code: 401 enviado.
     
-    - **CT-2.3 (Caso de Teste 2.3) - Logar com E-mail Em Branco:** 
+    - **[CT-2.3 (Caso de Teste 2.3)](https://oliver-almeida.atlassian.net/browse/PB3-50) - Logar com E-mail Em Branco:** 
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com e-mail em branco.
         - **Resultado Esperado:** Mensagem dizendo "E-mail não pode ficar em branco". Status code: 400 enviado.
 
-    - **CT-2.4 (Caso de Teste 2.4) - Logar com Senha Em Branco:** 
+    - **[CT-2.4 (Caso de Teste 2.4)](https://oliver-almeida.atlassian.net/browse/PB3-51) - Logar com Senha Em Branco:** 
         - **Objetivo:** Impedir que um usuário consiga realizar login se suas credenciais forem inválidas.
         - **Pré-condições:** Tentar logar na plataforma com senha em branco.
         - **Resultado Esperado:** Mensagem dizendo "Senha não pode ficar em branco". Status code: 400 enviado. 

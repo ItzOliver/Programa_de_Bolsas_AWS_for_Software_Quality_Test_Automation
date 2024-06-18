@@ -53,99 +53,99 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
 | AC-7 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos | Todos os Casos de Teste |
 
 ## Cenários Macro na Suíte de Testes
-### Testes de Cadastro de Produtos
+### [Testes de Cadastro de Produtos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98347#!testCycleId=98347)
 - **Cenário 1 - Cadastrar produto com campos válidos**
-    - **CT-1.1 (Caso de Teste 1.1) - Cadastrar Produto com Todos os Campos Válidos:**
+    - **[CT-1.1 (Caso de Teste 1.1)](https://oliver-almeida.atlassian.net/browse/PB3-10) - Cadastrar Produto com Todos os Campos Válidos:**
         - **Objetivo:** Garantir que um produto seja cadastrado caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do produto. Status Code: 201 enviado.
 
 - **Cenário 2 - Cadastrar produto com campos inválidos**
-    - **CT-2.1 (Caso de Teste 2.1) - Cadastrar Produto com Nome já Existente:**
+    - **[CT-2.1 (Caso de Teste 2.1)](https://oliver-almeida.atlassian.net/browse/PB3-11) - Cadastrar Produto com Nome já Existente:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso já existe outro produto com o mesmo nome.
         - **Pré-condições:** Tentar cadastrar produto com nome já utilizado.
         - **Resultado Esperado:** Mensagem dizendo "Já existe produto com esse nome". Status Code: 400 enviado.
     
-    - **CT-2.2 (Caso de Teste 2.2) - Cadastrar Produto com Token Ausente, Inválido ou Expirado:**
+    - **[CT-2.2 (Caso de Teste 2.2)](https://oliver-almeida.atlassian.net/browse/PB3-12) - Cadastrar Produto com Token Ausente, Inválido ou Expirado:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso o Token esteja ausente, inválido ou expirado.
         - **Pré-condições:** Tentar cadastrar produto com Token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status Code: 401 enviado.
     
-    - **CT-2.3 (Caso de Teste 2.3) - Cadastrar Produto sem Ser Administrador:**
+    - **[CT-2.3 (Caso de Teste 2.3)](https://oliver-almeida.atlassian.net/browse/PB3-13) - Cadastrar Produto sem Ser Administrador:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso o usuário não tenha permissões de administrador.
         - **Pré-condições:** Tentar cadastrar produto sem permissões de admnistrador.
         - **Resultado Esperado:** Mensagem dizendo "Rota exclusiva para administradores". Status Code: 403 enviado.
 
-### Testes de Atualização de Dados de Produtos
+### [Testes de Atualização de Dados de Produtos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98347#!testCycleId=98347)
 - **Cenário 3 - Atualizar um produto existe com dados válidos**
-    - **CT-3.1 (Caso de Teste 3.1) - Atualizar Dados de Produto com Todos os Campos Válidos:**
+    - **[CT-3.1 (Caso de Teste 3.1)](https://oliver-almeida.atlassian.net/browse/PB3-16) - Atualizar Dados de Produto com Todos os Campos Válidos:**
         - **Objetivo:** Garantir que um produto tenha seus dados alterados caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registro alterado com sucesso". Status Code: 200 enviado.
     
-    - **CT-3.2 (Caso de Teste 3.2) - Atualizar Dados de Produto Não cadastrado e com Todos os Campos Válidos:**
+    - **[CT-3.2 (Caso de Teste 3.2)](https://oliver-almeida.atlassian.net/browse/PB3-17) - Atualizar Dados de Produto Não cadastrado e com Todos os Campos Válidos:**
         - **Objetivo:** Garantir que, caso não seja encontrado produto com ID informado, é realizado novo cadastro ao invés de alteração.
         - **Pré-condições:** Possuir a autenticação necessária e não existir produto com ID informado.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do produto. Status Code: 201 enviado.
 
 - **Cenário 4 - Atualizar um produto existe com dados inválidos**
-    - **CT-4.1 (Caso de Teste 4.1) - Alterar Dados de Produto Não Cadastrado com Nome já Utilizado:**
+    - **[CT-4.1 (Caso de Teste 4.1)](https://oliver-almeida.atlassian.net/browse/PB3-18) - Alterar Dados de Produto Não Cadastrado com Nome já Utilizado:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso o nome já esteja sendo utilizado.
         - **Pré-condições:** Possuir a autenticação necessária, não existir produto com ID informado e nome já estar sendo utilizado.
         - **Resultado Esperado:** Mensagem dizendo "Já existe produto com esse nome". Status Code: 400 enviado.
     
-    - **CT-4.2 (Caso de Teste 4.2) - Alterar Dados de Produto com Token Ausente, Inválido ou Expirado:**
+    - **[CT-4.2 (Caso de Teste 4.2)](https://oliver-almeida.atlassian.net/browse/PB3-19) - Alterar Dados de Produto com Token Ausente, Inválido ou Expirado:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso o Token esteja ausente, inválido ou expirado.
         - **Pré-condições:** Tentar alterar produto com Token Ausente, Inválido ou Expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status Code: 401 enviado.
 
-    - **CT-4.3 (Caso de Teste 4.3) - Alterar Dados de Produto sem Ser Administrador:**
+    - **[CT-4.3 (Caso de Teste 4.3)](https://oliver-almeida.atlassian.net/browse/PB3-20) - Alterar Dados de Produto sem Ser Administrador:**
         - **Objetivo:** Garantir que um produto não seja cadastrado caso o usuário não tenha permissões de administrador.
         - **Pré-condições:** Tentar alterar produto sem permissões de admnistrador.
         - **Resultado Esperado:** Mensagem dizendo "Rota exclusiva para administradores". Status Code: 403 enviado.
 
-### Testes de Busca de Produto
+### [Testes de Busca de Produto](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98347#!testCycleId=98347)
 - **Cenário 5 - Realizar busca de produto válida**
-    - **CT-5.1 (Caso de Teste 5.1) - Buscar por Produto Existente:**
+    - **[CT-5.1 (Caso de Teste 5.1)](https://oliver-almeida.atlassian.net/browse/PB3-21) - Buscar por Produto Existente:**
         - **Objetivo:** Garantir que produtos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de produtos. Status Code: 200 enviado.
 
-    - **CT-5.2 (Caso de Teste 5.2) - Buscar por Produto Existente Específico:**
+    - **[CT-5.2 (Caso de Teste 5.2)](https://oliver-almeida.atlassian.net/browse/PB3-22) - Buscar por Produto Existente Específico:**
         - **Objetivo:** Garantir que produtos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de produtos que satisfaçam a condição de busca. Status Code: 200 enviado.
 
 - **Cenário 6 - Realizar busca de produto inválida**
-    - **CT-6.1 (Caso de Teste 6.1) - Buscar por Produto Inexistente:**
+    - **[CT-6.1 (Caso de Teste 6.1)](https://oliver-almeida.atlassian.net/browse/PB3-23) - Buscar por Produto Inexistente:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso busque por produtos inexistentes no sistema.
         - **Pré-condições:** Produto(s) buscado não existir(em) no sistema. 
         - **Resultado Esperado:** Mensagem dizendo "Produto não encontrado". Status Code: 400 enviado.
 
-### Testes de Deleção de Produto
+### [Testes de Deleção de Produto](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98347#!testCycleId=98347)
 - **Cenário 7 - Realizar deleção de produto válida**
-    - **CT-7.1 (Caso de Teste 7.1) - Deletar Produto Existente:**
+    - **[CT-7.1 (Caso de Teste 7.1)](https://oliver-almeida.atlassian.net/browse/PB3-24) - Deletar Produto Existente:**
         - **Objetivo:** Garantir que o produto selecionado será deletado (se existir).
         - **Pré-condições:** Possuir a autenticação necessária e produto não fazer parte de carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído | Nenhum registro excluído". Status Code: 200 enviado.
 
-    - **CT-7.2 (Caso de Teste 7.2) - Deletar Produto Inexistente:**
+    - **[CT-7.2 (Caso de Teste 7.2)](https://oliver-almeida.atlassian.net/browse/PB3-25) - Deletar Produto Inexistente:**
         - **Objetivo:** Garantir que o produto selecionado será deletado (se existir).
         - **Pré-condições:** Possuir a autenticação necessária e produto não fazer parte de carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído | Nenhum registro excluído". Status Code: 200 enviado.
 
 - **Cenário 8 - Realizar deleção de produto inválida**
-    - **CT-8.1 (Caso de Teste 8.1) - Deletar Produto que Faz Parte de Carrinho:**
+    - **[CT-8.1 (Caso de Teste 8.1)](https://oliver-almeida.atlassian.net/browse/PB3-26) - Deletar Produto que Faz Parte de Carrinho:**
         - **Objetivo:** Garantir que o produto não será deletado caso faça parte de um carrinho.
         - **Pré-condições:** Possuir a autenticação necessária e produto fazer parte de carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir produto que faz parte de carrinho" junto do ID do carrinho. Status Code: 400 enviado.
     
-    - **CT-8.2 (Caso de Teste 8.2) - Deletar Produto com Token Ausente, Inválido ou Expirado:**
+    - **[CT-8.2 (Caso de Teste 8.2)](https://oliver-almeida.atlassian.net/browse/PB3-27) - Deletar Produto com Token Ausente, Inválido ou Expirado:**
         - **Objetivo:** Garantir que um produto não será deletado caso o Token esteja ausente, inválido ou expirado.
         - **Pré-condições:** Tentar deletar produto com Token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status Code: 401 enviado.
     
-    - **CT-8.3 (Caso de Teste 8.3) - Deletar Produto sem Ser Administrador:**
+    - **[CT-8.3 (Caso de Teste 8.3)](https://oliver-almeida.atlassian.net/browse/PB3-28) - Deletar Produto sem Ser Administrador:**
         - **Objetivo:** Garantir que um produto não será deletado caso o usuário não tenha permissões de administrador.
         - **Pré-condições:** Tentar deletar produto sem permissões de administrador.
         - **Resultado Esperado:** Mensagem dizendo "Rota exclusiva para administradores". Status Code: 403 enviado.

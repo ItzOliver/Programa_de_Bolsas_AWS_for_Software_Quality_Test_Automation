@@ -59,74 +59,74 @@ Objetivo principal do sistema: Se cadastrar no Marketplace do ServeRest.
 | AC-10 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos | Todos os Casos de Teste |
 
 ## Cenários Macro na Suíte de Testes
-### Testes de Criação de Usuário
+### [Testes de Criação de Usuário](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98353#!testCycleId=98353)
 - **Cenário 1 - Criar usuário com campos válidos**
-    - **CT-1.1 (Caso de Teste 1.1) - Criar Usuário com Todos os Campos Válidos:**
+    - **[CT-1.1 (Caso de Teste 1.1)](https://oliver-almeida.atlassian.net/browse/PB3-30) - Criar Usuário com Todos os Campos Válidos:**
         - **Objetivo:** Garantir que um usuário seja criado caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 201 enviado.
 
 - **Cenário 2 - Criar usuário com campos inválidos**
-    - **CT-2.1 (Caso de Teste 2.1) - Criar Usuário com E-mail já Utilizado:** 
+    - **[CT-2.1 (Caso de Teste 2.1)](https://oliver-almeida.atlassian.net/browse/PB3-31) - Criar Usuário com E-mail já Utilizado:** 
         - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
         - **Pré-condições:** Tentar criar usuário com e-mail já utlizado.
         - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
 
-    - **CT-2.2 (Caso de Teste 2.2) - Criar Usuário com Provedor de E-mail Inválido:** 
+    - **[CT-2.2 (Caso de Teste 2.2)](https://oliver-almeida.atlassian.net/browse/PB3-32) - Criar Usuário com Provedor de E-mail Inválido:** 
         - **Objetivo:** Garantir que um usuário não seja criado caso seu provedor de e-mail seja inválido.
         - **Pré-condições:** Tentar criar usuário com e-mails de provedor gmail ou hotmail.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
-    - **CT-2.3 (Caso de Teste 2.3) - Criar Usuário com Senha Inválida:** 
+    - **[CT-2.3 (Caso de Teste 2.3)](https://oliver-almeida.atlassian.net/browse/PB3-33) - Criar Usuário com Senha Inválida:** 
         - **Objetivo:** Garantir que um usuário não seja criado caso sua senha seja inválida.
         - **Pré-condições:** Tentar criar usuário com senha menor que 5 caracteres ou maior que 10.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
-### Testes de Atualização de Dados de Usuário
+### [Testes de Atualização de Dados de Usuário](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98353#!testCycleId=98353)
 - **Cenário 3 - Realizar alteração com campos válidos**
-    - **CT-3.1 (Caso de Teste 3.1) - Alterar Dados de Usuário Cadastrado:** 
+    - **[CT-3.1 (Caso de Teste 3.1)](https://oliver-almeida.atlassian.net/browse/PB3-34) - Alterar Dados de Usuário Cadastrado:** 
         - **Objetivo:** Garantir que um usuário possa ter seus dados alterados.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registo alterado com sucesso". Status code: 200 enviado.
 
-    - **CT-3.2 (Caso de Teste 3.2) - Alterar Dados de Usuário Não Cadastrado:** 
+    - **[CT-3.2 (Caso de Teste 3.2)](https://oliver-almeida.atlassian.net/browse/PB3-35) - Alterar Dados de Usuário Não Cadastrado:** 
         - **Objetivo:** Garantir que, caso não seja encontrado usuário com ID informado, é realizado novo cadastro ao invés de alteração.
         - **Pré-condições:** Possuir a autenticação necessária e não existir usuário com ID informado.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do ID do usuário. Status Code: 200 enviado.
 
 - **Cenário 4 - Realizar alteração com campos inválidos**
-    - **CT-4.1 (Caso de Teste 4.1) - Alterar Dados de Usuário Não Cadastrado com E-mail já Utilizado:**
+    - **[CT-4.1 (Caso de Teste 4.1)](https://oliver-almeida.atlassian.net/browse/PB3-36) - Alterar Dados de Usuário Não Cadastrado com E-mail já Utilizado:**
         - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
         - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail já estar sendo utilizado.
         - **Resultado Esperado:** Mensagem dizendo "Este e-mail já está sendo utilizado". Status Code: 400 enviado.
 
-    - **CT-4.2 (Caso de Teste 4.2) - Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
+    - **[CT-4.2 (Caso de Teste 4.2)](https://oliver-almeida.atlassian.net/browse/PB3-37) - Alterar Dados de Usuário com E-mail e/ou Senha inválidos:**
         - **Objetivo:** Garantir que um usuário não seja criado caso o e-mail já esteja sendo utilizado.
         - **Pré-condições:** Possuir a autenticação necessária, não existir usuário com ID informado e e-mail e/ou senha serem inválidos.
         - **Resultado Esperado:** Mensagem dizendo "E-mail e/ou senha inválidos". Status Code: 401 enviado.
 
-### Testes de Busca de Usuário
+### [Testes de Busca de Usuário](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98353#!testCycleId=98353)
 - **Cenário 5 - Realizar busca de usuário válida**
-    - **CT-5.1 (Caso de Teste 5.1)- Buscar por Usuário Existente:**
+    - **[CT-5.1 (Caso de Teste 5.1)](https://oliver-almeida.atlassian.net/browse/PB3-38) - Buscar por Usuário Existente:**
         - **Objetivo:** Garantir que usuários existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de usuários que satisfaçam a condição de busca (se houver). Status Code: 200 enviado.
 
 - **Cenário 6 - Realizar busca de usuário inválida**
-    - **CT-6.1 (Caso de Teste 6.1) - Buscar por Usuário Inexistente:**
+    - **[CT-6.1 (Caso de Teste 6.1)](https://oliver-almeida.atlassian.net/browse/PB3-39) - Buscar por Usuário Inexistente:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso busque por usuários inexistentes no sistema.
         - **Pré-condições:** Usuário(s) buscados não existir(em) no sistema.
         - **Resultado Esperado:** Mensagem dizendo "Usuário não encontrado". Status Code: 400 enviado.
 
-### Teste de Deleção de Usuário
+### [Teste de Deleção de Usuário](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=98353#!testCycleId=98353)
 - **Cenário 7 - Realizar deleção de usuário válida**
-    - **CT-7.1 (Caso de Teste 7.1) - Deletar Usuário Existente/Inexistente:**
+    - **[CT-7.1 (Caso de Teste 7.1)](https://oliver-almeida.atlassian.net/browse/PB3-40) - Deletar Usuário Existente/Inexistente:**
         - **Objetivo:** Garantir que o usuário selecionado será deletado (se existir).
         - **Pré-condições:** Possuir a autenticação necessária e usuário não pode possuir carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Registro Excluído | Nenhum registro excluído". Status Code: 200 enviado.
 
 - **Cenário 8 - Realizar deleção de usuário inválida**
-    - **CT-8.1 (Caso de Teste 8.1) - Deletar Usuário com Carrinho:**
+    - **[CT-8.1 (Caso de Teste 8.1)](https://oliver-almeida.atlassian.net/browse/PB3-41) - Deletar Usuário com Carrinho:**
         - **Objetivo:** Garantir que o usuário selecionado não será deletado caso tenha um carrinho.
         - **Pré-condições:** Possuir a autenticação necessária e usuário possuir carrinho.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir usuário com carrinho". Status Code: 400 enviado.
