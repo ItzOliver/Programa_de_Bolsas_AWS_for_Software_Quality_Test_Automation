@@ -14,4 +14,24 @@ Em aplicações web dependendo de como navegamos pela aplicação a Url dela mud
 ## Sabotage
 Entender o funcionamento da aplicação, quais dependências ela possui e sabotá-la para testar como ela se comporta.
 
-## Ferramentas de Desenvolvedor
+## Ferramentas de Desenvolver
+Simular situações que não são possíveis somente manipulando o formulário através das ferramentas de desenvolvedor dos navegadores.
+
+## Requisições
+Requisições REST, Postman, Status Codes, etc.
+
+## Responsividade e Acessibilidade
+Responsividade -> Independente do tamanho ou layout da tela, os elementos presentes nela irão se adaptar a ele.
+Como testar isso? Diminuir o tamanho da janela do navegador.
+Acessibilidade -> Como uma pessoa com alguma dificuldade especial poderia interagir com sua aplicação.
+
+## Segurança
+Manipulação de formulários através das ferramentas de desenvolvedor, html injection, JS injection, Sql injection, etc.
+Barrar que formulário da aplicação aceite códigos.
+
+## Banco de Dados
+Raciocinando como determinada aplicação funciona é possível inferir modelos e entender como testar e manipular a aplicação.
+Através da inferência de como funciona um banco de daods é possível testar injeção de valores que causariam problemas a estrutura dele.
+
+## Resumão
+[Test Heuristics Cheat Sheets](https://www.ministryoftesting.com/articles/test-heuristics-cheat-sheet)
