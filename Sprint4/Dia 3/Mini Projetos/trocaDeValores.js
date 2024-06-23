@@ -1,3 +1,4 @@
+// troque os valores de duas variáveis
 let a = 'vermelho';
 let b = 'azul';
 
