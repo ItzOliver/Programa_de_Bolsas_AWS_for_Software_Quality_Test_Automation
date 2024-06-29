@@ -72,5 +72,8 @@ export default class Calculadora {
         const Bhask2 = (-(b) - this.raiz(delta)) / (2 * a)
         return Bhask1, Bhask2
     }
+    static VelMed(a, b){
+        return a / b
+    }
 
 }

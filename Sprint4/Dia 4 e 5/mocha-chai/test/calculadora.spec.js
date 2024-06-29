@@ -133,3 +133,13 @@ describe('Testes de cálculo de Bháskara', () => {
         expect(resultado).to.be.eq(0.5, 3)
     })
 })
+describe('Testes de cálculo de velocidade média', () => {
+    it('Deve calcular a velocidade média considerando que a distância percorrida foi 300km em um tempo de 5 horas, resultando em 60km/h', () => {
+        let resultado = Calculadora.VelMed(300, 5)
+        expect(resultado).to.be.eq(60)
+    })
+    it('Deve calcular a velocidade média considerando que a distância percorrida foi 150km em um tempo de 1,5 horas, resultando em 100km/h', () => {
+        let resultado = Calculadora.VelMed(150, 1.5)
+        expect(resultado).to.be.eq(100)
+    })
+})
