@@ -8,9 +8,13 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 - Instalar VSCode
 - Instalar Node.JS com os comandos abaixo:
 ``` winget install Schniz.fnm ```
+
 ``` fnm use --install-if-missing 20 ```
+
 ``` node -v ```
+
 ``` npm -v ``` 
+
 - Instalar Mocha com os comandos abaixo:
 ``` npm install mocha ```
 - Instalar Chai com os comandos:
