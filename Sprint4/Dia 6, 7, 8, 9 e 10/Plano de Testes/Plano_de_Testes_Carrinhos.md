@@ -20,7 +20,27 @@ Objetivo: Garantir que a API de carrinhos permita a autenticação do usuário e
 ## Priorização de Testes
 ### Fluxo Prioritário
 Aplicação: [API] Rota de Carrinho
-Objetivo principal do sistema:
+Objetivo principal do sistema: Garantir que um usuários possam se autenticar, cadastrar um carrinho e finalizar suas compras.
+
+- Lista de fluxos prioritários ordenada:
+    - Enviar uma requisição POST para cadastrar carrinho;
+        - O carrinho será vinculado ao usuário do token no header Authorization;
+        - Deverá ser reduzida no estoque a quantidade de cada produto inserido no carrinho ao cadastrar.
+    - Submeter requisição após preencher campos;
+        - Se houver produto duplicado no carrinho | usuário já possuir um carrinho | algum produto no carrinho não for encontrado | algum produto não possui quantidade suficiente:
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+        - Se Token de acesso estiver ausente, inválido ou expirado:
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+    - Carrinho cadastrado;
+    - Enviar uma requisição DELETE para finalizar a compra do carrinho;
+        - O carrinho será vinculado ao usuário do token no header Authorization;
+        - Ao concluir uma compra o carrinho é excluído.
+    - Submeter requisição após preencher campos;
+        - Se Token de acesso estiver ausente, inválido ou expirado;
+            - Rejeita a requisição e envia uma mensagem informando ao usuário.
+    - Carrinho excluído e compra finalizada.
+
+
 
 ## Matriz de Rastreabilidade
 | Requisito ID | Descrição do Requisito | Casos de Teste |
@@ -44,99 +64,109 @@ Objetivo principal do sistema:
 | AC-9 | Os testes executados deverão conter evidências | Evidências disponíveis no board do Jira |
 
 ## Cenários Macro na Suíte de Testes
-### [Testes de Criação de Carrinhos]()
+### [Testes de Criação de Carrinhos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=99734#!testCycleId=99734)
 - **Cenário 1 - Criar carrinho com campos válidos**
-    - **[CT-1.1 (Caso de Teste 1.1)]() - Criar Carrinho com Todos os Campos Válidos:** 
+    - **[CT-1.1 (Caso de Teste 1.1)](https://oliver-almeida.atlassian.net/browse/PB-57) - Criar Carrinho com Todos os Campos Válidos:** 
         - **Objetivo:** Garantir que um carrinho seja cadastrado caso todos os campos preenchidos sejam válidos.
         - **Pré-condições:** Ter realizado cadastro na plataforma.
         - **Resultado Esperado:** Mensagem dizendo "Cadastro realizado com sucesso" junto do id do carrinho. Status code: 201 enviado.
 
 - **Cenário 2 - Criar carrinho com campos inválidos**
-    - **[CT-2.1 (Caso de Teste 2.1)]() - Criar Carrinho com Produto Duplicado:** 
+    - **[CT-2.1 (Caso de Teste 2.1)](https://oliver-almeida.atlassian.net/browse/PB-58) - Criar Carrinho com Produto Duplicado:** 
         - **Objetivo:** Garantir que um carrinho não seja cadastrado caso tenha produtos duplicados. 
         - **Pré-condições:** Tentar cadastrar carrinho com produto duplicado.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido possuir produto duplicado | Não é permitido ter mais de 1 carrinho | Produto não encontrado | Produto não possui quantidade suficiente". Status code: 400 enviado.
 
-    - **[CT-2.2 (Caso de Teste 2.2)]() - Criar Carrinho já Possuindo um Carrinho Previamente:** 
+    - **[CT-2.2 (Caso de Teste 2.2)](https://oliver-almeida.atlassian.net/browse/PB-59) - Criar Carrinho já Possuindo um Carrinho Previamente:** 
         - **Objetivo:** Garantir que um carrinho não seja cadastrado caso o usuário já possua um carrinho cadastrado. 
         - **Pré-condições:** Tentar cadastrar carrinho já possuindo um carrinho previamente.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido possuir produto duplicado | Não é permitido ter mais de 1 carrinho | Produto não encontrado | Produto não possui quantidade suficiente". Status code: 400 enviado.
 
-    - **[CT-2.3 (Caso de Teste 2.3)]() - Criar Carrinho com Produto Não Encontrado:** 
+    - **[CT-2.3 (Caso de Teste 2.3)](https://oliver-almeida.atlassian.net/browse/PB-60) - Criar Carrinho com Produto Não Encontrado:** 
         - **Objetivo:** Garantir que um carrinho não seja cadastrado caso um dos produtos do carrinho não seja encontrado. 
         - **Pré-condições:** Tentar cadastrar carrinho com produto inexistente.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido possuir produto duplicado | Não é permitido ter mais de 1 carrinho | Produto não encontrado | Produto não possui quantidade suficiente". Status code: 400 enviado.
 
-    - **[CT-2.4 (Caso de Teste 2.4)]() - Criar Carrinho com Produto com Quantidade Insuficiente:** 
+    - **[CT-2.4 (Caso de Teste 2.4)](https://oliver-almeida.atlassian.net/browse/PB-61) - Criar Carrinho com Produto com Quantidade Insuficiente:** 
         - **Objetivo:** Garantir que um carrinho não seja cadastrado caso o produto não possua quantidade suficiente. 
         - **Pré-condições:** Tentar cadastrar carrinho com produto sem quantidade suficiente.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido possuir produto duplicado | Não é permitido ter mais de 1 carrinho | Produto não encontrado | Produto não possui quantidade suficiente". Status code: 400 enviado.
 
-    - **[CT-2.5 (Caso de Teste 2.5)]() - Criar Carrinho com Produto com Token Ausente, Inválido ou Expirado:** 
+    - **[CT-2.5 (Caso de Teste 2.5)](https://oliver-almeida.atlassian.net/browse/PB-62) - Criar Carrinho com Token Ausente, Inválido ou Expirado:** 
         - **Objetivo:** Garantir que um carrinho não seja cadastrado caso o Token esteja ausente, inválido ou expirado. 
         - **Pré-condições:** Tentar cadastrar carrinho com token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status code: 401 enviado.
 
-### [Testes de Atualização de Dados de Carrinhos]()
+### [Testes de Atualização de Dados de Carrinhos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=99734#!testCycleId=99734)
 - **Cenário 3 - Realizar atualização de dados de carrinho válida**
-    - **[CT-3.1 (Caso de Teste 3.1)]() - Remover Produto Existente de Carrinho:**
+    - **[CT-3.1 (Caso de Teste 3.1)](https://oliver-almeida.atlassian.net/browse/PB-63) - Remover Produto Existente de Carrinho:**
         - **Objetivo:** Garantir que carrinhos cadastrados possam ter produtos específicos removidos.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Produto removido com sucesso". Status Code: 200 enviado.
 
-    - **[CT-3.2 (Caso de Teste 3.2)]() - Adicionar Produto Existente a Carrinho já Cadastrado:**
+    - **[CT-3.2 (Caso de Teste 3.2)](https://oliver-almeida.atlassian.net/browse/PB-64) - Adicionar Produto Existente a Carrinho já Cadastrado:**
         - **Objetivo:** Garantir que carrinhos cadastrados possam ter produtos adicionados após o cadastro do carrinho.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Produto adicionado com sucesso". Status Code: 201 enviado.
 
 - **Cenário 4 - Realizar atualização de dados de carrinho inválida**
-    - **[CT-4.1 (Caso de Teste 4.1)]() - Remover Produto Inexsitente de Carrinho:**
+    - **[CT-4.1 (Caso de Teste 4.1)](https://oliver-almeida.atlassian.net/browse/PB-65) - Remover Produto Inexsitente de Carrinho:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso tente remover produtos inexistentes no carrinho.
         - **Pré-condições:** Possuir a autenticação necessária. 
         - **Resultado Esperado:** Mensagem dizendo "Produto não encontrado". Status Code: 400 enviado.
 
-    - **[CT-4.2 (Caso de Teste 4.2)]() - Adicionar Produto Inexsitente ao Carrinho:**
+    - **[CT-4.2 (Caso de Teste 4.2)](https://oliver-almeida.atlassian.net/browse/PB-66) - Adicionar Produto Inexsitente ao Carrinho:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso tente adicionar produtos inexistentes no carrinho.
         - **Pré-condições:** Possuir a autenticação necessária. 
         - **Resultado Esperado:** Mensagem dizendo "Produto não encontrado". Status Code: 400 enviado.
 
-    - **[CT-4.3 (Caso de Teste 4.3)]() - Tentar Alterar Dados de Carrinho com Token Ausente, Inválido ou Expirado:** 
+    - **[CT-4.3 (Caso de Teste 4.3)](https://oliver-almeida.atlassian.net/browse/PB-67) - Tentar Alterar Dados de Carrinho com Token Ausente, Inválido ou Expirado:** 
         - **Objetivo:** Garantir que um carrinho não seja alterado caso o Token esteja ausente, inválido ou expirado. 
         - **Pré-condições:** Tentar cadastrar carrinho com token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status code: 401 enviado.
 
-### [Testes de Busca de Carrinhos]()
+### [Testes de Busca de Carrinhos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=99734#!testCycleId=99734)
 - **Cenário 5 - Realizar busca de carrinho válida**
-    - **[CT-5.1 (Caso de Teste 5.1)]() - Buscar por Carrinho Existente:**
+    - **[CT-5.1 (Caso de Teste 5.1)](https://oliver-almeida.atlassian.net/browse/PB-68) - Buscar por Carrinho Existente:**
         - **Objetivo:** Garantir que carrinhos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de carrinhos. Status Code: 200 enviado.
 
-    - **[CT-5.2 (Caso de Teste 5.2)]() - Buscar por Carrinho Existente Específico:**
+    - **[CT-5.2 (Caso de Teste 5.2)](https://oliver-almeida.atlassian.net/browse/PB-69) - Buscar por Carrinho Existente Específico:**
         - **Objetivo:** Garantir que carrinhos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de carrinhos que satisfaçam a condição de busca. Status Code: 200 enviado.
 
 - **Cenário 6 - Realizar busca de carrinho inválida**
-    - **[CT-6.1 (Caso de Teste 6.1)]() - Buscar por Carrinho Inexistente:**
+    - **[CT-6.1 (Caso de Teste 6.1)](https://oliver-almeida.atlassian.net/browse/PB-70) - Buscar por Carrinho Inexistente:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso busque por carrinhos inexistentes no sistema.
         - **Pré-condições:** Carrinho(s) buscado não existir(em) no sistema. 
         - **Resultado Esperado:** Mensagem dizendo "Carrinho não encontrado". Status Code: 400 enviado.
 
-### [Testes de Deleção de Carrinhos]()
-- **Cenário 7 - Realizar deleção de produto válida**
-    - **[CT-7.1 (Caso de Teste 7.1)]() - Deletar Carrinho Existente "concluir-compra":**
+### [Testes de Deleção de Carrinhos](https://oliver-almeida.atlassian.net/plugins/servlet/ac/com.soldevelo.apps.test_management/test-cycle-details?testCycleId=99734#!testCycleId=99734)
+- **Cenário 7 - Realizar deleção de carrinho válida**
+    - **[CT-7.1 (Caso de Teste 7.1)](https://oliver-almeida.atlassian.net/browse/PB-71) - Deletar Carrinho Existente "concluir-compra":**
         - **Objetivo:** Garantir que o carrinho selecionado será deletado no endpoint "concluir-compra" ao concluir uma compra.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
 
-    - **[CT-7.2 (Caso de Teste 7.2)]() - Deletar Carrinho Existente "cancelar-compra":**
+    - **[CT-7.2 (Caso de Teste 7.2)](https://oliver-almeida.atlassian.net/browse/PB-72) - Deletar Carrinho Existente "cancelar-compra":**
         - **Objetivo:** Garantir que o carrinho selecionado será deletado e que os produtos retornem ao estoque no endpoint "cancelar-compra" ao cancelar uma compra.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
 
-- **Cenário 8 - Realizar deleção de produto inválida**
-    - **[CT-8.1 (Caso de Teste 8.1)]() - Deletar Carrinho com Token Ausente, Inválido ou Expirado:**
+    - **[CT-7.3 (Caso de Teste 7.3)](https://oliver-almeida.atlassian.net/browse/PB-74) - Deletar Carrinho Inexistente "concluir-compra":**
+        - **Objetivo:** Garantir que o usuário recebrá um feedback caso o carrinho deleta não exista.
+        - **Pré-condições:** Possuir a autenticação necessária.
+        - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
+
+    - **[CT-7.4 (Caso de Teste 7.4)](https://oliver-almeida.atlassian.net/browse/PB-75) - Deletar Carrinho Inexistente "concluir-compra":**
+        - **Objetivo:** Garantir que o usuário recebrá um feedback caso o carrinho deleta não exista.
+        - **Pré-condições:** Possuir a autenticação necessária.
+        - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
+
+- **Cenário 8 - Realizar deleção de carrinho inválida**
+    - **[CT-8.1 (Caso de Teste 8.1)](https://oliver-almeida.atlassian.net/browse/PB-73) - Deletar Carrinho com Token Ausente, Inválido ou Expirado:**
         - **Objetivo:** Garantir que o carrinho não será deletado caso Token esteja ausente, inválido ou expirado.
         - **Pré-condições:** Tentar deletar carrinho com token ausente, inválido ou expirado.
-        - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir produto que faz parte de carrinho" junto do ID do carrinho. Status Code: 400 enviado.
+        - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status Code: 401 enviado.
