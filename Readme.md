@@ -16,9 +16,9 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 
 ``` npm -v ``` 
 
-- Instalar Mocha com os comandos abaixo:
+- Instalar Mocha com o comando:
 ``` npm install mocha ```
-- Instalar Chai com os comandos:
+- Instalar Chai com o comando:
 ``` npm install chai ```
 - Abrir o terminal na pasta mocha-chai e executar o comando:
 ``` npm run test ```
