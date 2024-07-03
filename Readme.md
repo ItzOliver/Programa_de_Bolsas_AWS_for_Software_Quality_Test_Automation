@@ -4,13 +4,13 @@ Seja bem-vindo! Este repositório documenta o estudo e o desenvolvimento de toda
 # 📚 Organização
 A organização do conteúdo das Sprints pode ser contemplada navegando pela [wiki](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/wiki) do projeto.
 
-# 🗺 Mapa Mental API ServeRest
-![API Serverest.png](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/src/API%20Serverest%20-%20Challenge.png?raw=true)
+# 🗺 Mapa Mental API ServeRest - Rota Carrinhos
+![API Serverest.png](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint4/src/API%20Serverest%20-%20Carrinhos.png?raw=true)
 
-O arquivo do mapa mental pode ser acessado clicando [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint3/Sprint3/Dia%207%2C%208%2C%209%20e%2010/Challenge/Mapa%20Mental/API%20Serverest%20-%20Challenge.xmind).
+O arquivo do mapa mental pode ser acessado clicando [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint4/Sprint4/Dia%206%2C%207%2C%208%2C%209%20e%2010/Mapa%20Mental).
 
 # 📄 Plano de Testes API ServeRest
-O plano de testes para as rotas de usuário, login e produtos da API ServeRest pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint3/Sprint3/Dia%207%2C%208%2C%209%20e%2010/Challenge/Planos%20de%20Testes).
+O plano de testes para as rotas de usuário, login e produtos da API ServeRest pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint4/Sprint4/Dia%206%2C%207%2C%208%2C%209%20e%2010/Plano%20de%20Testes).
 
 # 🤝 Agradecimentos
 - Enzo Rossi
