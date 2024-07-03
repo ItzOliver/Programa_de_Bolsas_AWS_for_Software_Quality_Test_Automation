@@ -7,6 +7,7 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 # Passo a Passo para Rodar os Testes Mocha e Chai da Calculadora
 - Instalar VSCode
 - Instalar Node.JS com os comandos abaixo:
+
 ``` winget install Schniz.fnm ```
 
 ``` fnm use --install-if-missing 20 ```
