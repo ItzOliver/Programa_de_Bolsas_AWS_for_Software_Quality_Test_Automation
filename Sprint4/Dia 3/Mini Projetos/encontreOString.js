@@ -10,7 +10,7 @@ const filme = {
 
 function exibirPropriedades(obj){
     for (let chave in obj) {
-        if (typeof obj[chave] === "string"){
+        if (typeof obj[chave] === 'string'){
             console.log(chave, obj[chave]);
         };
     };

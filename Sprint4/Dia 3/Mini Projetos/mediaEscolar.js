@@ -6,24 +6,25 @@
 // 80-89: B
 // 90-100: A
 // REFAZER!!!
-function mediaEscolar(array){
-    let soma = 0;
-    for (let i = 0; i <= array.length; i++){
-        soma += array[i];
-    };
-    const mediaFinal = soma /(array.length);
-    if (mediaFinal <= 59){
-        return "E";
-    } else if (mediaFinal >= 60 && mediaFinal <=69){
-        return "D";
-    } else if (mediaFinal >= 70 && mediaFinal <= 79){
-        return "C";
-    } else if (mediaFinal >= 80 && mediaFinal <= 89){
-        return "B";
-    } else if (mediaFinal >= 90 && mediaFinal <= 100){
-        return "A";
-    };
-};
+
+// Agradeço ao Mathias pela ajuda com a atividade e elaboração
 
 const array = [70, 70, 80];
-mediaEscolar(array);
+console.log(mediaDoAluno(array));
+
+function mediaDoAluno(notas) {
+    const media = calcularMedia(notas);
+    if (media < 59) return 'F';
+    if (media < 69) return 'D';
+    if (media < 79) return 'C';
+    if (media < 89) return 'B';
+    return 'A';
+}
+
+function calcularMedia(array) {
+    let soma = 0;
+    for (let valor of array) {
+        soma += valor;
+    }
+    return soma / array.length;
+}
