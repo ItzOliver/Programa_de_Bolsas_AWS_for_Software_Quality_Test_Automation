@@ -25,21 +25,23 @@ Objetivo principal do sistema:
 ## Matriz de Rastreabilidade
 | Requisito ID | Descrição do Requisito | Casos de Teste |
 |:----------|:-------------:|:-------------:|
-| DoR-1 | --- | --- |
-| DoR-2 | --- | --- |
-| DoR-3 | --- | --- |
-| DoD-1 | --- | --- |
-| DoD-2 | --- | --- |
+| DoR-1 | Banco de dados e infraestrutura para desenvolvimento disponibilizados | Todos os casos de teste dependem da infraestrutura adequada |
+| DoR-2 | API de cadastro de usuários implementada | Todos os casos de teste dependem da existência de usuários autenticados |
+| DoR-3 | API de autenticação implementada | Todos os casos de teste dependem da autenticação funcional |
+| DoR-4 | Ambiente de testes disponibilizado | Todos os casos de teste dependem do ambiente de testes |
+| DoD-1 | CRUD de cadastro de Carrinhos implementado (CRIAR, LISTAR, ATUALIZAR E DELETAR) | Todos os Casos de Teste |
+| DoD-2 | Análise de testes cobrindo a rota de carrinhos | Todos os Casos de Teste |
 | DoD-3 | Matriz de rastreabilidade atualizada | Este documento |
-| DoD-4 | --- | --- |
-| AC-1 | --- | --- |
-| AC-2 | --- | --- |
-| AC-3 | --- | --- |
-| AC-4 | --- | --- |
-| AC-5 | --- | --- |
-| AC-6 | --- | --- |
-| AC-7 | --- | --- |
-| AC-8 | --- | --- |
+| DoD-4 | Automação de testes baseado na análise realizada | --- |
+| AC-1 | Usuários não autenticados não devem conseguir realizar ações na rota de Carrinhos | CT-2.5, CT-4.3 |
+| AC-2 | Não deve ser possível cadastrar amais que 1 carrinho por usuário | CT-2.2 |
+| AC-3 | O carrinho deve ser vinculado ao usuário do token enviado no header Authorization | CT-1.1, CT-2.1, CT-2.2, CT-2.3, CT-2.4 |
+| AC-4 | Ao cadastrar carrinho com sucesso é feita a redução da quantidade no cadastro de cada produto inserido no carrinho | CT-1.1 |
+| AC-5 | Ao concluir uma compra o carrinho é excluído, o carrinho excluído será o vinculado ao usuário do token utilizado | CT-7.1 |
+| AC-6 | Ao cancelar uma compra o carrinho é excluído e o estoque dos produtos desse carrinho é reabastecido | CT-7.2 |
+| AC-7 | O carrinho excluído deverá ser o vinculado ao usuário do token utilizado | CT-7.1, CT-7.2 |
+| AC-8 | A cobertura de testes deve se basear no Swagger e ir além, cobrindo cenários alternativos | Todos os Casos de Teste |
+| AC-9 | Os testes executados deverão conter evidências | Evidências disponíveis no board do Jira |
 
 ## Cenários Macro na Suíte de Testes
 ### [Testes de Criação de Carrinhos]()
@@ -75,38 +77,66 @@ Objetivo principal do sistema:
         - **Pré-condições:** Tentar cadastrar carrinho com token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status code: 401 enviado.
 
+### [Testes de Atualização de Dados de Carrinhos]()
+- **Cenário 3 - Realizar atualização de dados de carrinho válida**
+    - **[CT-3.1 (Caso de Teste 3.1)]() - Remover Produto Existente de Carrinho:**
+        - **Objetivo:** Garantir que carrinhos cadastrados possam ter produtos específicos removidos.
+        - **Pré-condições:** Possuir a autenticação necessária.
+        - **Resultado Esperado:** Mensagem dizendo "Produto removido com sucesso". Status Code: 200 enviado.
+
+    - **[CT-3.2 (Caso de Teste 3.2)]() - Adicionar Produto Existente a Carrinho já Cadastrado:**
+        - **Objetivo:** Garantir que carrinhos cadastrados possam ter produtos adicionados após o cadastro do carrinho.
+        - **Pré-condições:** Possuir a autenticação necessária.
+        - **Resultado Esperado:** Mensagem dizendo "Produto adicionado com sucesso". Status Code: 201 enviado.
+
+- **Cenário 4 - Realizar atualização de dados de carrinho inválida**
+    - **[CT-4.1 (Caso de Teste 4.1)]() - Remover Produto Inexsitente de Carrinho:**
+        - **Objetivo:** Garantir que o usuário receba um feedback caso tente remover produtos inexistentes no carrinho.
+        - **Pré-condições:** Possuir a autenticação necessária. 
+        - **Resultado Esperado:** Mensagem dizendo "Produto não encontrado". Status Code: 400 enviado.
+
+    - **[CT-4.2 (Caso de Teste 4.2)]() - Adicionar Produto Inexsitente ao Carrinho:**
+        - **Objetivo:** Garantir que o usuário receba um feedback caso tente adicionar produtos inexistentes no carrinho.
+        - **Pré-condições:** Possuir a autenticação necessária. 
+        - **Resultado Esperado:** Mensagem dizendo "Produto não encontrado". Status Code: 400 enviado.
+
+    - **[CT-4.3 (Caso de Teste 4.3)]() - Tentar Alterar Dados de Carrinho com Token Ausente, Inválido ou Expirado:** 
+        - **Objetivo:** Garantir que um carrinho não seja alterado caso o Token esteja ausente, inválido ou expirado. 
+        - **Pré-condições:** Tentar cadastrar carrinho com token ausente, inválido ou expirado.
+        - **Resultado Esperado:** Mensagem dizendo "Token de acesso ausente, inválido, expirado ou usuário do token não existe mais". Status code: 401 enviado.
+
 ### [Testes de Busca de Carrinhos]()
-- **Cenário 3 - Realizar busca de carrinho válida**
-    - **[CT-3.1 (Caso de Teste 3.1)]() - Buscar por Carrinho Existente:**
+- **Cenário 5 - Realizar busca de carrinho válida**
+    - **[CT-5.1 (Caso de Teste 5.1)]() - Buscar por Carrinho Existente:**
         - **Objetivo:** Garantir que carrinhos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de carrinhos. Status Code: 200 enviado.
 
-    - **[CT-3.2 (Caso de Teste 3.2)]() - Buscar por Carrinho Existente Específico:**
+    - **[CT-5.2 (Caso de Teste 5.2)]() - Buscar por Carrinho Existente Específico:**
         - **Objetivo:** Garantir que carrinhos existentes possam ser buscados no sistema.
         - **Pré-condições:** Não há.
         - **Resultado Esperado:** Lista de carrinhos que satisfaçam a condição de busca. Status Code: 200 enviado.
 
-- **Cenário 4 - Realizar busca de carrinho inválida**
-    - **[CT-4.1 (Caso de Teste 4.1)]() - Buscar por Carrinho Inexistente:**
+- **Cenário 6 - Realizar busca de carrinho inválida**
+    - **[CT-6.1 (Caso de Teste 6.1)]() - Buscar por Carrinho Inexistente:**
         - **Objetivo:** Garantir que o usuário receba um feedback caso busque por carrinhos inexistentes no sistema.
         - **Pré-condições:** Carrinho(s) buscado não existir(em) no sistema. 
         - **Resultado Esperado:** Mensagem dizendo "Carrinho não encontrado". Status Code: 400 enviado.
 
 ### [Testes de Deleção de Carrinhos]()
-- **Cenário 5 - Realizar deleção de produto válida**
-    - **[CT-5.1 (Caso de Teste 5.1)]() - Deletar Carrinho Existente "concluir-compra":**
+- **Cenário 7 - Realizar deleção de produto válida**
+    - **[CT-7.1 (Caso de Teste 7.1)]() - Deletar Carrinho Existente "concluir-compra":**
         - **Objetivo:** Garantir que o carrinho selecionado será deletado no endpoint "concluir-compra" ao concluir uma compra.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
 
-    - **[CT-5.2 (Caso de Teste 5.2)]() - Deletar Carrinho Existente "cancelar-compra":**
+    - **[CT-7.2 (Caso de Teste 7.2)]() - Deletar Carrinho Existente "cancelar-compra":**
         - **Objetivo:** Garantir que o carrinho selecionado será deletado e que os produtos retornem ao estoque no endpoint "cancelar-compra" ao cancelar uma compra.
         - **Pré-condições:** Possuir a autenticação necessária.
         - **Resultado Esperado:** Mensagem dizendo "Registro excluído com sucesso | Não foi encontrado carrinho para esse usuário". Status Code: 200 enviado.
 
-- **Cenário 6 - Realizar deleção de produto inválida**
-    - **[CT-6.1 (Caso de Teste 6.1)]() - Deletar Carrinho com Token Ausente, Inválido ou Expirado:**
+- **Cenário 8 - Realizar deleção de produto inválida**
+    - **[CT-8.1 (Caso de Teste 8.1)]() - Deletar Carrinho com Token Ausente, Inválido ou Expirado:**
         - **Objetivo:** Garantir que o carrinho não será deletado caso Token esteja ausente, inválido ou expirado.
         - **Pré-condições:** Tentar deletar carrinho com token ausente, inválido ou expirado.
         - **Resultado Esperado:** Mensagem dizendo "Não é permitido excluir produto que faz parte de carrinho" junto do ID do carrinho. Status Code: 400 enviado.
