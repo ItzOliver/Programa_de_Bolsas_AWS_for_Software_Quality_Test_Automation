@@ -1,0 +1,29 @@
+# Por que Eu Deveria Testar a Performance da Minha API
+## Por que teria problemas em negligenciar requisitos de performance?
+- Falta de Direcionamento para o Desenvolvimento;
+    - Implementações Erradas;
+        - Aquitetura;
+        - Codificação.
+    - Modelagem de Banco de Dados;
+        - Query's Onerosas;
+        - Index.
+    - Decisões erradas de Infra-Estrutura.
+- Falta de visibilidade do impacto do negócio;
+    - Janelas de processamento;
+    - Riscos de Perdas clientes/receita;
+        - Indisponilidade;
+        - Alto tempo de resposta;
+        - Alta taxa de Erro.
+- Por que eu deveria testar a performance da minha API?
+    - Prevenção de Problemas;
+    - Direcionamento da melhor arquitetura para atender as necessidades de negócio;
+    - Evitar retrabalhos;
+        - Custos;
+            - Tempo;
+            - Financeiro.
+    - Restruturação na arquitetura da API.
+    - Zelar pela reputação da aplicação;
+        - Exposição negativa em redes sociais;
+        - Experiência ruim dousuário.
+    - Não causar danos aos clientes/usuários;
+    - Garantir responsabilidade legal.

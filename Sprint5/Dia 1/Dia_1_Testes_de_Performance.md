@@ -1,0 +1,298 @@
+# Testes de Performance - Conceitos de Performance
+## Requisitos Não Funcionais
+- O que é requisito?
+    - Condição Básica para atender;
+        - Propósito;
+        - Condição;
+        - Definição;
+        - Regra;
+        - Critérios.
+- O que é requisito não funcional?
+    - Não interferem diretamento no desenvolvimento do sistema;
+    - Pode impactar em atender o propósito da aplicação;
+    - São os requisitos relacionados ao usa da aplicação;
+        - Desempenho -> Nosso foco é performance;
+        - Disponibilidade;
+        - Usabilidade;
+        - Confiabilidade;
+        - Segurança;
+        - Interoperabilidade.
+- Importante Lembrar
+    - Requisito Funcional;
+        - O que?
+            - Regras de Negócio;
+            - Definição dos Fluxos da Aplicação;
+            - O que o sistema deve fazer.
+    - Requisito Não Funcional;
+        - Como?
+        - Comportamento da aplicação.
+- Qual a importância desses requisitos de performance?
+    - Prevenção de Problemas;
+    - Direcionamento para Desenvolvimento;
+        - Guiar arquitetura para atender necessidades dos clientes.
+    - Visibilidade do impacto no negócio;
+        - Janelas de Processamento;
+        - Visão sistemica da funcionalidade.
+    - Evitar;
+        - Retrabalhos;
+            - Custos;
+                - Tempo;
+                - Financeiro.
+        - Restruturação na arquitetura da aplicação;
+        - Stress com clientes/usuários;
+        - Perda Financeira com Cliente;
+        - Reputação da aplicação;
+            - Exposição Negativa em redes Sociais.
+        - Problemas de Responsabilidade Legal;
+            - Civil;
+            - Criminal.
+## Performance
+- O que é Performance? 
+    - Desempenho desejável/aceitável da Aplicação.
+## Testes de Performance
+- O que é Testes de Performance?
+    - Teste Não Funcional;
+    - Base;
+        - Quantidade de Usuários Simultâneos;
+            - Concorrência;
+            - Quantidade de Registros.
+        - Tempo;
+            - Tempo de Resposta;
+            - Tempo de Processamento.
+    - Objetivo é medir;
+        - Desempenho;
+        - Capacidade;
+        - Confiabilidade;
+        - Disponibilidade;
+        - Escalabilidade;
+        - Resiliência.
+    - Sub Características;
+        - Comportamento do tempo;
+        - Capacidade;
+        - Utilização de recursos;
+            - Consumo de Memória;
+            - Consumo de CPU;
+            - Espaço em Disco.
+    - Experimentações;
+        - Eliminar obstáculos de desempenho;
+        - Entender melhores configurações;
+        - Entender necessidades de hardware para atender os requisitos de performance.
+    - Princípios;
+        - Alinhado as expectativas de todos envolvidos;
+            - Entender;
+                - Objetivo -> Qual necessidade de performance?
+                - Contexto;
+                    - Negócio;
+                    - Técnico;
+                - Riscos -> Criticidade;
+                - Escopo;
+                - Não Escopo;
+                - Critérios de Aceite -> Definição de Métricas.
+        - Reprodutíveis;
+            - Massa de Dados;
+                - Criada em tempo de execução?
+                - Geração de Carga;
+                - Duplicidade;
+                - Configurações;
+                - Inconsistência com Negócio;
+                - Valores válidos;
+                - Pré-cadastrada.
+        - Resultados Compreensíveis;
+            - Status de acordo com as expectativas dos stakeholdes;
+                - Passou;
+                - Falhou;
+                - Evidências.
+            - Linguagem entendida por todos stakeholders;
+                - Negócio;
+                - Técnica.
+        - Ambientes similares de produção.
+- Quais são os Tipos de Testes de Performance?
+    - Teste de Performance;
+        - Termo abrangente;
+        - Genérico para qualquer tipo de teste de desempenho;
+        - Cada tpo de teste tem um objetivo diferente;
+        - Importante Lembrar -> De acordo com contexto pode ser que precise aplicar mais de um tipo de teste.
+    - Carga ou Volume;
+        - Objetivo;
+            - Avaliar a aplicação quando o sistema é submetido a aumento de carga;
+                - Níveis crescentes de cargas;
+                - Usuários Simultâneos (Threads);
+                - Quantidade de Registros.
+    - Capacidade;
+        - Objetivo;
+            - Avaliar e decobrir o limite da aplicação;
+                - Aumento de carga;
+                    - Níveis crescentes de cargas;
+                    - Usuários Simultâneos (Threads);
+                    - Quantidade de Registros.
+                - Determinado Tempo (Período).
+    - Escalabilidade;
+        - Objetivo;
+            - Avaliar a capacidade do sistema de expandir.
+    - Stress;
+        - Objetivo;
+            - Avaliar comportamento da aplicação com cargas próximas/superiores limite;
+                - Aumento de carga acima do limite/pico;
+                    - Usuários Simultâneos (Threads);
+                    - Quantidade de Registros.
+                - Pior Cenário (relacionado volume);
+                    - Disponibilidade;
+                    - Resiliência;
+                    - Recuperação.
+    - Pico;
+        - Objetivo;
+            - Avaliar comportamento da aplicação após rajadas repentinas;
+                - Grande quantiade de Threads simultâneas em determinado tempo;
+                - Estabilidade;
+                - Disponibilidade.
+    - Resistência;
+        - Objetivo;
+            - Avaliar comportamento da aplicação com maior volume em períodos mais longos;
+            - Degradação da Performance;
+                - Hardware;
+                - Aplicação.
+            - Falhas;
+            - Interrupções.
+    - Concorrência;
+        - Objetivo;
+            - Avaliar impactos na aplicação em execuções simultâneas;
+            - Difícil de Reproduzir.
+    - Ramp-up;
+        - Steps;
+        - Subida gradativa de carga;
+        - Facilita a encontrar o momento de ruptura.
+- Quais métricas podemos utilizar?
+    - Tempo de Resposta;
+        - Unidade de Tempo;
+            - Minutos;
+            - Segundos;
+            - Millesegundos.
+        - Média do Tempo de Resposta;
+            - Percentis;
+                - 99%;
+                - 95%;
+                - 90%.
+        - Mínimo;
+        - Máximo.
+    - Throughput;
+        - Quantidade de registros em uma Unidade de Tempo;
+        - Transações por Segundos -> TPS;
+        - Diferença - Threads x Througput;
+            - 1 Thread;
+            - Tempo Resposta 500 ms;
+            - 2 TPS;
+    - Latência -> Atraso (o tempo) que uma solicitação leva para ser transferida de um ponto para outro.
+    - Bytes;
+        - Enviados;
+        - Recebidos;
+    - Utilização de recursos;
+        - % Consumo de Memória;
+        - % Consumo de CPU.
+- Falhas comuns;
+    - Resposta lenta sob todos os níveis de carga;
+        - Implementação;
+        - Modelagem;
+        - Latência.
+    - Resposta lenta sob níveis de carga moderada a pesada;
+        - Itens Acima;
+        - Recursos de Hardware.
+    - Resposta degradada ao longo do tempo;
+        - Vazamentos de memória;
+        - Fragmentação de disco;
+        - Aumento de carga de rede ao longo do tempo;
+        - Gravação em disco.
+    - Tratamento inadequado de erros sob carga pesada ou acima do limite;
+        - Divergências de configurações;
+        - Timeout;
+        - Funcional.
+## Skills
+- Hard Skills;
+    - Conceitos de Banco de Dados;
+    - Conceitos de Performance e Teste de Performance -> Estratégias;
+    - Aprofundar na arquitetura da aplicação;
+    - Analisar métricas para construção de relatório;
+    - Conhecer alguma linguagem para aplicar no script;
+    - Monitoramento;
+        - Hardware;
+        - Banco de Dados;
+        - Aplicação.
+- Soft Skills;
+    - Comunicação;
+    - Flexibilidade;
+    - Resiliência;
+    - Cooperação.
+## Processos Teste de Performance
+- Maior Desafio/Duvidas;
+    - Como encontrar as métricas?
+        - Mapear padrões de acordo com perfil da aplicação.
+    - Entender com análise de Dados;
+        - Métricas coletadas em PRD.
+- Sugestões de Implementação;
+    - Pré-Requisitos;
+        - Priorizar -> Selecionar principais funcionalidades;
+        - Definir Métricas -> Classificar números entre X e Y ou até Z tempos;
+            - Escala;
+                - Ruim;
+                - Aceitável;
+                - Bom;
+                - Excelente.
+            - Exemplo;
+                - Ruim -> Acima de 3s;
+                - Aceitável -> 2 à 3s;
+                - Bom -> 1 à 2s
+                - Excelente -> Abaixo de 1s.
+        - Ambiente;
+            - Definição;
+                - Hardware -> Infra-estrutura;
+                    - Server APP;
+                    - Server BD;
+                    - Server que vai disparar a carga.
+                - Distribuição de Massa de Dados.
+        - Ferramentas;
+            - Execução;
+                - JMeter;
+                - Load Runner;
+                - Gatling;
+                - Locust;
+                - K6.
+            - Monitoramento;
+                - New Relic;
+                - Dynatrace;
+                - Elastic APM;
+                - Prometheus -> Grafana;
+                - Java Flight Recorder -> Mission Control;
+                - ASH Viewer;
+                    - Oracle;
+                    - Postgree.
+                - AWR -> Oracle.
+    - Estrutura;
+        - Shift Left Testing de Performance;
+            - Pensar em performance desde o início do ciclo de desenvolvimento;
+            - Revisões;
+                - Requisitos;
+                - Arquitetura;
+                - Infra-Estrutura;
+                - Banco de Dados.
+            - Começar a ter um tópico sobre requisitos não funcionais (performance) nos documetos de requisitos.
+        - Entendimento da Demanda;
+            - Ponto de Vista de Negócio;
+            - Ponto de Vista Técnico;
+            - Análise de Dados.
+        - Criação de Scripts;
+            - Criar Scripts;
+            - Refinar Scripts;
+            - Smoke Testing.
+        - Execução do Teste;
+            - Definir Pré-Requisitos;
+            - Subir Ambiente;
+            - Executar Scripts;
+            - Acompanhamento/Monitoramento.
+        - Análise dos Insumos coletados no Teste;
+            - Compilado da Execução;
+            - Geração de Relatório;
+                - Escopo;
+                - Conclusão;
+                - Evidências;
+                - Recomendações;
+                    - Apontar Gargalos/Gaps;
+                    - Pontos de Melhoria.
