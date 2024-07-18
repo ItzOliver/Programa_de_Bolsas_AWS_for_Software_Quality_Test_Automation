@@ -5,9 +5,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 3133 milissegundos (3,1 segundos) e uma taxa de erro de 0%, o que demonstra que a API está acima do tempo de resposta aceitável mas dentro da taxa de erros aceitável.
 - **Evidências:**
 
-[TabelaCarga]()
+![TabelaCarga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/TabelaCarga.png?raw=true)
 
-[GraficoCarga]()
+![GraficoCarga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/GraficoCarga.png?raw=true)
 
 ## Teste de Estresse - TP2
 - **Cenário do Teste:** O teste foi realizado com 420 Threads, Período de Ramp-up de 20 segundos e duração de 60 segundos.
@@ -15,9 +15,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 54 milissegundos e uma taxa de erro de 0%, o que demonstra que a API consegue operar bem durante períodos de extremo esforço.
 - **Evidências:**
 
-[TabelaEstresse]()
+![TabelaEstresse](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/TabelaEstresse.png?raw=true)
 
-[GraficoEstresse]()
+![GraficoEstresse]()
 
 ## Teste de Escalabilidade - TP3
 - **Cenário do Teste:** 960 Threads, Período de Ramp-up de 24 segundos e duração de 120 segundos.
@@ -31,9 +31,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 1614 milissegundos (1,6 segundos) e uma taxa de erro de 0%, o que demonstra que a API consegue lidar com um número abrupto de requisições.
 - **Evidências:**
 
-[TabeloPico]()
+![TabeloPico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/TabelaPico.png?raw=true)
 
-[GraficoPico]()
+![GraficoPico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/GraficoPico.png?raw=true)
 
 ## Teste de Resistência - TP5
 - **Cenário do Teste:** 100 Threads, Período de Ramp-up de 1 segundo e duração de 600 segundos.
@@ -41,9 +41,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 1021 milissegundos (1 segundo) e uma taxa de erro de 0%, o que demonstra que a API consegue se manter estável por períodos de operação mais extensos. 
 - **Evidências:** 
 
-[TabelaResistencia]()
+![TabelaResistencia](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/TabelaResistencia.png?raw=true)
 
-[GraficoResistencia]()
+![GraficoResistencia](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/GraficoResistencia.png?raw=true)
 
 ## Teste de Concorrência - TP6
 - **Cenário do Teste:** 50 Threads, Período de Ramp-up de 5 segundos e duração de 60 segundos.
@@ -51,9 +51,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 491 milissegundos e uma taxa de erro de 0%, o que demonstra que operações concorrentes conseguem ser processadas de forma eficiente.
 - **Evidências:**
 
-[TabelaConcorrencia]()
+![TabelaConcorrencia]()
 
-[GraficoConcorrencia]()
+![GraficoConcorrencia](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/GraficoConcorrencia.png?raw=true)
 
 ## Teste de Capacidade - TP7
 - **Cenário do Teste:** 600 Threads, Período de Ramp-up de 10 segundos e duração de 60 segundos.
@@ -61,6 +61,6 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 4851 milissegundos e uma taxa de erro de 0%, o que demonstra que a API fica acima do tempo esperado quando lida com um número maior de requisições do que o normal mas consegue manter a taxa de falhas em 0%.
 - **Evidências:**
 
-[TabelaCapacidade]()
+![TabelaCapacidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/TabelaCapacidade.png?raw=true)
 
-[GraficoCapacidade]()
+![GraficoCapacidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/src/GraficoCapacidade.png?raw=true)
