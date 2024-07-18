@@ -7,6 +7,7 @@ A organização do conteúdo das Sprints pode ser contemplada navegando pela [wi
 
 # 📄 Plano de Testes - Testes de Performance
 O plano de testes atualizado com os testes de performance para a rota de usuários pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/Sprint5/Challenge/Plano_de_Testes_Usuarios.md).
+
 O resultado dos testes de performance na rota de usuários pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/Sprint5/Challenge/Resultados_Obtidos_Performance.md).
 
 # 🤝 Agradecimentos
