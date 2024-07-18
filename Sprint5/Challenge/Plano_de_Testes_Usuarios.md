@@ -133,68 +133,68 @@ Objetivo principal do sistema: Se cadastrar no Marketplace do ServeRest.
 
 # Testes de Performance
 ## Resumo dos Testes
-| ID | Tipo de Teste | Configuração de Teste | Métricas | Resultado Esperado | Resultado Obtido |
-|:---|:-------------:|:---------------------:|:--------:|:------------------:|:----------------:|
-| TP1 | Carga |  |  |  |  |
-| TP2 | Estresse |  |  |  |  |
-| TP3 | Escalabilidade |  |  |  |  |
-| TP4 | Pico |  |  |  |  |
-| TP5 | Resistência |  |  |  |  |
-| TP6 | Concorrência |  |  |  |  |
-| TP7 | Capacidade |  |  |  |  |
+| ID | Tipo de Teste | Configuração de Teste | Métricas | Resultado Esperado | Verbo |
+|:---|:-------------:|:---------------------:|:--------:|:------------------:|:-----:|
+| TP1 | Carga | 800 Threads, Período de Ramp-up de 20 segundos e duração de 120 segundos | Tempo de resposta, Throughput, Taxa de erro | A API deve manter tempos de resposta aceitáveis (abaixo de 2 segundos) e uma baixa taxa de erros (menos de 5%) | GET |
+| TP2 | Estresse | 420 Threads, Período de Ramp-up de 20 segundos e duração de 60 segundos | Tempo de resposta, Throughput, Taxa de erro | Identificação do ponto em que a API não consegue mais manter um desempenho aceitável, com tempos de resposta aumentando significativamente e a taxa de erro ultrapassando limites aceitáveis. | POST |
+| TP3 | Escalabilidade | 960 Threads, Período de Ramp-up de 24 segundos e duração de 120 segundos | Tempo de resposta, Throughput, Taxa de erro | A API deve demonstrar capacidade de escalonamento com aumento linear ou sub-linear no tempo de resposta e taxa de erro. | GET |
+| TP4 | Pico | 400 Threads, Período de Ramp-up de 1 segundo e duração de 2 segundos | Tempo de resposta, Throughput, Taxa de erro | A API deve suportar picos súbitos sem falhas críticas e retornar ao desempenho normal rapidamente após a diminuição da carga. | GET |
+| TP5 | Resistência | 100 Threads, Período de Ramp-up de 1 segundo e duração de 600 segundos | Tempo de resposta, Throughput, Taxa de erro | A API deve manter um desempenho estável e aceitável ao longo do tempo, sem degradação significativa. | GET |
+| TP6 | Concorrência | 50 Threads, Período de Ramp-up de 5 segundos e duração de 60 segundos | Tempo de resposta, Throughput, Taxa de erro | A API deve gerenciar eficientemente operações concorrentes com tempos de resposta aceitáveis e uma baixa taxa de erros. | GET |
+| TP7 | Capacidade | 600 Threads, Período de Ramp-up de 10 segundos e duração de 60 segundos | Tempo de resposta, Throughput, Taxa de erro | A capacidade máxima deve ser identificada com métricas claras indicando quando o desempenho começa a degradar. | POST |
 
 ## Testes de Carga
-### **Teste de Performance 1 - TP1:**
+### [**Teste de Performance 1 - TP1:**]()
 
 **Objetivo:** Avaliar o desempenho da API sob condições normais de uso, simulando a quantidade de usuários e operações esperadas em um cenário real.
-- **Cenário de Teste:** Simular um número crescente de usuários simultâneos realizando operações CRUD na rota de usuários.
+- **Cenário de Teste:** 800 Threads, Período de Ramp-up de 20 segundos e duração de 120 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, throughput.
-- **Resultados Esperados:** A API deve manter tempos de resposta aceitáveis (p.ex., abaixo de 2 segundos) e uma baixa taxa de erros (p.ex., menos de 1%).
+- **Resultados Esperados:** A API deve manter tempos de resposta aceitáveis (abaixo de 2 segundos) e uma baixa taxa de erros (menos de 5%).
 
 ## Testes de Estresse
-### **Teste de Performance 2 - TP2:**
+### [**Teste de Performance 2 - TP2:**]()
 
 **Objetivo:** Determinar o limite máximo de capacidade da API e identificar o ponto de falha.
-- **Cenário de Teste:** Incrementar a carga de usuários e operações na API até que o desempenho degrade significativamente ou ocorra uma falha.
+- **Cenário de Teste:** 420 Threads, Período de Ramp-up de 20 segundos e duração de 60 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, número de usuários simultâneos no ponto de falha.
-- **Resultados Esperados:** Identificação do ponto em que a API não consegue mais manter um desempenho aceitável, com tempos de resposta aumentando significativamente e a taxa de erro ultrapassando limites aceitáveis.
+- **Resultados Esperados:** A API teve como maior tempo de resposta 54 milissegundos e uma taxa de erro de 0%, o que demonstra que a API consegue operar bem durante períodos de extremo esforço.
 
 ## Testes de Escalabilidade
-### **Teste de Performance 3 - TP3:**
+### [**Teste de Performance 3 - TP3:**]()
 
 **Objetivo:** Avaliar a capacidade da API de escalar eficientemente com o aumento de carga.
-- **Cenário de Teste:** Aumentar gradualmente a carga e monitorar o desempenho enquanto se adapta a recursos adicionais (p.ex., escalonamento horizontal/vertical).
+- **Cenário de Teste:**  960 Threads, Período de Ramp-up de 24 segundos e duração de 120 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, eficiência de escalabilidade.
 - **Resultados Esperados:** A API deve demonstrar capacidade de escalonamento com aumento linear ou sub-linear no tempo de resposta e taxa de erro.
 
 ## Testes de Pico
-### **Teste de Performance 4 - TP4:**
+### [**Teste de Performance 4 - TP4:**]()
 
 **Objetivo:** Avaliar a capacidade da API de lidar com picos súbitos de carga.
-- **Cenário de Teste:** Aplicar cargas de trabalho intensas e abruptas, simulando picos de acesso inesperados.
+- **Cenário de Teste:** 400 Threads, Período de Ramp-up de 1 segundo e duração de 2 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, recuperação pós-pico.
 - **Resultados Esperados:** A API deve suportar picos súbitos sem falhas críticas e retornar ao desempenho normal rapidamente após a diminuição da carga.
 
 ## Testes de Resistência
-### **Teste de Performance 5 - TP5:**
+### [**Teste de Performance 5 - TP5:**]()
 
 **Objetivo:** Avaliar a estabilidade e desempenho da API em longos períodos de tempo sob carga contínua.
-- **Cenário de Teste:** Simular uma carga constante de usuários e operações por um período prolongado (p.ex., 24 horas).
+- **Cenário de Teste:** 100 Threads, Período de Ramp-up de 1 segundo e duração de 600 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, uso de recursos (CPU, memória), estabilidade.
 - **Resultados Esperados:** A API deve manter um desempenho estável e aceitável ao longo do tempo, sem degradação significativa.
 
 ## Testes de Concorrência
-### **Teste de Performance 6 - TP6:**
+### [**Teste de Performance 6 - TP6:**]()
 
 **Objetivo:** Avaliar a capacidade da API de lidar com múltiplas operações concorrentes.
-- **Cenário de Teste:** Simular múltiplos usuários realizando operações concorrentes na rota de usuários.
+- **Cenário de Teste:** 50 Threads, Período de Ramp-up de 5 segundos e duração de 60 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, throughput.
 - **Resultados Esperados:** A API deve gerenciar eficientemente operações concorrentes com tempos de resposta aceitáveis e uma baixa taxa de erros.
 
 ## Testes de Capacidade
-### **Teste de Performance 7 - TP7:**
+### [**Teste de Performance 7 - TP7:**]()
 
 **Objetivo:** Determinar a capacidade máxima de processamento da API antes que o desempenho se torne inaceitável.
-- **Cenário de Teste:** Gradualmente aumentar a carga de trabalho até atingir a capacidade máxima da API.
+- **Cenário de Teste:** 600 Threads, Período de Ramp-up de 10 segundos e duração de 60 segundos.
 - **Métricas:** Tempo de resposta, taxa de erro, throughput no ponto de saturação.
-- **Resultados Esperados:** A capacidade máxima deve ser identificada com métricas claras indicando quando o desempenho começa a degradar.
+- **Resultados Esperados:** A API deve conseguir manter se manter no mesmo nível de desempenho ou próximo dele mesmo com uma quantidade usuários maior que o normal.

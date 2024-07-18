@@ -173,15 +173,15 @@ Objetivo principal do sistema: Garantir que um usuários possam se autenticar, c
 
 # Testes de Performance
 ## Resumo dos Testes
-| ID | Tipo de Teste | Configuração de Teste | Métricas | Resultado Esperado | Resultado Obtido |
-|:---|:-------------:|:---------------------:|:--------:|:------------------:|:----------------:|
-| TP1 | Carga |  |  |  |  |
-| TP2 | Estresse |  |  |  |  |
-| TP3 | Escalabilidade |  |  |  |  |
-| TP4 | Pico |  |  |  |  |
-| TP5 | Resistência |  |  |  |  |
-| TP6 | Concorrência |  |  |  |  |
-| TP7 | Capacidade |  |  |  |  |
+| ID | Tipo de Teste | Configuração de Teste | Métricas | Resultado Esperado | Verbo |
+|:---|:-------------:|:---------------------:|:--------:|:------------------:|:-----:|
+| TP1 | Carga |  |  |  |  |  
+| TP2 | Estresse |  |  |  |  |  
+| TP3 | Escalabilidade |  |  |  |  |  
+| TP4 | Pico |  |  |  |  |  
+| TP5 | Resistência |  |  |  |  |  
+| TP6 | Concorrência |  |  |  |  |  
+| TP7 | Capacidade |  |  |  |  |  
 
 ## Testes de Carga
 ### **Teste de Performance 1 - TP1:**
@@ -227,7 +227,7 @@ Objetivo principal do sistema: Garantir que um usuários possam se autenticar, c
 ### **Teste de Performance 6 - TP6:**
 
 **Objetivo:** Avaliar a capacidade da API de lidar com múltiplas operações concorrentes.
-- **Cenário de Teste:** Simular múltiplos usuários realizando operações concorrentes na rota de usuários.
+- **Cenário de Teste:** Simular múltiplos usuários realizando operações concorrentes na rota de carrinhos.
 - **Métricas:** Tempo de resposta, taxa de erro, throughput.
 - **Resultados Esperados:** A API deve gerenciar eficientemente operações concorrentes com tempos de resposta aceitáveis e uma baixa taxa de erros.
 
