@@ -17,6 +17,7 @@ Clone o repositório executando os seguintes comandos na pasta desejada:
 git clone https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation
 
 cd Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation
+
 git checkout pb_sprint6
 
 cd Sprint06/Dia10Challenge/Testes
