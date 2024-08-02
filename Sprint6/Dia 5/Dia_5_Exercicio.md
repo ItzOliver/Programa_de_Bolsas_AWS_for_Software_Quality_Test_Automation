@@ -1,1 +1,2 @@
 # Exercício K6
+crie seu primeiro script K6 para testar a ServeRest Local com o foco na rota /usuarios. O objetivo deste exercício é validar a utilização do K6, interpretar as métricas e definir thresholds, utilizando a API ServeRest.
