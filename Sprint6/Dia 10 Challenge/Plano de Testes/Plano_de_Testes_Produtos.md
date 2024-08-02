@@ -161,31 +161,31 @@ Objetivo principal do sistema: Garantir que usuários possam se autenticar e cad
 | TP-P5 | Resistência | 100 VUs durante 5 minutos | Tempo de resposta, taxa de erro, throughput | Desempenho estável durante todo o período, sem aumento significativo no tempo de resposta ou taxa de erro | GET |
 
 ## Detalhamento dos Testes
-**[TPP-1: Teste de Carga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Produtos/Resultados_Produtos.md#teste-de-carga---tpp-1)**
+**[TPP-1: Teste de Carga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados/Resultados_Produtos.md#teste-de-carga---tpp-1)**
 **Objetivo:** Validar a capacidade da API de lidar com um número constante de usuários simultâneos.
 - Configuração: Simular 100 Usuários Virtuais (VUs) durante 1 minuto.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[TPP-2: Teste de Estresse](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Produtos/Resultados_Produtos.md#teste-de-estresse---tpp-2)**
+**[TPP-2: Teste de Estresse](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados/Resultados_Produtos.md#teste-de-estresse---tpp-2)**
 - **Objetivo:** Identificar o ponto de falha da API sob carga crescente.
 - Configuração: Aumentar gradualmente de 0 a 300 VUs em 2 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve continuar a responder às solicitações, sem falhas críticas ou interrupções no serviço.
 
-**[TPP-3: Teste de Escalabilidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Produtos/Resultados_Produtos.md#teste-de-escalabilidade---tpp-3)**
+**[TPP-3: Teste de Escalabilidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados/Resultados_Produtos.md#teste-de-escalabilidade---tpp-3)**
 **Objetivo:** Avaliar a capacidade da API de escalar conforme a carga aumenta.
 - Configuração: Iniciar com 100 VUs e aumentar em 50 VUs a cada 20 segundos até atingir 300 VUs.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve escalar de forma eficiente sem degradação severa no tempo de resposta ou aumento significativo na taxa de erro.
 
-**[TPP-4: Teste de Pico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Produtos/Resultados_Produtos.md#teste-de-pico---tpp-4)**
+**[TPP-4: Teste de Pico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados/Resultados_Produtos.md#teste-de-pico---tpp-4)**
 **Objetivo:** Testar a resposta da API sob um pico de carga elevada.
 - Configuração: Simular 500 VUs durante 30 segundos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[TPP-5: Teste de Resistência](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Produtos/Resultados_Produtos.md#teste-de-resistência---tpp-5)**
+**[TPP-5: Teste de Resistência](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados/Resultados_Produtos.md#teste-de-resistência---tpp-5)**
 **Objetivo:** Avaliar o desempenho da API sob carga constante por um período prolongado.
 - Configuração: Simular 100 VUs durante 5 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.

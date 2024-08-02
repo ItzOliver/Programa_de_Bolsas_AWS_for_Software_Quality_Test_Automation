@@ -4,10 +4,35 @@ Seja bem-vindo! Este repositório documenta o estudo e o desenvolvimento de toda
 # 📚 Organização
 A organização do conteúdo das Sprints pode ser contemplada navegando pela [wiki](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/wiki) do projeto.
 
-# 📄 Plano de Testes - Testes de Performance
-O plano de testes atualizado com os testes de performance para a rota de usuários, produtos e login pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes).
+# 📔 Pré-Requisitos
+Para executar os testes será necessário:
+- VSCode instalado
+Link para download [aqui](https://code.visualstudio.com/download) 
+- K6 instalado
+Link para download [aqui](https://grafana.com/get/?src=k6io&redirectPath=k6&tab=self-managed)
 
-O resultado dos testes de performance na rota de usuários pode ser consultado [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint5/Sprint5/Challenge/Resultados_Obtidos_Performance.md).
+# 🚶🏻‍♀️ Passo a Passo de Execução dos Códigos com K6
+Clone o repositório executando os seguintes comandos na pasta desejada:
+```
+git clone https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation
+
+cd Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation
+git checkout pb_sprint6
+
+cd Sprint06/Dia10Challenge/Testes
+```
+
+
+# 📄 Plano de Testes - Testes de Performance
+O plano de testes atualizado com os testes de performance para a rota de usuários, produtos e login junto do fluxo geral podem ser consultados [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes).
+
+O resultado dos testes de performance na rota de usuários, produtos e login junto do fluxo geral podem ser consultados [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint6/Sprint6/Dia%2010%20Challenge/Resultados).
+
+# 👩🏻‍💻 Testes de Performance
+Os testes de performances podem ser consultados aqui [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint6/Sprint6/Dia%2010%20Challenge/Testes)
+
+# Autores
+Oliver Pereira de Almeida
 
 # 🤝 Agradecimentos
 - Gabriel Knust
