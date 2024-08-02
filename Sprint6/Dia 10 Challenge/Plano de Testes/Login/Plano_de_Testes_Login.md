@@ -93,31 +93,31 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
 | TPL-5 | Resistência | 100 VUs durante 5 minutos | Tempo de resposta, taxa de erro, throughput | Desempenho estável durante todo o período, sem aumento significativo no tempo de resposta ou taxa de erro | POST |
 
 ## Detalhamento dos Testes
-**[TPL-1: Teste de Carga]()**
+**[TPL-1: Teste de Carga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Login/Resultados_Login.md#teste-de-carga---tpl-1)**
 **Objetivo:** Validar a capacidade da API de lidar com um número constante de usuários simultâneos.
 - Configuração: Simular 100 Usuários Virtuais (VUs) durante 1 minuto.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[TPL-2: Teste de Estresse]()**
+**[TPL-2: Teste de Estresse](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Login/Resultados_Login.md#teste-de-estresse---tpl-2)**
 - **Objetivo:** Identificar o ponto de falha da API sob carga crescente.
 - Configuração: Aumentar gradualmente de 0 a 300 VUs em 2 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve continuar a responder às solicitações, sem falhas críticas ou interrupções no serviço.
 
-**[TPL-3: Teste de Escalabilidade]()**
+**[TPL-3: Teste de Escalabilidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Login/Resultados_Login.md#teste-de-escalabilidade---tpl-3)**
 **Objetivo:** Avaliar a capacidade da API de escalar conforme a carga aumenta.
 - Configuração: Iniciar com 100 VUs e aumentar em 50 VUs a cada 20 segundos até atingir 300 VUs.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve escalar de forma eficiente sem degradação severa no tempo de resposta ou aumento significativo na taxa de erro.
 
-**[TPL-4: Teste de Pico]()**
+**[TPL-4: Teste de Pico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Login/Resultados_Login.md#teste-de-pico---tpl-4)**
 **Objetivo:** Testar a resposta da API sob um pico de carga elevada.
 - Configuração: Simular 500 VUs durante 30 segundos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[TPL-5: Teste de Resistência]()**
+**[TPL-5: Teste de Resistência](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes/Login/Resultados_Login.md#teste-de-resistência---tpl-5)**
 **Objetivo:** Avaliar o desempenho da API sob carga constante por um período prolongado.
 - Configuração: Simular 100 VUs durante 5 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
@@ -125,21 +125,3 @@ Objetivo principal do sistema: Autenticar usuários no Marketplace do ServeRest.
 
 ## Ferramentas Utilizadas
 - K6: Ferramenta de código aberto para testes de carga e desempenho.
-- Prometheus & Grafana: Para monitoramento e visualização das métricas durante os testes.
-
-## Preparação para os Testes
-- Ambiente de Teste: Certifique-se de que o ambiente de teste esteja configurado e isolado do ambiente de produção.
-- Dados de Teste: Prepare um conjunto de dados de teste que será utilizado durante os testes de carga.
-- Monitoramento: Configure ferramentas de monitoramento para acompanhar o desempenho da API em tempo real.
-
-## Execução dos Testes
-Carregar o Script de Teste: Utilize scripts K6 para definir os cenários de teste conforme descrito nas configurações de cada teste.
-Iniciar o Teste: Execute cada teste de acordo com o plano.
-Coleta de Métricas: Monitore as métricas em tempo real e colete os dados para análise posterior.
-Análise dos Resultados: Após a execução de cada teste, analise os resultados para identificar possíveis gargalos e áreas de melhoria.
-
-## Relatório de Teste
-Resumo dos Resultados: Apresentar um resumo dos resultados de cada teste, destacando as métricas principais.
-Análise de Desempenho: Identificar possíveis problemas e propor soluções para otimização da API.
-Conclusões e Recomendações: Fornecer conclusões sobre a capacidade da API de lidar com diferentes níveis de carga e recomendar ações para melhorar o desempenho, se necessário.
-Este plano de testes visa garantir que a API de cadastro de usuários no ServeRest atenda aos requisitos de desempenho e esteja preparada para operar sob diferentes condições de carga.
