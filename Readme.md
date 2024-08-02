@@ -22,7 +22,7 @@ git checkout pb_sprint6
 
 cd Sprint06/Dia10Challenge/Testes
 ```
-
+Isso feito basta utilizar o comando ``` k6 run nome_Do_Teste.js ```
 
 # 📄 Plano de Testes - Testes de Performance
 O plano de testes atualizado com os testes de performance para a rota de usuários, produtos e login junto do fluxo geral podem ser consultados [aqui](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/tree/pb_sprint6/Sprint6/Dia%2010%20Challenge/Plano%20de%20Testes).
