@@ -36,13 +36,13 @@ Os testes de performances podem ser consultados aqui [aqui](https://github.com/I
 Oliver Pereira de Almeida
 
 # 🤝 Agradecimentos
+Um agradecimento especial ao Ricardo Neckel por ter me ajudado na construção do script de teste e aos demais colegas pela ajuda ao longo da sprint:
 - Gabriel Knust
 - Davi Santana
 - Enzo Rossi
 - Gabriel Just
 - Jorge Soares
 - Daniel Pontes
-- Ricardo Neckel
 - Mathias Fischer
 
 # 📄 Template para Reporte de Bugs
