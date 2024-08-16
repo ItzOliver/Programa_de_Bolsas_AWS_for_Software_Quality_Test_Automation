@@ -182,31 +182,31 @@ Objetivo principal do sistema: Garantir que um usuários possam se autenticar, c
 | #C5 | Resistência | 100 VUs durante 5 minutos | Tempo de resposta, taxa de erro, throughput | Desempenho estável durante todo o período, sem aumento significativo no tempo de resposta ou taxa de erro | POST |
 
 ## Detalhamento dos Testes
-**[#C1: Teste de Carga]()**
+**[#C1: Teste de Carga](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/Sprint7/resultados/resultadosCarrinhos.md#teste-de-carga---c1)**
 **Objetivo:** Validar a capacidade da API de lidar com um número constante de usuários simultâneos.
 - Configuração: Simular 100 Usuários Virtuais (VUs) durante 1 minuto.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[#C2: Teste de Estresse]()**
+**[#C2: Teste de Estresse](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/Sprint7/resultados/resultadosCarrinhos.md#teste-de-estresse---c2)**
 - **Objetivo:** Identificar o ponto de falha da API sob carga crescente.
 - Configuração: Aumentar gradualmente de 0 a 300 VUs em 2 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve continuar a responder às solicitações, sem falhas críticas ou interrupções no serviço.
 
-**[#C3: Teste de Escalabilidade]()**
+**[#C3: Teste de Escalabilidade](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/Sprint7/resultados/resultadosCarrinhos.md#teste-de-escalabilidade---c3)**
 **Objetivo:** Avaliar a capacidade da API de escalar conforme a carga aumenta.
 - Configuração: Iniciar com 100 VUs e aumentar em 50 VUs a cada 20 segundos até atingir 300 VUs.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: A API deve escalar de forma eficiente sem degradação severa no tempo de resposta ou aumento significativo na taxa de erro.
 
-**[#C4: Teste de Pico]()**
+**[#C4: Teste de Pico](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/Sprint7/resultados/resultadosCarrinhos.md#teste-de-pico---c4)**
 **Objetivo:** Testar a resposta da API sob um pico de carga elevada.
 - Configuração: Simular 500 VUs durante 30 segundos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.
 - Resultado Esperado: O tempo de resposta deve ser inferior a 2 segundos e a taxa de erro inferior a 5%.
 
-**[#C5: Teste de Resistência]()**
+**[#C5: Teste de Resistência](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/Sprint7/resultados/resultadosCarrinhos.md#teste-de-resistência---c5)**
 **Objetivo:** Avaliar o desempenho da API sob carga constante por um período prolongado.
 - Configuração: Simular 100 VUs durante 5 minutos.
 - Métricas: Tempo de resposta, taxa de erro, throughput.

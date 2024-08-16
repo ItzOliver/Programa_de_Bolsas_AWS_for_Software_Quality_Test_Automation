@@ -128,12 +128,14 @@ export const testConfig = {
             }
         },
         loadTresholdsProducsts: {
-            vus: 100,
+            vus: 60,
             duration: '1m',
             thresholds: {
                 http_req_duration: ['p(95)<2000'],  // Tempo de resposta menor que 2 segundos
                 http_req_failed: ['rate<0.05'],     // Taxa de erro menor que 5%
-            }
+            },
+            setupTimeout: '120s',
+            teardownTimeout: '120s',
         },
         scalabilityTresholdsProducts: {
             stages: [

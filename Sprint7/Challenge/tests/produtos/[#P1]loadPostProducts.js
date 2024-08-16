@@ -40,3 +40,34 @@ export default function (data) {
     const res = baseRest.post(ENDPOINTS.PRODUCTS_ENDPOINT, payloadPro, {'Authorization': data.userAuthorization})
     baseChecks.checkStatusCode(res, 201)
 }
+
+// Código desenvolvido com a ajuda de Jorge Soares
+export function teardown(data) {
+    const authToken = data.authToken;
+    const productId = data.productId;
+    const userId = data.userId;
+
+    if (productId) {
+        try {
+            const deleteRes = baseRest.delete(`${ENDPOINTS.PRODUCTS_ENDPOINT}/${productId}`, { 
+                headers: { 'Authorization': `${authToken}` } 
+            });
+            baseChecks.checkStatusCode(deleteRes, 200);
+            console.log(`Produto ${productId} excluído: ${deleteRes.json().message}`);
+        } catch (error) {
+            console.error(`Não foi possível excluir o produto ${productId}: ${error}`);
+        }
+    }
+
+    if (userId) {
+        try {
+            const deleteUserRes = baseRest.delete(`${ENDPOINTS.USER_ENDPOINT}/${userId}`, { 
+                headers: { 'Authorization': `${authToken}` } 
+            });
+            baseChecks.checkStatusCode(deleteUserRes, 200);
+            console.log(`Usuário ${userId} excluído: ${deleteUserRes.json().message}`);
+        } catch (error) {
+            console.error(`Não foi possível excluir o usuário ${userId}: ${error}`);
+        }
+    }
+}
