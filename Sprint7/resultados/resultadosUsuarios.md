@@ -34,9 +34,9 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 2558 milissegundos (2,5 segundos), Throughput 528,15/seg e uma taxa de erro de 0%, o que demonstra que a API consegue lidar relativamente bem com um aumento abrupto de requisições.
 - **Evidências:**
 
-![[#U4]Metrics]()
-![[#U4]Stats]()
-![[#U4]Checks]()
+![[#U4]Metrics](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U4%5DMetrics.png?raw=true)
+![[#U4]Stats](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U4%5DStats.png?raw=truehttps://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U4%5DStats.png?raw=true)
+![[#U4]Checks](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U4%5DChecks.png?raw=true)
 
 ## Teste de Resistência - #U5
 - **Cenário do Teste:** O teste foi realizado com 100 VUs e teve duração de 5 minutos.
@@ -44,6 +44,6 @@
 - **Resultado Obtido:** A API teve como maior tempo de resposta 903 milissegundos, Throughput 781,84/seg e uma taxa de erro de 0%, o que demonstra que a API consegue se manter estável por períodos de operação mais extensos. 
 - **Evidências:** 
 
-![[#U5]Metrics]()
-![[#U5]Stats]()
-![[#U5]Checks]()
+![[#U5]Metrics](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U5%5DMetrics.png?raw=true)
+![[#U5]Stats](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U5%5DStats.png?raw=true)
+![[#U5]Checks](https://github.com/ItzOliver/Programa_de_Bolsas_AWS_for_Software_Quality_Test_Automation/blob/pb_sprint7/src/%5B%23U5%5DChecks.png?raw=true)
